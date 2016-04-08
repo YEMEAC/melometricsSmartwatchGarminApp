@@ -3,12 +3,16 @@ using Toybox.WatchUi as Ui;
 using Toybox.Graphics as Gfx;
 
 //behavior extiende a inputdelegate por lo atnto tiene sus metodos
-class MeloMetricsDelegate extends Ui.BehaviorDelegate {
+class Vo2maxSpeedDelegate extends Ui.BehaviorDelegate {
 
 	var app;
+	var vo2maxSpeedView;
 
     function initialize() {
-   		app = App.getApp();
+   		//guardo un apuntadoe a al view que controla y a la aplicacion
+		app = App.getApp();
+   		vo2maxSpeedView=app.vo2maxSpeedView;
+   		
         BehaviorDelegate.initialize();
     }
 
@@ -51,12 +55,12 @@ class MeloMetricsDelegate extends Ui.BehaviorDelegate {
         // @param evt Event object with click information
         // @return true if handled, false otherwise
         function onTap( evt ){
-        	if(app.testEnEjecucion==false){
-        		app.empezarTest();
-        	}else if (app.testEnEjecucion==true && app.testDetenido==false){
+        	if(Vo2maxSpeedDelegateView.testEnEjecucion==false){
+        		Vo2maxSpeedDelegateView.empezarTest();
+        	}else if (Vo2maxSpeedDelegateView.testEnEjecucion==true && Vo2maxSpeedDelegateView.testDetenido==false){
         		app.detenerTest();
-        	}else if (app.testEnEjecucion==true && app.testDetenido==true){
-        		app.continuarTest();
+        	}else if (Vo2maxSpeedDelegateView.testEnEjecucion==true && Vo2maxSpeedDelegateView.testDetenido==true){
+        		Vo2maxSpeedDelegateView.continuarTest();
         	}
         	
 	        return true; 

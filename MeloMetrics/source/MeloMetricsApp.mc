@@ -4,7 +4,9 @@ using Toybox.Time.Gregorian as Calendar;
 using Toybox.Sensor as Snsr;
 using Toybox.Lang as Lang;
 using Toybox.System as Sys;
-
+using Toybox.ActivityMonitor as ActivityMonitor;
+using Toybox.ActivityRecording as ActivityRecording;
+using Toybox.Activity as Activity;
 
 //las propiedades de este enum son accesibles desde cualquier lugar solo hace falta escrir la propiedad
 enum{
@@ -27,71 +29,40 @@ enum{
 }
 
 class MeloMetricsApp extends App.AppBase {
-
-	var testEnEjecucion;
-	var	testDetenido;
-	var mensajeTest;
 	
-	//runninIndex index
-	var	maxHeartRate;
-	var heartRateReserve;
-	var restingHeartRate;
-	var acumuladorRunningIndex;
-	var estimacionRuninIndex;
-	var mediaRunningIndex;
-	var contadorRunningIndexMuestras;
 
-	//constantes
 	var heartRate;
 	var speed;
 	var vo2max;
 	
-	//variables para controlar tiempo/timer
-	var tiempoInicioTest;
-	var tiempoTestDetenido;
-	var tiempoTestReanudado;
-	//segundos que debe durar el test antes de tener suficientes muestras
-	var tiempoDuracionTest;
-	//segundos para hacer la media con mas muestrasdespues de tener la primera estimacion
-	var tiempoDuracionTestMedia;
-	var timerTest;
-	var primeraMuestraRunningIndex;
+	var activityrec;
 	
-	function resetVariables(){
-		tiempoInicioTest=0;
-		tiempoTestDetenido=0;
-		tiempoTestReanudado=0;
-		tiempoDuracionTest=5;
-		tiempoDuracionTestMedia=5;
+	var oneMileWalkTestView;
+	var oneMileWalkTestDelegate;
+	var vo2maxSpeedView;
+	var vo2maxSpeedDelegate;
 		
-		testEnEjecucion=false;
-		testDetenido=false;
-		
-	
-		//running index stuff	
-		primeraMuestraRunningIndex=true;
-		maxHeartRate=186.0d;
-		restingHeartRate=55.0d;
-		heartRateReserve=0.0d;
-		acumuladorRunningIndex=0.0d;
-		contadorRunningIndexMuestras=0.0d;
-		//heartRateReserve=0;
-		//runninIndex=0.0d;
-		
-		
-		speed=0.0d;
-		heartRate=0;
-		//vo2max=0.0d;
-		
-		mensajeTest = Ui.loadResource(Rez.Strings.mensajeTest1);
-					
-	}
-	
     function initialize() {
     	resetVariables();
         AppBase.initialize();
     }
+    
+    function resetVariables(){
+		oneMileWalkTestView = new OneMileWalkTestView();
+		oneMileWalkTestDelegate = new OneMileWalkTestDelegate();
+		vo2maxSpeedView = new Vo2maxSpeedView();
+		vo2maxSpeedDelegate = new Vo2maxSpeedDelegate();
 
+		speed=0.0d;
+		heartRate=0;
+					
+	}
+
+    //! Return the initial view of your application here
+    function getInitialView() {
+        return [  new Vo2maxSpeedView(),  new Vo2maxSpeedDelegate() ];
+    }
+    
     //! onStart() is called on application start up
     function onStart() {
     
@@ -100,83 +71,7 @@ class MeloMetricsApp extends App.AppBase {
     //! onStop() is called when your application is exiting
     function onStop() {
     }
-
-    //! Return the initial view of your application here
-    function getInitialView() {
-        return [ new MeloMetricsView(), new MeloMetricsDelegate() ];
-    }
-    
-    function empezarTest(){
-    	testEnEjecucion=true;
-    	
-    	Snsr.setEnabledSensors( [Snsr.SENSOR_HEARTRATE] );
-		Snsr.enableSensorEvents( method(:onSnsr) );	
-    	mensajeTest = Ui.loadResource(Rez.Strings.mensajeTest2);
-    	 	
-    	tiempoInicioTest=Time.now().value();
-    	timerTest= new Timer.Timer();
-    	timerTest.start(method(:timerRunningIndexCallback),tiempoDuracionTest*1000,false);
-    	 	
-    	System.println("Empezando test");
-    }
-    
-    function detenerTest(){
-    	testDetenido=true;
-    	timerTest.stop();
-    	tiempoTestDetenido=Time.now().value();
-    	mensajeTest = Ui.loadResource(Rez.Strings.mensajeTest3);
-    	System.println("Detener test");
-    }
-    
-    function continuarTest(){
-    	testDetenido=false;
-    	tiempoTestReanudado=Time.now().value();
-    	
-    	//se reinicia el timer que llama a la funcion callback de finalizartest, al tiempo de duracion del test
-		//se le resta se le resta el tiempo que el test llevaba ejecutandose
-		if(primeraMuestraRunningIndex==true){
-    		timerTest.start(method(:timerRunningIndexCallback),(tiempoDuracionTest -(tiempoTestDetenido-tiempoInicioTest))*1000,false);
-    	}else{
-    		timerTest.start(method(:timerRunningIndexCallback),(tiempoDuracionTestMedia -(tiempoTestDetenido-tiempoInicioTest))*1000,false);
-    	}
-    	
-    	mensajeTest = Ui.loadResource(Rez.Strings.mensajeTest2);
-    	System.println("Continuar test");
-    }
-    
-    function finalizarTest(){
-    	resetVariables();
-    	System.println("Finalizar test");
-    }
-    
-    function timerRunningIndexCallback(){	
-    	System.println("Estimacion Running Index");
-    	
-    	heartRateReserve=maxHeartRate-restingHeartRate;	
-    	//aux=current runnig heart rate as a percentage of hr reserve
-    	var aux=(heartRate-restingHeartRate)/heartRateReserve;
-    	var estimacionRuninIndex=speed/aux;
-    	
-		acumuladorRunningIndex=acumuladorRunningIndex+estimacionRuninIndex;
-		contadorRunningIndexMuestras=contadorRunningIndexMuestras+1;
-		mediaRunningIndex=acumuladorRunningIndex/contadorRunningIndexMuestras;
-        
-    	//yield an estimate of the maxium runnin speed - will be close to your vo2max running speed
-    	
-		System.println("max hr "+maxHeartRate);
-		System.println("resting hr "+restingHeartRate);
-		System.println("reserve hr "+heartRateReserve);
-		System.println("current hr "+heartRate);
-		System.println("percent. of hr reserve "+ aux);
-		System.println("running index "+ mediaRunningIndex);
-
-		primeraMuestraRunningIndex=false;
-    	timerTest.start(method(:timerRunningIndexCallback),tiempoDuracionTestMedia*1000,false);
-    	//finalizarTest();
-    	//timerTest.stop();
-    	Ui.requestUpdate();
-    }
-      
+       
     
     function timerPantalla() {
     	if(testEnEjecucion==true && testDetenido==false){

@@ -2,8 +2,11 @@ using Toybox.Application as App;
 using Toybox.WatchUi as Ui;
 using Toybox.Graphics as Gfx;
 using Toybox.Sensor as Snsr;
+using Toybox.ActivityMonitor as ActivityMonitor;
+using Toybox.ActivityRecording as ActivityRecording;
+using Toybox.Activity as Activity;
 
-class MeloMetricsView extends Ui.View {
+class OneMileWalkTestView extends Ui.View {
 
 	var app;
 	
@@ -14,7 +17,7 @@ class MeloMetricsView extends Ui.View {
 
     //! Load your resources here
     function onLayout(dc) {
-        setLayout(Rez.Layouts.MainLayout(dc));
+        setLayout(Rez.Layouts.OneMileWalkTestLayout(dc));
 		
     }
 
@@ -43,9 +46,9 @@ class MeloMetricsView extends Ui.View {
 		var	Y2 = 127;
 		  	
     	
-    	if(app.mediaRunningIndex!=null){
+    	if(app.mediaVo2maxSpeed!=null){
     		dc.setColor(GREEN, -1);
-    		dc.drawText(X2, Y1, numFont, app.mediaRunningIndex.format("%.2f"), just);
+    		dc.drawText(X2, Y1, numFont, app.mediaVo2maxSpeed.format("%.2f"), just);
     	}else{
     		dc.setColor(RED, -1);
     		dc.drawText(X2, Y1, msgFontSmall, Ui.loadResource(Rez.Strings.esperando) , just);
@@ -55,7 +58,7 @@ class MeloMetricsView extends Ui.View {
 		dc.drawText(X1, Y1, numFont, app.heartRate.toString(), just);
 		dc.drawText(X1, Y2, numFont, app.speed.format("%.2f") , just);
 		
-		if(app.primeraMuestraRunningIndex==true){
+		if(app.primeraMuestraVo2maxSpeed==true){
 			dc.drawText(X2, Y2, numFont, app.timerPantalla(), just);
 		}else{
 			dc.setColor(LT_GRAY, -1);
@@ -69,7 +72,8 @@ class MeloMetricsView extends Ui.View {
 			dc.drawText(105, 74, msgFontMedium, app.mensajeTest, just);
 		}
 		
-		System.println(app.heartRate + " - " + app.speed);
+		
+		System.println(app.heartRate + " - " + app.speed + " - " + Activity.getActivityInfo().currentHeartRate );
     }
 
     //! Called when this View is removed from the screen. Save the

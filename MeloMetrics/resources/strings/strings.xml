@@ -7,7 +7,7 @@
     <string id="menu_label_2">Item 2</string>
     
     
-    <string id="vo2max">VO2MAX</string>
+    <string id="vo2maxSpeed"> VO2max Speed</string>
     <string id="hrv">HRV</string>
     <string id="spe">SPD</string>
     <string id="timer">TIMER</string>

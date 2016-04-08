@@ -2,7 +2,7 @@
     <bitmap id="LauncherIcon" filename="launcher_icon.png" />
     
     
-    <drawable-list id="dosLineasHorizontales" background="Gfx.COLOR_TRANSPARENT">
+    <drawable-list id="dosLineasHorizontalesVo2maxSpeedLayout" background="Gfx.COLOR_TRANSPARENT">
     	<shape type="rectangle" x="0" y="61" height="1" width="200" color="Gfx.COLOR_BLUE" />
     	<shape type="rectangle" x="0" y="89" height="1" width="200" color="Gfx.COLOR_BLUE" />
     </drawable-list>
