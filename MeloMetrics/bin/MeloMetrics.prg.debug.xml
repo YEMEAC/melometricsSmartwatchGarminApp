@@ -1,239 +1,455 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <debugInfo>
 <pcToLineNum>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="40" pc="268435458" symbol="resetVariables"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="41" pc="268435468" symbol="resetVariables"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="42" pc="268435485" symbol="resetVariables"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="43" pc="268435502" symbol="resetVariables"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="44" pc="268435519" symbol="resetVariables"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="45" pc="268435536" symbol="resetVariables"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="47" pc="268435553" symbol="resetVariables"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="48" pc="268435566" symbol="resetVariables"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="49" pc="268435579" symbol="resetVariables"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="50" pc="268435592" symbol="resetVariables"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="51" pc="268435605" symbol="resetVariables"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="53" pc="268435618" symbol="resetVariables"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="54" pc="268435628" symbol="resetVariables"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="55" pc="268435638" symbol="resetVariables"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="59" pc="268435684" symbol="initialize"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="60" pc="268435707" symbol="initialize"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="65" pc="268435728" symbol="onLayout"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="72" pc="268435768" symbol="onUpdate"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="73" pc="268435788" symbol="onUpdate"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="77" pc="268435805" symbol="pintarVista"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="78" pc="268435812" symbol="pintarVista"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="79" pc="268435819" symbol="pintarVista"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="80" pc="268435826" symbol="pintarVista"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="82" pc="268435833" symbol="pintarVista"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="83" pc="268435840" symbol="pintarVista"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="84" pc="268435847" symbol="pintarVista"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="85" pc="268435854" symbol="pintarVista"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="88" pc="268435861" symbol="pintarVista"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="89" pc="268435874" symbol="pintarVista"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="90" pc="268435905" symbol="pintarVista"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="92" pc="268435950" symbol="pintarVista"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="93" pc="268435981" symbol="pintarVista"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="96" pc="268436036" symbol="pintarVista"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="97" pc="268436067" symbol="pintarVista"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="99" pc="268436078" symbol="pintarVista"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="100" pc="268436128" symbol="pintarVista"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="102" pc="268436186" symbol="pintarVista"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="103" pc="268436211" symbol="pintarVista"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="106" pc="268436236" symbol="pintarVista"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="107" pc="268436250" symbol="pintarVista"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="109" pc="268436284" symbol="pintarVista"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="110" pc="268436315" symbol="pintarVista"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="113" pc="268436370" symbol="pintarVista"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="114" pc="268436401" symbol="pintarVista"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="115" pc="268436415" symbol="pintarVista"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="117" pc="268436452" symbol="pintarVista"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="121" pc="268436486" symbol="pintarVista"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="126" pc="268436570" symbol="empezarTest"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="128" pc="268436580" symbol="empezarTest"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="129" pc="268436622" symbol="empezarTest"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="135" pc="268436654" symbol="empezarTest"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="137" pc="268436697" symbol="empezarTest"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="138" pc="268436731" symbol="empezarTest"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="139" pc="268436767" symbol="empezarTest"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="141" pc="268436817" symbol="empezarTest"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="146" pc="268436843" symbol="detenerTest"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="147" pc="268436853" symbol="detenerTest"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="148" pc="268436871" symbol="detenerTest"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="149" pc="268436905" symbol="detenerTest"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="152" pc="268436948" symbol="detenerTest"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="156" pc="268436974" symbol="continuarTest"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="157" pc="268436984" symbol="continuarTest"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="161" pc="268437018" symbol="continuarTest"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="162" pc="268437032" symbol="continuarTest"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="164" pc="268437103" symbol="continuarTest"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="167" pc="268437171" symbol="continuarTest"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="168" pc="268437214" symbol="continuarTest"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="172" pc="268437240" symbol="finalizarTest"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="173" pc="268437252" symbol="finalizarTest"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="177" pc="268437278" symbol="timerVo2maxSpeedCallback"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="179" pc="268437301" symbol="timerVo2maxSpeedCallback"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="181" pc="268437320" symbol="timerVo2maxSpeedCallback"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="182" pc="268437342" symbol="timerVo2maxSpeedCallback"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="184" pc="268437355" symbol="timerVo2maxSpeedCallback"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="185" pc="268437374" symbol="timerVo2maxSpeedCallback"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="186" pc="268437396" symbol="timerVo2maxSpeedCallback"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="188" pc="268437421" symbol="timerVo2maxSpeedCallback"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="189" pc="268437453" symbol="timerVo2maxSpeedCallback"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="190" pc="268437485" symbol="timerVo2maxSpeedCallback"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="191" pc="268437511" symbol="timerVo2maxSpeedCallback"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="192" pc="268437543" symbol="timerVo2maxSpeedCallback"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="193" pc="268437569" symbol="timerVo2maxSpeedCallback"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="195" pc="268437601" symbol="timerVo2maxSpeedCallback"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="196" pc="268437611" symbol="timerVo2maxSpeedCallback"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="199" pc="268437661" symbol="timerVo2maxSpeedCallback"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedDelegate.mc" lineNum="13" pc="268437680" symbol="initialize"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedDelegate.mc" lineNum="14" pc="268437703" symbol="initialize"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedDelegate.mc" lineNum="16" pc="268437725" symbol="initialize"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedDelegate.mc" lineNum="23" pc="268437746" symbol="onMenu"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedDelegate.mc" lineNum="24" pc="268437830" symbol="onMenu"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedDelegate.mc" lineNum="58" pc="268437851" symbol="onTap"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedDelegate.mc" lineNum="59" pc="268437871" symbol="onTap"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedDelegate.mc" lineNum="61" pc="268437935" symbol="onTap"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedDelegate.mc" lineNum="63" pc="268437999" symbol="onTap"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedDelegate.mc" lineNum="66" pc="268438020" symbol="onTap"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedDelegate.mc" lineNum="74" pc="268438026" symbol="onHold"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedDelegate.mc" lineNum="75" pc="268438110" symbol="onHold"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\Vo2maxSpeedDelegate.mc" lineNum="115" pc="268438122" symbol="onKey"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="14" pc="268438128" symbol="initialize"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="15" pc="268438151" symbol="initialize"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="20" pc="268438172" symbol="onLayout"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="33" pc="268438215" symbol="onUpdate"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="34" pc="268438235" symbol="onUpdate"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="38" pc="268438252" symbol="pintarVista"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="39" pc="268438259" symbol="pintarVista"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="40" pc="268438266" symbol="pintarVista"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="41" pc="268438273" symbol="pintarVista"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="43" pc="268438280" symbol="pintarVista"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="44" pc="268438287" symbol="pintarVista"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="45" pc="268438294" symbol="pintarVista"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="46" pc="268438301" symbol="pintarVista"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="49" pc="268438308" symbol="pintarVista"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="50" pc="268438327" symbol="pintarVista"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="51" pc="268438358" symbol="pintarVista"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="53" pc="268438409" symbol="pintarVista"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="54" pc="268438440" symbol="pintarVista"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="57" pc="268438495" symbol="pintarVista"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="58" pc="268438526" symbol="pintarVista"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="59" pc="268438569" symbol="pintarVista"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="61" pc="268438617" symbol="pintarVista"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="62" pc="268438637" symbol="pintarVista"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="64" pc="268438677" symbol="pintarVista"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="65" pc="268438708" symbol="pintarVista"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="68" pc="268438763" symbol="pintarVista"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="69" pc="268438794" symbol="pintarVista"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="70" pc="268438814" symbol="pintarVista"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="72" pc="268438857" symbol="pintarVista"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="76" pc="268438897" symbol="pintarVista"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\OneMileWalkTestDelegate.mc" lineNum="11" pc="268438984" symbol="initialize"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\OneMileWalkTestDelegate.mc" lineNum="12" pc="268439007" symbol="initialize"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\OneMileWalkTestDelegate.mc" lineNum="19" pc="268439028" symbol="onMenu"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\OneMileWalkTestDelegate.mc" lineNum="20" pc="268439112" symbol="onMenu"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\OneMileWalkTestDelegate.mc" lineNum="54" pc="268439133" symbol="onTap"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\OneMileWalkTestDelegate.mc" lineNum="55" pc="268439153" symbol="onTap"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\OneMileWalkTestDelegate.mc" lineNum="57" pc="268439217" symbol="onTap"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\OneMileWalkTestDelegate.mc" lineNum="59" pc="268439281" symbol="onTap"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\OneMileWalkTestDelegate.mc" lineNum="62" pc="268439302" symbol="onTap"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\OneMileWalkTestDelegate.mc" lineNum="70" pc="268439308" symbol="onHold"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\OneMileWalkTestDelegate.mc" lineNum="71" pc="268439392" symbol="onHold"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\OneMileWalkTestDelegate.mc" lineNum="111" pc="268439404" symbol="onKey"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\MeloMetricsMenuDelegate.mc" lineNum="7" pc="268439410" symbol="initialize"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\MeloMetricsMenuDelegate.mc" lineNum="11" pc="268439431" symbol="onMenuItem"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\MeloMetricsMenuDelegate.mc" lineNum="12" pc="268439442" symbol="onMenuItem"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\MeloMetricsMenuDelegate.mc" lineNum="14" pc="268439477" symbol="onMenuItem"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\MeloMetricsApp.mc" lineNum="46" pc="268439504" symbol="initialize"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\MeloMetricsApp.mc" lineNum="47" pc="268439516" symbol="initialize"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\MeloMetricsApp.mc" lineNum="51" pc="268439537" symbol="resetVariables"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\MeloMetricsApp.mc" lineNum="52" pc="268439567" symbol="resetVariables"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\MeloMetricsApp.mc" lineNum="53" pc="268439597" symbol="resetVariables"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\MeloMetricsApp.mc" lineNum="54" pc="268439627" symbol="resetVariables"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\MeloMetricsApp.mc" lineNum="56" pc="268439657" symbol="resetVariables"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\MeloMetricsApp.mc" lineNum="57" pc="268439674" symbol="resetVariables"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\MeloMetricsApp.mc" lineNum="63" pc="268439690" symbol="getInitialView"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\MeloMetricsApp.mc" lineNum="77" pc="268439766" symbol="timerPantalla"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\MeloMetricsApp.mc" lineNum="78" pc="268439797" symbol="timerPantalla"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\MeloMetricsApp.mc" lineNum="80" pc="268439863" symbol="timerPantalla"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\MeloMetricsApp.mc" lineNum="82" pc="268439898" symbol="timerPantalla"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\MeloMetricsApp.mc" lineNum="88" pc="268439918" symbol="tiempoTestEnCursoDenido"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\MeloMetricsApp.mc" lineNum="93" pc="268439939" symbol="tiempoTestEnCurso"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\MeloMetricsApp.mc" lineNum="96" pc="268439976" symbol="tiempoTestEnCurso"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\MeloMetricsApp.mc" lineNum="99" pc="268440033" symbol="tiempoTestEnCurso"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\MeloMetricsApp.mc" lineNum="104" pc="268440072" symbol="timerFormat"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\MeloMetricsApp.mc" lineNum="105" pc="268440082" symbol="timerFormat"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\MeloMetricsApp.mc" lineNum="106" pc="268440098" symbol="timerFormat"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\MeloMetricsApp.mc" lineNum="107" pc="268440108" symbol="timerFormat"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\MeloMetricsApp.mc" lineNum="108" pc="268440119" symbol="timerFormat"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\MeloMetricsApp.mc" lineNum="111" pc="268440217" symbol="timerFormat"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\MeloMetricsApp.mc" lineNum="116" pc="268440291" symbol="onSnsr"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\MeloMetricsApp.mc" lineNum="117" pc="268440304" symbol="onSnsr"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\MeloMetricsApp.mc" lineNum="120" pc="268440323" symbol="onSnsr"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\MeloMetricsApp.mc" lineNum="121" pc="268440336" symbol="onSnsr"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\MeloMetricsApp.mc" lineNum="123" pc="268440355" symbol="onSnsr"/>
-<entry filename="C:\\Users\\ymeloa\\git\\MeloMetrics\\source\\MeloMetricsApp.mc" lineNum="124" pc="268440371" symbol="onSnsr"/>
-<entry filename="Rez" lineNum="5" pc="268442562" symbol="&lt;init&gt;"/>
-<entry filename="Rez" lineNum="6" pc="268442571" symbol="&lt;init&gt;"/>
-<entry filename="Rez" lineNum="7" pc="268442580" symbol="&lt;init&gt;"/>
-<entry filename="Rez" lineNum="8" pc="268442589" symbol="&lt;init&gt;"/>
-<entry filename="Rez" lineNum="9" pc="268442598" symbol="&lt;init&gt;"/>
-<entry filename="Rez" lineNum="10" pc="268442607" symbol="&lt;init&gt;"/>
-<entry filename="Rez" lineNum="11" pc="268442616" symbol="&lt;init&gt;"/>
-<entry filename="Rez" lineNum="12" pc="268442625" symbol="&lt;init&gt;"/>
-<entry filename="Rez" lineNum="13" pc="268442634" symbol="&lt;init&gt;"/>
-<entry filename="Rez" lineNum="14" pc="268442643" symbol="&lt;init&gt;"/>
-<entry filename="Rez" lineNum="15" pc="268442652" symbol="&lt;init&gt;"/>
-<entry filename="Rez" lineNum="16" pc="268442661" symbol="&lt;init&gt;"/>
-<entry filename="Rez" lineNum="17" pc="268442670" symbol="&lt;init&gt;"/>
-<entry filename="Rez" lineNum="25" pc="268440377" symbol="initialize"/>
-<entry filename="Rez" lineNum="26" pc="268440395" symbol="initialize"/>
-<entry filename="Rez" lineNum="27" pc="268440447" symbol="initialize"/>
-<entry filename="Rez" lineNum="41" pc="268440502" symbol="initialize"/>
-<entry filename="Rez" lineNum="45" pc="268440529" symbol="draw"/>
-<entry filename="Rez" lineNum="46" pc="268440536" symbol="draw"/>
-<entry filename="Rez" lineNum="47" pc="268440543" symbol="draw"/>
-<entry filename="Rez" lineNum="48" pc="268440556" symbol="draw"/>
-<entry filename="Rez" lineNum="49" pc="268440569" symbol="draw"/>
-<entry filename="Rez" lineNum="53" pc="268440594" symbol="drawComplex"/>
-<entry filename="Rez" lineNum="54" pc="268440630" symbol="drawComplex"/>
-<entry filename="Rez" lineNum="55" pc="268440674" symbol="drawComplex"/>
-<entry filename="Rez" lineNum="57" pc="268440710" symbol="drawComplex"/>
-<entry filename="Rez" lineNum="58" pc="268440746" symbol="drawComplex"/>
-<entry filename="Rez" lineNum="60" pc="268440832" symbol="drawComplex"/>
-<entry filename="Rez" lineNum="61" pc="268440868" symbol="drawComplex"/>
-<entry filename="Rez" lineNum="34" pc="268442511" symbol="&lt;init&gt;"/>
-<entry filename="Rez" lineNum="75" pc="268440957" symbol="Vo2maxSpeedLayout"/>
-<entry filename="Rez" lineNum="76" pc="268440971" symbol="Vo2maxSpeedLayout"/>
-<entry filename="Rez" lineNum="77" pc="268441104" symbol="Vo2maxSpeedLayout"/>
-<entry filename="Rez" lineNum="78" pc="268441118" symbol="Vo2maxSpeedLayout"/>
-<entry filename="Rez" lineNum="79" pc="268441251" symbol="Vo2maxSpeedLayout"/>
-<entry filename="Rez" lineNum="80" pc="268441265" symbol="Vo2maxSpeedLayout"/>
-<entry filename="Rez" lineNum="81" pc="268441398" symbol="Vo2maxSpeedLayout"/>
-<entry filename="Rez" lineNum="82" pc="268441412" symbol="Vo2maxSpeedLayout"/>
-<entry filename="Rez" lineNum="83" pc="268441545" symbol="Vo2maxSpeedLayout"/>
-<entry filename="Rez" lineNum="84" pc="268441581" symbol="Vo2maxSpeedLayout"/>
-<entry filename="Rez" lineNum="85" pc="268441592" symbol="Vo2maxSpeedLayout"/>
-<entry filename="Rez" lineNum="87" pc="268441608" symbol="Vo2maxSpeedLayout"/>
-<entry filename="Rez" lineNum="97" pc="268441668" symbol="OneMileWalkTestLayout"/>
-<entry filename="Rez" lineNum="98" pc="268441682" symbol="OneMileWalkTestLayout"/>
-<entry filename="Rez" lineNum="99" pc="268441815" symbol="OneMileWalkTestLayout"/>
-<entry filename="Rez" lineNum="100" pc="268441829" symbol="OneMileWalkTestLayout"/>
-<entry filename="Rez" lineNum="101" pc="268441962" symbol="OneMileWalkTestLayout"/>
-<entry filename="Rez" lineNum="102" pc="268441976" symbol="OneMileWalkTestLayout"/>
-<entry filename="Rez" lineNum="103" pc="268442109" symbol="OneMileWalkTestLayout"/>
-<entry filename="Rez" lineNum="104" pc="268442123" symbol="OneMileWalkTestLayout"/>
-<entry filename="Rez" lineNum="105" pc="268442256" symbol="OneMileWalkTestLayout"/>
-<entry filename="Rez" lineNum="106" pc="268442292" symbol="OneMileWalkTestLayout"/>
-<entry filename="Rez" lineNum="107" pc="268442303" symbol="OneMileWalkTestLayout"/>
-<entry filename="Rez" lineNum="109" pc="268442319" symbol="OneMileWalkTestLayout"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\ThreeMinuteStepTestDelegate.mc" lineNum="14" pc="268435458" symbol="initialize"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\ThreeMinuteStepTestDelegate.mc" lineNum="15" pc="268435481" symbol="initialize"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\ThreeMinuteStepTestDelegate.mc" lineNum="16" pc="268435503" symbol="initialize"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\ThreeMinuteStepTestDelegate.mc" lineNum="17" pc="268435513" symbol="initialize"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\ThreeMinuteStepTestDelegate.mc" lineNum="24" pc="268435534" symbol="onMenu"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\ThreeMinuteStepTestDelegate.mc" lineNum="25" pc="268435618" symbol="onMenu"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\ThreeMinuteStepTestDelegate.mc" lineNum="30" pc="268435624" symbol="getView"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\ThreeMinuteStepTestDelegate.mc" lineNum="32" pc="268435624" symbol="getView"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\ThreeMinuteStepTestDelegate.mc" lineNum="34" pc="268435635" symbol="getView"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\ThreeMinuteStepTestDelegate.mc" lineNum="38" pc="268435675" symbol="getView"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\ThreeMinuteStepTestDelegate.mc" lineNum="42" pc="268435715" symbol="getView"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\ThreeMinuteStepTestDelegate.mc" lineNum="46" pc="268435744" symbol="getView"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\ThreeMinuteStepTestDelegate.mc" lineNum="49" pc="268435770" symbol="getView"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\ThreeMinuteStepTestDelegate.mc" lineNum="54" pc="268435776" symbol="getDelegate"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\ThreeMinuteStepTestDelegate.mc" lineNum="56" pc="268435776" symbol="getDelegate"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\ThreeMinuteStepTestDelegate.mc" lineNum="58" pc="268435787" symbol="getDelegate"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\ThreeMinuteStepTestDelegate.mc" lineNum="62" pc="268435827" symbol="getDelegate"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\ThreeMinuteStepTestDelegate.mc" lineNum="66" pc="268435867" symbol="getDelegate"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\ThreeMinuteStepTestDelegate.mc" lineNum="70" pc="268435896" symbol="getDelegate"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\ThreeMinuteStepTestDelegate.mc" lineNum="73" pc="268435922" symbol="getDelegate"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\ThreeMinuteStepTestDelegate.mc" lineNum="79" pc="268435928" symbol="onNextPage"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\ThreeMinuteStepTestDelegate.mc" lineNum="80" pc="268435956" symbol="onNextPage"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\ThreeMinuteStepTestDelegate.mc" lineNum="84" pc="268436025" symbol="onPreviousPage"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\ThreeMinuteStepTestDelegate.mc" lineNum="85" pc="268436047" symbol="onPreviousPage"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\ThreeMinuteStepTestDelegate.mc" lineNum="86" pc="268436064" symbol="onPreviousPage"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\ThreeMinuteStepTestDelegate.mc" lineNum="88" pc="268436080" symbol="onPreviousPage"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\ThreeMinuteStepTestDelegate.mc" lineNum="89" pc="268436102" symbol="onPreviousPage"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\ThreeMinuteStepTestDelegate.mc" lineNum="96" pc="268436171" symbol="onSwipe"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\ThreeMinuteStepTestDelegate.mc" lineNum="97" pc="268436198" symbol="onSwipe"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\ThreeMinuteStepTestDelegate.mc" lineNum="99" pc="268436240" symbol="onSwipe"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\ThreeMinuteStepTestDelegate.mc" lineNum="107" pc="268436258" symbol="onTap"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\ThreeMinuteStepTestDelegate.mc" lineNum="108" pc="268436278" symbol="onTap"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\ThreeMinuteStepTestDelegate.mc" lineNum="110" pc="268436342" symbol="onTap"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\ThreeMinuteStepTestDelegate.mc" lineNum="112" pc="268436406" symbol="onTap"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\ThreeMinuteStepTestDelegate.mc" lineNum="115" pc="268436427" symbol="onTap"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\ThreeMinuteStepTestDelegate.mc" lineNum="123" pc="268436433" symbol="onHold"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\ThreeMinuteStepTestDelegate.mc" lineNum="124" pc="268436517" symbol="onHold"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\OneMileWalkTestDelegate.mc" lineNum="11" pc="268436523" symbol="initialize"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\OneMileWalkTestDelegate.mc" lineNum="12" pc="268436546" symbol="initialize"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\OneMileWalkTestDelegate.mc" lineNum="19" pc="268436567" symbol="onMenu"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\OneMileWalkTestDelegate.mc" lineNum="20" pc="268436651" symbol="onMenu"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\OneMileWalkTestDelegate.mc" lineNum="54" pc="268436672" symbol="onTap"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\OneMileWalkTestDelegate.mc" lineNum="55" pc="268436692" symbol="onTap"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\OneMileWalkTestDelegate.mc" lineNum="57" pc="268436756" symbol="onTap"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\OneMileWalkTestDelegate.mc" lineNum="59" pc="268436820" symbol="onTap"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\OneMileWalkTestDelegate.mc" lineNum="62" pc="268436841" symbol="onTap"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\OneMileWalkTestDelegate.mc" lineNum="70" pc="268436847" symbol="onHold"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\OneMileWalkTestDelegate.mc" lineNum="71" pc="268436931" symbol="onHold"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\OneMileWalkTestDelegate.mc" lineNum="111" pc="268436943" symbol="onKey"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\MeloMetricsMenuDelegate.mc" lineNum="7" pc="268436949" symbol="initialize"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\MeloMetricsMenuDelegate.mc" lineNum="11" pc="268436970" symbol="onMenuItem"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\MeloMetricsMenuDelegate.mc" lineNum="12" pc="268436981" symbol="onMenuItem"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\MeloMetricsMenuDelegate.mc" lineNum="14" pc="268437016" symbol="onMenuItem"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\MainDelegate2.mc" lineNum="14" pc="268437043" symbol="initialize"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\MainDelegate2.mc" lineNum="15" pc="268437066" symbol="initialize"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\MainDelegate2.mc" lineNum="16" pc="268437088" symbol="initialize"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\MainDelegate2.mc" lineNum="17" pc="268437098" symbol="initialize"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\MainDelegate2.mc" lineNum="24" pc="268437119" symbol="onMenu"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\MainDelegate2.mc" lineNum="25" pc="268437203" symbol="onMenu"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\MainDelegate2.mc" lineNum="30" pc="268437209" symbol="getView"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\MainDelegate2.mc" lineNum="32" pc="268437209" symbol="getView"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\MainDelegate2.mc" lineNum="34" pc="268437220" symbol="getView"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\MainDelegate2.mc" lineNum="38" pc="268437260" symbol="getView"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\MainDelegate2.mc" lineNum="42" pc="268437300" symbol="getView"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\MainDelegate2.mc" lineNum="46" pc="268437329" symbol="getView"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\MainDelegate2.mc" lineNum="49" pc="268437355" symbol="getView"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\MainDelegate2.mc" lineNum="54" pc="268437361" symbol="getDelegate"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\MainDelegate2.mc" lineNum="56" pc="268437361" symbol="getDelegate"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\MainDelegate2.mc" lineNum="58" pc="268437372" symbol="getDelegate"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\MainDelegate2.mc" lineNum="62" pc="268437412" symbol="getDelegate"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\MainDelegate2.mc" lineNum="66" pc="268437452" symbol="getDelegate"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\MainDelegate2.mc" lineNum="70" pc="268437481" symbol="getDelegate"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\MainDelegate2.mc" lineNum="73" pc="268437507" symbol="getDelegate"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\MainDelegate2.mc" lineNum="79" pc="268437513" symbol="onNextPage"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\MainDelegate2.mc" lineNum="80" pc="268437541" symbol="onNextPage"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\MainDelegate2.mc" lineNum="84" pc="268437610" symbol="onPreviousPage"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\MainDelegate2.mc" lineNum="85" pc="268437632" symbol="onPreviousPage"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\MainDelegate2.mc" lineNum="86" pc="268437649" symbol="onPreviousPage"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\MainDelegate2.mc" lineNum="88" pc="268437665" symbol="onPreviousPage"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\MainDelegate2.mc" lineNum="89" pc="268437687" symbol="onPreviousPage"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\MainDelegate2.mc" lineNum="96" pc="268437756" symbol="onSwipe"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\MainDelegate2.mc" lineNum="97" pc="268437783" symbol="onSwipe"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\MainDelegate2.mc" lineNum="99" pc="268437825" symbol="onSwipe"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\MainDelegate2.mc" lineNum="107" pc="268437843" symbol="onTap"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\MainDelegate2.mc" lineNum="108" pc="268437863" symbol="onTap"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\MainDelegate2.mc" lineNum="110" pc="268437927" symbol="onTap"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\MainDelegate2.mc" lineNum="112" pc="268437991" symbol="onTap"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\MainDelegate2.mc" lineNum="115" pc="268438012" symbol="onTap"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\MainDelegate2.mc" lineNum="123" pc="268438018" symbol="onHold"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\delegates\\MainDelegate2.mc" lineNum="124" pc="268438102" symbol="onHold"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="29" pc="268438108" symbol="resetVariablesParent"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="30" pc="268438121" symbol="resetVariablesParent"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="31" pc="268438134" symbol="resetVariablesParent"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="32" pc="268438147" symbol="resetVariablesParent"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="33" pc="268438160" symbol="resetVariablesParent"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="35" pc="268438173" symbol="resetVariablesParent"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="36" pc="268438183" symbol="resetVariablesParent"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="37" pc="268438193" symbol="resetVariablesParent"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="42" pc="268438239" symbol="timerPantalla"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="43" pc="268438270" symbol="timerPantalla"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="45" pc="268438336" symbol="timerPantalla"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="47" pc="268438371" symbol="timerPantalla"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="53" pc="268438391" symbol="tiempoTestEnCursoDenido"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="58" pc="268438412" symbol="tiempoTestEnCurso"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="61" pc="268438449" symbol="tiempoTestEnCurso"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="64" pc="268438506" symbol="tiempoTestEnCurso"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="69" pc="268438545" symbol="timerFormat"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="70" pc="268438555" symbol="timerFormat"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="71" pc="268438571" symbol="timerFormat"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="72" pc="268438581" symbol="timerFormat"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="73" pc="268438592" symbol="timerFormat"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="76" pc="268438690" symbol="timerFormat"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="97" pc="268438765" symbol="initialize"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="98" pc="268438788" symbol="initialize"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="99" pc="268438800" symbol="initialize"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="100" pc="268438812" symbol="initialize"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="105" pc="268438833" symbol="resetVariables"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="106" pc="268438843" symbol="resetVariables"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="107" pc="268438860" symbol="resetVariables"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="108" pc="268438877" symbol="resetVariables"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="109" pc="268438894" symbol="resetVariables"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="110" pc="268438911" symbol="resetVariables"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="116" pc="268438931" symbol="onLayout"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="122" pc="268438971" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="123" pc="268438991" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="127" pc="268439008" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="128" pc="268439015" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="129" pc="268439022" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="130" pc="268439029" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="132" pc="268439036" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="133" pc="268439043" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="134" pc="268439050" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="135" pc="268439057" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="138" pc="268439064" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="139" pc="268439077" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="140" pc="268439108" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="142" pc="268439153" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="143" pc="268439184" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="146" pc="268439239" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="147" pc="268439270" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="149" pc="268439310" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="152" pc="268439363" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="153" pc="268439388" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="156" pc="268439413" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="157" pc="268439453" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="159" pc="268439511" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="162" pc="268439536" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="163" pc="268439550" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="165" pc="268439584" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="166" pc="268439615" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="169" pc="268439670" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="170" pc="268439701" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="171" pc="268439715" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="173" pc="268439752" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="177" pc="268439786" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="182" pc="268439870" symbol="empezarTest"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="184" pc="268439880" symbol="empezarTest"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="185" pc="268439922" symbol="empezarTest"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="191" pc="268439954" symbol="empezarTest"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="193" pc="268439997" symbol="empezarTest"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="194" pc="268440031" symbol="empezarTest"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="195" pc="268440067" symbol="empezarTest"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="197" pc="268440117" symbol="empezarTest"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="202" pc="268440143" symbol="detenerTest"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="203" pc="268440153" symbol="detenerTest"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="204" pc="268440171" symbol="detenerTest"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="205" pc="268440205" symbol="detenerTest"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="208" pc="268440248" symbol="detenerTest"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="212" pc="268440274" symbol="continuarTest"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="213" pc="268440284" symbol="continuarTest"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="217" pc="268440318" symbol="continuarTest"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="218" pc="268440332" symbol="continuarTest"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="220" pc="268440403" symbol="continuarTest"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="223" pc="268440471" symbol="continuarTest"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="224" pc="268440514" symbol="continuarTest"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="228" pc="268440540" symbol="finalizarTest"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="229" pc="268440552" symbol="finalizarTest"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="233" pc="268440578" symbol="timerCallback"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="235" pc="268440601" symbol="timerCallback"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="237" pc="268440620" symbol="timerCallback"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="238" pc="268440648" symbol="timerCallback"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="240" pc="268440667" symbol="timerCallback"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="241" pc="268440686" symbol="timerCallback"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="242" pc="268440708" symbol="timerCallback"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="244" pc="268440733" symbol="timerCallback"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="245" pc="268440765" symbol="timerCallback"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="246" pc="268440797" symbol="timerCallback"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="247" pc="268440823" symbol="timerCallback"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="248" pc="268440861" symbol="timerCallback"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="249" pc="268440887" symbol="timerCallback"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="251" pc="268440919" symbol="timerCallback"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="252" pc="268440929" symbol="timerCallback"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="255" pc="268440979" symbol="timerCallback"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="259" pc="268440998" symbol="onSnsr"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="260" pc="268441011" symbol="onSnsr"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="263" pc="268441036" symbol="onSnsr"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="264" pc="268441049" symbol="onSnsr"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="266" pc="268441074" symbol="onSnsr"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\Vo2maxSpeedView.mc" lineNum="267" pc="268441090" symbol="onSnsr"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\ThreeMinuteStepTestView.mc" lineNum="14" pc="268441096" symbol="initialize"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\ThreeMinuteStepTestView.mc" lineNum="15" pc="268441119" symbol="initialize"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\ThreeMinuteStepTestView.mc" lineNum="20" pc="268441140" symbol="onLayout"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\ThreeMinuteStepTestView.mc" lineNum="33" pc="268441183" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\ThreeMinuteStepTestView.mc" lineNum="34" pc="268441203" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\ThreeMinuteStepTestView.mc" lineNum="38" pc="268441220" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\ThreeMinuteStepTestView.mc" lineNum="39" pc="268441227" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\ThreeMinuteStepTestView.mc" lineNum="40" pc="268441234" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\ThreeMinuteStepTestView.mc" lineNum="41" pc="268441241" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\ThreeMinuteStepTestView.mc" lineNum="43" pc="268441248" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\ThreeMinuteStepTestView.mc" lineNum="44" pc="268441255" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\ThreeMinuteStepTestView.mc" lineNum="45" pc="268441262" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\ThreeMinuteStepTestView.mc" lineNum="46" pc="268441269" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\ThreeMinuteStepTestView.mc" lineNum="49" pc="268441276" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\ThreeMinuteStepTestView.mc" lineNum="50" pc="268441295" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\ThreeMinuteStepTestView.mc" lineNum="51" pc="268441326" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\ThreeMinuteStepTestView.mc" lineNum="53" pc="268441377" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\ThreeMinuteStepTestView.mc" lineNum="54" pc="268441408" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\ThreeMinuteStepTestView.mc" lineNum="57" pc="268441463" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\ThreeMinuteStepTestView.mc" lineNum="58" pc="268441494" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\ThreeMinuteStepTestView.mc" lineNum="59" pc="268441537" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\ThreeMinuteStepTestView.mc" lineNum="61" pc="268441585" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\ThreeMinuteStepTestView.mc" lineNum="62" pc="268441605" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\ThreeMinuteStepTestView.mc" lineNum="64" pc="268441645" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\ThreeMinuteStepTestView.mc" lineNum="65" pc="268441676" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\ThreeMinuteStepTestView.mc" lineNum="68" pc="268441731" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\ThreeMinuteStepTestView.mc" lineNum="69" pc="268441762" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\ThreeMinuteStepTestView.mc" lineNum="70" pc="268441782" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\ThreeMinuteStepTestView.mc" lineNum="72" pc="268441825" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\ThreeMinuteStepTestView.mc" lineNum="76" pc="268441865" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="29" pc="268441952" symbol="resetVariablesParent"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="30" pc="268441965" symbol="resetVariablesParent"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="31" pc="268441978" symbol="resetVariablesParent"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="32" pc="268441991" symbol="resetVariablesParent"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="33" pc="268442004" symbol="resetVariablesParent"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="35" pc="268442017" symbol="resetVariablesParent"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="36" pc="268442027" symbol="resetVariablesParent"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="37" pc="268442037" symbol="resetVariablesParent"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="42" pc="268442083" symbol="timerPantalla"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="43" pc="268442114" symbol="timerPantalla"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="45" pc="268442180" symbol="timerPantalla"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="47" pc="268442215" symbol="timerPantalla"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="53" pc="268442235" symbol="tiempoTestEnCursoDenido"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="58" pc="268442256" symbol="tiempoTestEnCurso"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="61" pc="268442293" symbol="tiempoTestEnCurso"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="64" pc="268442350" symbol="tiempoTestEnCurso"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="69" pc="268442389" symbol="timerFormat"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="70" pc="268442399" symbol="timerFormat"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="71" pc="268442415" symbol="timerFormat"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="72" pc="268442425" symbol="timerFormat"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="73" pc="268442436" symbol="timerFormat"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="76" pc="268442534" symbol="timerFormat"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="97" pc="268442609" symbol="initialize"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="98" pc="268442632" symbol="initialize"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="99" pc="268442644" symbol="initialize"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="100" pc="268442656" symbol="initialize"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="105" pc="268442677" symbol="resetVariables"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="106" pc="268442687" symbol="resetVariables"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="107" pc="268442704" symbol="resetVariables"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="108" pc="268442721" symbol="resetVariables"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="109" pc="268442738" symbol="resetVariables"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="110" pc="268442755" symbol="resetVariables"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="116" pc="268442775" symbol="onLayout"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="122" pc="268442815" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="123" pc="268442835" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="127" pc="268442852" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="128" pc="268442859" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="129" pc="268442866" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="130" pc="268442873" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="132" pc="268442880" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="133" pc="268442887" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="134" pc="268442894" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="135" pc="268442901" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="138" pc="268442908" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="139" pc="268442921" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="140" pc="268442952" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="142" pc="268442997" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="143" pc="268443028" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="146" pc="268443083" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="147" pc="268443114" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="149" pc="268443154" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="152" pc="268443207" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="153" pc="268443232" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="156" pc="268443257" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="157" pc="268443297" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="159" pc="268443355" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="162" pc="268443380" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="163" pc="268443394" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="165" pc="268443428" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="166" pc="268443459" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="169" pc="268443514" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="170" pc="268443545" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="171" pc="268443559" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="173" pc="268443596" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="177" pc="268443630" symbol="pintarVista"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="182" pc="268443714" symbol="empezarTest"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="184" pc="268443724" symbol="empezarTest"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="185" pc="268443766" symbol="empezarTest"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="191" pc="268443798" symbol="empezarTest"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="193" pc="268443841" symbol="empezarTest"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="194" pc="268443875" symbol="empezarTest"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="195" pc="268443911" symbol="empezarTest"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="197" pc="268443961" symbol="empezarTest"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="202" pc="268443987" symbol="detenerTest"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="203" pc="268443997" symbol="detenerTest"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="204" pc="268444015" symbol="detenerTest"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="205" pc="268444049" symbol="detenerTest"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="208" pc="268444092" symbol="detenerTest"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="212" pc="268444118" symbol="continuarTest"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="213" pc="268444128" symbol="continuarTest"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="217" pc="268444162" symbol="continuarTest"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="218" pc="268444176" symbol="continuarTest"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="220" pc="268444247" symbol="continuarTest"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="223" pc="268444315" symbol="continuarTest"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="224" pc="268444358" symbol="continuarTest"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="228" pc="268444384" symbol="finalizarTest"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="229" pc="268444396" symbol="finalizarTest"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="233" pc="268444422" symbol="timerCallback"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="235" pc="268444445" symbol="timerCallback"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="237" pc="268444464" symbol="timerCallback"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="238" pc="268444492" symbol="timerCallback"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="240" pc="268444511" symbol="timerCallback"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="241" pc="268444530" symbol="timerCallback"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="242" pc="268444552" symbol="timerCallback"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="244" pc="268444577" symbol="timerCallback"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="245" pc="268444609" symbol="timerCallback"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="246" pc="268444641" symbol="timerCallback"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="247" pc="268444667" symbol="timerCallback"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="248" pc="268444705" symbol="timerCallback"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="249" pc="268444731" symbol="timerCallback"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="251" pc="268444763" symbol="timerCallback"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="252" pc="268444773" symbol="timerCallback"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="255" pc="268444823" symbol="timerCallback"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="259" pc="268444842" symbol="onSnsr"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="260" pc="268444855" symbol="onSnsr"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="263" pc="268444880" symbol="onSnsr"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="264" pc="268444893" symbol="onSnsr"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="266" pc="268444918" symbol="onSnsr"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\OneMileWalkTestView.mc" lineNum="267" pc="268444934" symbol="onSnsr"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\MeloMetricsApp.mc" lineNum="45" pc="268444940" symbol="initialize"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\MeloMetricsApp.mc" lineNum="46" pc="268444952" symbol="initialize"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\MeloMetricsApp.mc" lineNum="50" pc="268444973" symbol="resetVariables"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\MeloMetricsApp.mc" lineNum="51" pc="268445003" symbol="resetVariables"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\MeloMetricsApp.mc" lineNum="52" pc="268445019" symbol="resetVariables"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\MeloMetricsApp.mc" lineNum="54" pc="268445049" symbol="resetVariables"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\MeloMetricsApp.mc" lineNum="55" pc="268445066" symbol="resetVariables"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\MeloMetricsApp.mc" lineNum="61" pc="268445082" symbol="getInitialView"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\MeloMetricsApp.mc" lineNum="62" pc="268445089" symbol="getInitialView"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\MainView.mc" lineNum="12" pc="268445161" symbol="initialize"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\MainView.mc" lineNum="14" pc="268445184" symbol="initialize"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\MainView.mc" lineNum="19" pc="268445205" symbol="onLayout"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\MainView.mc" lineNum="26" pc="268445245" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\MainView.mc" lineNum="27" pc="268445265" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\MainDelegate.mc" lineNum="17" pc="268445282" symbol="initialize"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\MainDelegate.mc" lineNum="18" pc="268445305" symbol="initialize"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\MainDelegate.mc" lineNum="19" pc="268445315" symbol="initialize"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\MainDelegate.mc" lineNum="20" pc="268445325" symbol="initialize"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\MainDelegate.mc" lineNum="25" pc="268445346" symbol="onSwipe"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\MainDelegate.mc" lineNum="26" pc="268445373" symbol="onSwipe"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\MainDelegate.mc" lineNum="28" pc="268445415" symbol="onSwipe"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\MainDelegate.mc" lineNum="33" pc="268445433" symbol="onMenu"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\MainDelegate.mc" lineNum="34" pc="268445517" symbol="onMenu"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\MainDelegate.mc" lineNum="39" pc="268445523" symbol="onTap"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\MainDelegate.mc" lineNum="40" pc="268445543" symbol="onTap"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\MainDelegate.mc" lineNum="42" pc="268445607" symbol="onTap"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\MainDelegate.mc" lineNum="44" pc="268445671" symbol="onTap"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\MainDelegate.mc" lineNum="47" pc="268445692" symbol="onTap"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\MainDelegate.mc" lineNum="51" pc="268445698" symbol="onHold"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\MainDelegate.mc" lineNum="52" pc="268445782" symbol="onHold"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\MainDelegate.mc" lineNum="65" pc="268445788" symbol="onNextPage"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\MainDelegate.mc" lineNum="66" pc="268445810" symbol="onNextPage"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\MainDelegate.mc" lineNum="70" pc="268445867" symbol="onPreviousPage"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\MainDelegate.mc" lineNum="71" pc="268445889" symbol="onPreviousPage"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\MainDelegate.mc" lineNum="72" pc="268445906" symbol="onPreviousPage"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\MainDelegate.mc" lineNum="74" pc="268445922" symbol="onPreviousPage"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\MainDelegate.mc" lineNum="75" pc="268445944" symbol="onPreviousPage"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\MainDelegate.mc" lineNum="80" pc="268446013" symbol="getView"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\MainDelegate.mc" lineNum="82" pc="268446013" symbol="getView"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\MainDelegate.mc" lineNum="85" pc="268446024" symbol="getView"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\MainDelegate.mc" lineNum="86" pc="268446053" symbol="getView"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\MainDelegate.mc" lineNum="92" pc="268446083" symbol="getView"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\MainDelegate.mc" lineNum="93" pc="268446112" symbol="getView"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\MainDelegate.mc" lineNum="99" pc="268446142" symbol="getView"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\MainDelegate.mc" lineNum="100" pc="268446171" symbol="getView"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\MainDelegate.mc" lineNum="106" pc="268446190" symbol="getView"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\MainDelegate.mc" lineNum="107" pc="268446219" symbol="getView"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\MainDelegate.mc" lineNum="111" pc="268446235" symbol="getView"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\MainDelegate.mc" lineNum="116" pc="268446241" symbol="getDelegate"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\MainDelegate.mc" lineNum="117" pc="268446256" symbol="getDelegate"/>
+<entry filename="C:\\Users\\Jeison\\git\\tfg\\MeloMetrics\\source\\MainDelegate.mc" lineNum="118" pc="268446284" symbol="getDelegate"/>
+<entry filename="Rez" lineNum="5" pc="268448437" symbol="&lt;init&gt;"/>
+<entry filename="Rez" lineNum="6" pc="268448446" symbol="&lt;init&gt;"/>
+<entry filename="Rez" lineNum="7" pc="268448455" symbol="&lt;init&gt;"/>
+<entry filename="Rez" lineNum="8" pc="268448464" symbol="&lt;init&gt;"/>
+<entry filename="Rez" lineNum="9" pc="268448473" symbol="&lt;init&gt;"/>
+<entry filename="Rez" lineNum="10" pc="268448482" symbol="&lt;init&gt;"/>
+<entry filename="Rez" lineNum="11" pc="268448491" symbol="&lt;init&gt;"/>
+<entry filename="Rez" lineNum="12" pc="268448500" symbol="&lt;init&gt;"/>
+<entry filename="Rez" lineNum="13" pc="268448509" symbol="&lt;init&gt;"/>
+<entry filename="Rez" lineNum="14" pc="268448518" symbol="&lt;init&gt;"/>
+<entry filename="Rez" lineNum="15" pc="268448527" symbol="&lt;init&gt;"/>
+<entry filename="Rez" lineNum="16" pc="268448536" symbol="&lt;init&gt;"/>
+<entry filename="Rez" lineNum="17" pc="268448545" symbol="&lt;init&gt;"/>
+<entry filename="Rez" lineNum="25" pc="268446290" symbol="initialize"/>
+<entry filename="Rez" lineNum="26" pc="268446308" symbol="initialize"/>
+<entry filename="Rez" lineNum="27" pc="268446360" symbol="initialize"/>
+<entry filename="Rez" lineNum="41" pc="268446415" symbol="initialize"/>
+<entry filename="Rez" lineNum="45" pc="268446442" symbol="draw"/>
+<entry filename="Rez" lineNum="46" pc="268446449" symbol="draw"/>
+<entry filename="Rez" lineNum="47" pc="268446456" symbol="draw"/>
+<entry filename="Rez" lineNum="48" pc="268446469" symbol="draw"/>
+<entry filename="Rez" lineNum="49" pc="268446482" symbol="draw"/>
+<entry filename="Rez" lineNum="53" pc="268446507" symbol="drawComplex"/>
+<entry filename="Rez" lineNum="54" pc="268446543" symbol="drawComplex"/>
+<entry filename="Rez" lineNum="55" pc="268446587" symbol="drawComplex"/>
+<entry filename="Rez" lineNum="57" pc="268446623" symbol="drawComplex"/>
+<entry filename="Rez" lineNum="58" pc="268446659" symbol="drawComplex"/>
+<entry filename="Rez" lineNum="60" pc="268446745" symbol="drawComplex"/>
+<entry filename="Rez" lineNum="61" pc="268446781" symbol="drawComplex"/>
+<entry filename="Rez" lineNum="34" pc="268448386" symbol="&lt;init&gt;"/>
+<entry filename="Rez" lineNum="75" pc="268446870" symbol="Vo2maxSpeedLayout"/>
+<entry filename="Rez" lineNum="76" pc="268446884" symbol="Vo2maxSpeedLayout"/>
+<entry filename="Rez" lineNum="77" pc="268447017" symbol="Vo2maxSpeedLayout"/>
+<entry filename="Rez" lineNum="78" pc="268447031" symbol="Vo2maxSpeedLayout"/>
+<entry filename="Rez" lineNum="79" pc="268447164" symbol="Vo2maxSpeedLayout"/>
+<entry filename="Rez" lineNum="80" pc="268447178" symbol="Vo2maxSpeedLayout"/>
+<entry filename="Rez" lineNum="81" pc="268447311" symbol="Vo2maxSpeedLayout"/>
+<entry filename="Rez" lineNum="82" pc="268447325" symbol="Vo2maxSpeedLayout"/>
+<entry filename="Rez" lineNum="83" pc="268447458" symbol="Vo2maxSpeedLayout"/>
+<entry filename="Rez" lineNum="84" pc="268447494" symbol="Vo2maxSpeedLayout"/>
+<entry filename="Rez" lineNum="85" pc="268447505" symbol="Vo2maxSpeedLayout"/>
+<entry filename="Rez" lineNum="87" pc="268447521" symbol="Vo2maxSpeedLayout"/>
+<entry filename="Rez" lineNum="97" pc="268447581" symbol="OneMileWalkTestLayout"/>
+<entry filename="Rez" lineNum="98" pc="268447595" symbol="OneMileWalkTestLayout"/>
+<entry filename="Rez" lineNum="99" pc="268447728" symbol="OneMileWalkTestLayout"/>
+<entry filename="Rez" lineNum="100" pc="268447742" symbol="OneMileWalkTestLayout"/>
+<entry filename="Rez" lineNum="101" pc="268447875" symbol="OneMileWalkTestLayout"/>
+<entry filename="Rez" lineNum="102" pc="268447889" symbol="OneMileWalkTestLayout"/>
+<entry filename="Rez" lineNum="103" pc="268448022" symbol="OneMileWalkTestLayout"/>
+<entry filename="Rez" lineNum="104" pc="268448036" symbol="OneMileWalkTestLayout"/>
+<entry filename="Rez" lineNum="105" pc="268448169" symbol="OneMileWalkTestLayout"/>
+<entry filename="Rez" lineNum="106" pc="268448205" symbol="OneMileWalkTestLayout"/>
+<entry filename="Rez" lineNum="107" pc="268448216" symbol="OneMileWalkTestLayout"/>
+<entry filename="Rez" lineNum="109" pc="268448232" symbol="OneMileWalkTestLayout"/>
 </pcToLineNum>
 <symbolTable>
 <entry id="8389359" symbol="&lt;gre&gt;"/>
 <entry id="8389061" symbol="mMode"/>
 <entry field="true" id="8388831" symbol="SPORT_RUNNING"/>
-<entry id="69" method="true" symbol="OneMileWalkTestLayout"/>
+<entry id="64" method="true" symbol="OneMileWalkTestLayout"/>
 <entry field="true" id="8389423" symbol="DEVICE_STATE_CNT"/>
 <entry field="true" id="8388974" symbol="TONE_ALARM"/>
 <entry id="8388823" method="true" symbol="emptyMailbox"/>
@@ -246,7 +462,7 @@
 <entry id="8389051" method="true" symbol="switchToView"/>
 <entry id="8388638" module="true" symbol="ActivityRecording"/>
 <entry id="8388635" module="true" symbol="Application"/>
-<entry field="true" id="44" symbol="estimacionVo2maxSpeed"/>
+<entry field="true" id="42" symbol="estimacionVo2maxSpeed"/>
 <entry id="8388637" module="true" symbol="Communications"/>
 <entry id="8389330" symbol="december"/>
 <entry field="true" id="8389206" symbol="MSG_ID_LOW_PRIORITY_SEARCH_TIMEOUT"/>
@@ -257,13 +473,14 @@
 <entry field="true" id="8389421" symbol="DEVICE_STATE_SEARCHING"/>
 <entry id="8389115" symbol="mMessage"/>
 <entry field="true" id="8388810" symbol="INVALID_HTTP_HEADER_FIELDS_IN_REQUEST"/>
-<entry field="true" id="79" symbol="menu_label_2"/>
-<entry field="true" id="77" symbol="menu_label_1"/>
+<entry field="true" id="66" symbol="menu_label_2"/>
+<entry field="true" id="65" symbol="menu_label_1"/>
 <entry id="8389644" symbol="defaults"/>
 <entry id="8388924" module="true" symbol="Gregorian"/>
 <entry field="true" id="8389055" symbol="POP_VIEW"/>
 <entry id="8389316" symbol="radians"/>
 <entry field="true" id="8388738" symbol="currentSpeed"/>
+<entry field="true" id="91" symbol="view"/>
 <entry id="8389595" object="true" symbol="Event"/>
 <entry id="8389085" symbol="mDisplayString"/>
 <entry id="8388676" method="true" symbol="testTypeCreation"/>
@@ -277,19 +494,19 @@
 <entry id="8389645" symbol="nextArrow"/>
 <entry field="true" id="8389149" symbol="restingHeartRate"/>
 <entry id="8388644" module="true" symbol="System"/>
-<entry id="9" object="true" symbol="Vo2maxSpeedDelegate"/>
+<entry id="92" symbol="Vo2maxSpeedDelegate"/>
 <entry field="true" id="8388876" symbol="SUB_SPORT_CARDIO_TRAINING"/>
 <entry field="true" id="8389443" symbol="WEIGHT_SCALE_GENDER_MALE"/>
 <entry id="8389358" symbol="&lt;deu&gt;"/>
 <entry id="8389548" symbol="&lt;tha&gt;"/>
 <entry field="true" id="8388807" symbol="BLE_REQUEST_TOO_LARGE"/>
 <entry id="8388819" method="true" symbol="makeImageRequest"/>
-<entry id="62" module="true" symbol="Menus"/>
+<entry id="57" module="true" symbol="Menus"/>
 <entry id="3" module="true" symbol="globals_Rez_Drawables"/>
 <entry id="8388630" module="true" symbol="Toybox_Position"/>
 <entry id="8389354" symbol="&lt;dut&gt;"/>
 <entry id="8388821" method="true" symbol="getMailbox"/>
-<entry field="true" id="26" symbol="PINK"/>
+<entry field="true" id="30" symbol="PINK"/>
 <entry id="8388957" method="true" symbol="enableSensorEvents"/>
 <entry field="true" id="8388811" symbol="INVALID_HTTP_BODY_IN_REQUEST"/>
 <entry field="true" id="8388750" symbol="currentCadence"/>
@@ -311,16 +528,16 @@
 <entry field="true" id="8388808" symbol="BLE_UNKNOWN_SEND_ERROR"/>
 <entry id="8388666" method="true" symbol="testDiv"/>
 <entry field="true" id="8389295" symbol="QUALITY_POOR"/>
-<entry id="39" method="true" symbol="onSnsr"/>
+<entry id="53" method="true" symbol="onSnsr"/>
 <entry id="8388678" method="true" symbol="testBooleanOperations"/>
 <entry id="8389027" object="true" symbol="Menu"/>
 <entry id="8389364" symbol="&lt;pol&gt;"/>
-<entry field="true" id="14" symbol="LT_GRAY"/>
+<entry field="true" id="18" symbol="LT_GRAY"/>
 <entry id="8389306" symbol="lon"/>
 <entry field="true" id="8389035" symbol="NUMBER_PICKER_TIME_MIN_SEC"/>
 <entry id="8389023" object="true" symbol="View"/>
 <entry id="8389087" method="true" symbol="setProgress"/>
-<entry field="true" id="30" symbol="oneMileWalkTestView"/>
+<entry field="true" id="36" symbol="oneMileWalkTestView"/>
 <entry id="8388899" method="true" symbol="log"/>
 <entry field="true" id="8389501" symbol="muscleMass"/>
 <entry id="8389099" method="true" symbol="onHold"/>
@@ -355,7 +572,7 @@
 <entry id="8389184" method="true" symbol="drawLine"/>
 <entry field="true" id="8389250" symbol="timestamp"/>
 <entry id="8388877" method="true" symbol="createSession"/>
-<entry field="true" id="64" symbol="LauncherIcon"/>
+<entry field="true" id="59" symbol="LauncherIcon"/>
 <entry id="8388616" module="true" symbol="Toybox_Communications"/>
 <entry field="true" id="8389380" symbol="OBSCURE_TOP"/>
 <entry field="true" id="8389201" symbol="MSG_ID_SEARCH_TIMEOUT"/>
@@ -389,7 +606,7 @@
 <entry id="8389425" object="true" symbol="Device"/>
 <entry field="true" id="8388833" symbol="SPORT_TRANSITION"/>
 <entry id="8388620" module="true" symbol="Toybox_Time"/>
-<entry id="11" object="true" symbol="OneMileWalkTestDelegate"/>
+<entry id="9" object="true" symbol="OneMileWalkTestDelegate"/>
 <entry id="8389468" symbol="DEVICE_TYPE_GEOCACHE"/>
 <entry field="true" id="8388848" symbol="SPORT_MULTISPORT"/>
 <entry field="true" id="8389593" symbol="REQUEST_CONTENT_TYPE_JSON"/>
@@ -423,14 +640,14 @@
 <entry field="true" id="8388855" symbol="SUB_SPORT_SPIN"/>
 <entry id="8389597" method="true" symbol="scheduleEvent"/>
 <entry id="8388668" method="true" symbol="testBitwiseOr"/>
-<entry field="true" id="55" symbol="timerTest"/>
+<entry field="true" id="83" symbol="timerTest"/>
 <entry id="8389320" symbol="february"/>
 <entry field="true" id="8388838" symbol="SPORT_TENNIS"/>
 <entry field="true" id="8388961" symbol="power"/>
 <entry field="true" id="8388747" symbol="currentHeartRate"/>
-<entry field="true" id="43" symbol="acumuladorVo2maxSpeed"/>
+<entry field="true" id="41" symbol="acumuladorVo2maxSpeed"/>
 <entry field="true" id="8389652" symbol="energyExpenditure"/>
-<entry id="68" method="true" symbol="Vo2maxSpeedLayout"/>
+<entry id="63" method="true" symbol="Vo2maxSpeedLayout"/>
 <entry field="true" id="8388967" symbol="TONE_START"/>
 <entry field="true" id="8389143" symbol="weight"/>
 <entry field="true" id="8389006" symbol="ANIM_TYPE_LINEAR"/>
@@ -444,13 +661,13 @@
 <entry field="true" id="8388735" symbol="currentLocationAccuracy"/>
 <entry id="8388677" method="true" symbol="testTypeConversion"/>
 <entry id="8388942" method="true" symbol="add"/>
-<entry id="8388889" symbol="mIndex"/>
-<entry field="true" id="15" symbol="DK_GRAY"/>
+<entry field="true" id="8388889" symbol="mIndex"/>
+<entry field="true" id="19" symbol="DK_GRAY"/>
 <entry id="8388610" symbol="statics"/>
 <entry id="8389116" method="true" symbol="getHeight"/>
-<entry id="65" object="true" symbol="dosLineasHorizontalesVo2maxSpeedLayout"/>
+<entry id="60" object="true" symbol="dosLineasHorizontalesVo2maxSpeedLayout"/>
 <entry id="8388675" method="true" symbol="testGreaterThanEqual"/>
-<entry field="true" id="48" symbol="testEnEjecucion"/>
+<entry field="true" id="84" symbol="testEnEjecucion"/>
 <entry id="8389393" method="true" symbol="initResources"/>
 <entry id="8388665" method="true" symbol="testMul"/>
 <entry field="true" id="8389404" symbol="elevationUnits"/>
@@ -463,16 +680,16 @@
 <entry id="8389187" method="true" symbol="fillPolygon"/>
 <entry field="true" id="8389210" symbol="MSG_ID_OPEN_CHANNEL"/>
 <entry field="true" id="8389589" symbol="HTTP_REQUEST_METHOD_PUT"/>
-<entry field="true" id="50" symbol="tiempoInicioTest"/>
+<entry field="true" id="78" symbol="tiempoInicioTest"/>
 <entry field="true" id="8389153" symbol="FONT_TINY"/>
 <entry id="8389433" object="true" symbol="CalculatedPower"/>
-<entry field="true" id="71" symbol="esperando"/>
+<entry field="true" id="75" symbol="esperando"/>
 <entry id="8388932" symbol="getDayHash"/>
 <entry id="8389534" module="true" symbol="PersistedLocations"/>
 <entry id="8389656" method="true" symbol="weak"/>
 <entry id="8389347" symbol="color"/>
 <entry id="8389617" object="true" symbol="Picker"/>
-<entry id="59" method="true" symbol="continuarTest"/>
+<entry id="50" method="true" symbol="continuarTest"/>
 <entry field="true" id="8389156" symbol="FONT_LARGE"/>
 <entry id="8389624" symbol="mDefaults"/>
 <entry field="true" id="8389004" symbol="KEY_UP_LEFT"/>
@@ -489,9 +706,10 @@
 <entry id="8389098" method="true" symbol="onTap"/>
 <entry field="true" id="8389416" symbol="BATT_STATUS_INVALID"/>
 <entry field="true" id="8389417" symbol="BATT_STATUS_CNT"/>
+<entry id="86" method="true" symbol="resetVariablesParent"/>
 <entry field="true" id="8389631" symbol="NETWORK_PRIVATE"/>
 <entry id="8388759" object="true" symbol="Long"/>
-<entry field="true" id="17" symbol="RED"/>
+<entry field="true" id="21" symbol="RED"/>
 <entry id="8389654" method="true" object="true" symbol="WeakReference"/>
 <entry id="8388945" method="true" symbol="lessThan"/>
 <entry id="8389581" module="true" symbol="Toybox_Events"/>
@@ -502,8 +720,7 @@
 <entry id="8389188" method="true" symbol="fillRectangle"/>
 <entry id="8388729" object="true" symbol="Info"/>
 <entry id="8389628" method="true" symbol="getDrawable"/>
-<entry id="83" symbol="Vo2maxSpeedDelegateView"/>
-<entry id="63" module="true" symbol="Layouts"/>
+<entry id="58" module="true" symbol="Layouts"/>
 <entry id="8388710" object="true" symbol="Stats"/>
 <entry field="true" id="8389632" symbol="CHANNEL_TYPE_RX_ONLY"/>
 <entry id="8389189" method="true" symbol="fillRoundedRectangle"/>
@@ -514,7 +731,7 @@
 <entry field="true" id="8389591" symbol="HTTP_REQUEST_METHOD_DELETE"/>
 <entry field="true" id="8388999" symbol="KEY_DOWN_LEFT"/>
 <entry id="8388885" method="true" symbol="getGeometry"/>
-<entry field="true" id="18" symbol="DK_RED"/>
+<entry field="true" id="22" symbol="DK_RED"/>
 <entry id="8389082" method="true" symbol="onNextMode"/>
 <entry field="true" id="8389551" symbol="PRESS_TYPE_UP"/>
 <entry id="8389279" method="true" symbol="onStart"/>
@@ -529,6 +746,7 @@
 <entry id="8388956" method="true" symbol="setEnabledSensors"/>
 <entry id="8388619" module="true" symbol="Toybox_ActivityMonitor"/>
 <entry id="8388631" module="true" symbol="Activity"/>
+<entry id="15" object="true" symbol="ParentView2"/>
 <entry id="8389361" symbol="&lt;hrv&gt;"/>
 <entry id="8388896" method="true" symbol="asin"/>
 <entry field="true" id="8388802" symbol="BLE_HOST_TIMEOUT"/>
@@ -538,11 +756,10 @@
 <entry field="true" id="8389037" symbol="NUMBER_PICKER_WEIGHT"/>
 <entry field="true" id="8389406" symbol="heightUnits"/>
 <entry id="8389329" symbol="november"/>
-<entry field="true" id="31" symbol="oneMileWalkTestDelegate"/>
 <entry id="8389325" symbol="july"/>
 <entry field="true" id="8388959" symbol="cadence"/>
 <entry id="8388650" object="true" symbol="Dictionary"/>
-<entry field="true" id="72" symbol="estimacionContinua"/>
+<entry field="true" id="77" symbol="estimacionContinua"/>
 <entry field="true" id="8389611" symbol="LAYOUT_HALIGN_LEFT"/>
 <entry id="8388627" module="true" symbol="Toybox_Graphics"/>
 <entry id="8388767" object="true" symbol="Method"/>
@@ -556,7 +773,7 @@
 <entry id="8389538" object="true" symbol="TextPickerDelegate"/>
 <entry field="true" id="8389381" symbol="OBSCURE_RIGHT"/>
 <entry id="8388714" method="true" symbol="getClockTime"/>
-<entry id="60" method="true" symbol="finalizarTest"/>
+<entry id="51" method="true" symbol="finalizarTest"/>
 <entry id="8388775" method="true" symbol="toNumber"/>
 <entry id="8389554" method="true" symbol="onKeyReleased"/>
 <entry field="true" id="8389672" symbol="screenHeight"/>
@@ -579,25 +796,25 @@
 <entry field="true" id="8388725" symbol="usedMemory"/>
 <entry field="true" id="8389663" symbol="SCREEN_SHAPE_ROUND"/>
 <entry field="true" id="8389453" symbol="WEIGHT_SCALE_ACTIVITY_LEVEL_RESERVED"/>
-<entry field="true" id="53" symbol="tiempoDuracionTest"/>
+<entry field="true" id="81" symbol="tiempoDuracionTest"/>
 <entry id="8388621" module="true" symbol="Toybox_Time_Gregorian"/>
-<entry id="38" method="true" symbol="timerFormat"/>
+<entry id="90" method="true" symbol="timerFormat"/>
 <entry id="8389342" symbol="hours"/>
 <entry id="8389129" symbol="mJustification"/>
 <entry field="true" id="8388748" symbol="averageHeartRate"/>
 <entry id="8389568" method="true" symbol="runTest"/>
 <entry id="8389327" symbol="september"/>
-<entry field="true" id="13" symbol="WHITE"/>
+<entry field="true" id="17" symbol="WHITE"/>
 <entry id="8389132" method="true" symbol="setFont"/>
-<entry field="true" id="21" symbol="GREEN"/>
+<entry field="true" id="25" symbol="GREEN"/>
 <entry field="true" id="8389519" symbol="torque"/>
 <entry field="true" id="8389529" symbol="userProfileSelected"/>
-<entry field="true" id="75" symbol="timer"/>
+<entry field="true" id="70" symbol="timer"/>
 <entry id="8389630" method="true" symbol="getSize"/>
 <entry field="true" id="8389039" symbol="NUMBER_PICKER_CALORIES"/>
 <entry id="8389541" method="true" symbol="onCancel"/>
 <entry field="true" id="8388968" symbol="TONE_STOP"/>
-<entry field="true" id="47" symbol="primeraMuestraVo2maxSpeed"/>
+<entry field="true" id="45" symbol="primeraMuestraVo2maxSpeed"/>
 <entry field="true" id="8389509" symbol="wheelSpeed"/>
 <entry field="true" id="8389244" symbol="deviceNumber"/>
 <entry id="8389467" object="true" symbol="WeightScale"/>
@@ -624,7 +841,7 @@
 <entry id="8389344" symbol="seconds"/>
 <entry field="true" id="8388854" symbol="SUB_SPORT_TRACK"/>
 <entry id="8389432" object="true" symbol="CalculatedCrankCadence"/>
-<entry field="true" id="22" symbol="DK_GREEN"/>
+<entry field="true" id="26" symbol="DK_GREEN"/>
 <entry field="true" id="8388651" symbol="session"/>
 <entry field="true" id="8388868" symbol="SUB_SPORT_OPEN_WATER"/>
 <entry id="8389251" method="true" symbol="getPayload"/>
@@ -638,9 +855,9 @@
 <entry field="true" id="8389225" symbol="MSG_CODE_CHANNEL_ID_NOT_SET"/>
 <entry id="8388773" method="true" symbol="toFloat"/>
 <entry id="8389305" symbol="lat"/>
+<entry id="33" object="true" symbol="MainDelegate"/>
 <entry id="8389235" object="true" symbol="GenericChannel"/>
 <entry field="true" id="8389158" symbol="COLOR_LT_GRAY"/>
-<entry id="61" method="true" symbol="timerVo2maxSpeedCallback"/>
 <entry field="true" id="8389240" symbol="messageId"/>
 <entry id="8389241" symbol="dataLow"/>
 <entry id="8389366" symbol="&lt;rus&gt;"/>
@@ -664,7 +881,7 @@
 <entry id="8388763" object="true" symbol="String"/>
 <entry id="8389469" method="true" symbol="getDownloadProgress"/>
 <entry field="true" id="8389583" symbol="alarmCount"/>
-<entry field="true" id="20" symbol="YELLOW"/>
+<entry field="true" id="24" symbol="YELLOW"/>
 <entry field="true" id="8389047" symbol="SLIDE_DOWN"/>
 <entry field="true" id="8388856" symbol="SUB_SPORT_INDOOR_CYCLING"/>
 <entry field="true" id="8389382" symbol="OBSCURE_BOTTOM"/>
@@ -700,7 +917,7 @@
 <entry id="8389281" method="true" symbol="onStop"/>
 <entry field="true" id="8389429" symbol="BIKE_POWER_SENSOR_TYPE_CRANK_TORQUE"/>
 <entry field="true" id="8389385" symbol="FONT_NUMBER_MILD"/>
-<entry id="41" method="true" symbol="pintarVista"/>
+<entry id="47" method="true" symbol="pintarVista"/>
 <entry id="8388789" method="true" symbol="get"/>
 <entry id="8389465" object="true" symbol="WeightScaleAdvancedReading"/>
 <entry id="8389334" symbol="wednesday"/>
@@ -711,11 +928,11 @@
 <entry field="true" id="8388984" symbol="TONE_ERROR"/>
 <entry field="true" id="8389064" symbol="locX"/>
 <entry field="true" id="8389212" symbol="MSG_ID_BROADCAST_DATA"/>
-<entry field="true" id="81" symbol="mensajeTest3"/>
+<entry field="true" id="68" symbol="mensajeTest3"/>
 <entry field="true" id="8389430" symbol="BIKE_POWER_SENSOR_TYPE_CRANK_TORQUE_FREQUENCY"/>
-<entry field="true" id="78" symbol="mensajeTest2"/>
+<entry field="true" id="69" symbol="mensajeTest2"/>
 <entry id="8388822" method="true" symbol="setMailboxListener"/>
-<entry field="true" id="80" symbol="mensajeTest1"/>
+<entry field="true" id="71" symbol="mensajeTest1"/>
 <entry id="8388657" method="true" symbol="testInheritanceName"/>
 <entry id="8388826" method="true" symbol="next"/>
 <entry id="8389587" method="true" symbol="getErrorMessage"/>
@@ -727,20 +944,21 @@
 <entry field="true" id="8389524" symbol="swRevisionSupplemental"/>
 <entry field="true" id="8388851" symbol="SUB_SPORT_TREADMILL"/>
 <entry id="8389398" method="true" symbol="getDeviceSettings"/>
-<entry id="85" symbol="item_2"/>
-<entry id="84" symbol="item_1"/>
+<entry id="94" symbol="item_2"/>
+<entry id="93" symbol="item_1"/>
 <entry field="true" id="8389238" symbol="network"/>
 <entry id="8388639" module="true" symbol="Graphics"/>
 <entry field="true" id="8389502" symbol="rightPedalIndicator"/>
-<entry field="true" id="25" symbol="PURPLE"/>
+<entry field="true" id="29" symbol="PURPLE"/>
 <entry field="true" id="8388816" symbol="NETWORK_RESPONSE_TOO_LARGE"/>
 <entry field="true" id="8389395" symbol="UNIT_METRIC"/>
-<entry id="37" method="true" symbol="tiempoTestEnCurso"/>
+<entry id="89" method="true" symbol="tiempoTestEnCurso"/>
 <entry id="8389130" symbol="mColor"/>
 <entry id="8388888" symbol="mLocation"/>
 <entry field="true" id="8389500" symbol="hydrationPercentage"/>
 <entry id="8389690" method="true" symbol="getFontDescent"/>
 <entry id="8389283" method="true" symbol="setProperty"/>
+<entry id="8" object="true" symbol="ThreeMinuteStepTestDelegate"/>
 <entry field="true" id="8389089" symbol="MAX_SIZE"/>
 <entry field="true" id="8389401" symbol="is24Hour"/>
 <entry id="8389464" object="true" symbol="WeightScaleBasicReading"/>
@@ -751,7 +969,7 @@
 <entry id="8389285" method="true" symbol="clearProperties"/>
 <entry field="true" id="8388834" symbol="SPORT_FITNESS_EQUIPMENT"/>
 <entry id="8389369" symbol="&lt;spa&gt;"/>
-<entry id="67" object="true" symbol="MainMenu"/>
+<entry id="62" object="true" symbol="MainMenu"/>
 <entry id="8388788" method="true" symbol="put"/>
 <entry id="8389537" object="true" symbol="TextPicker"/>
 <entry id="8389183" method="true" symbol="drawBitmap"/>
@@ -759,6 +977,7 @@
 <entry id="8389441" object="true" symbol="Geocache"/>
 <entry field="true" id="8389054" symbol="PUSH_VIEW"/>
 <entry id="8388664" method="true" symbol="testSub"/>
+<entry id="32" object="true" symbol="MainView"/>
 <entry field="true" id="8388875" symbol="SUB_SPORT_INDOOR_SKIING"/>
 <entry field="true" id="8389270" symbol="messagePeriod"/>
 <entry field="true" id="8389426" symbol="BIKE_POWER_SENSOR_TYPE_NONE"/>
@@ -781,13 +1000,13 @@
 <entry id="8388760" object="true" symbol="Float"/>
 <entry id="8389579" symbol="&lt;zsm&gt;"/>
 <entry id="8389081" method="true" symbol="onBack"/>
-<entry field="true" id="42" symbol="heartRateReserve"/>
+<entry field="true" id="40" symbol="heartRateReserve"/>
 <entry field="true" id="8389044" symbol="SLIDE_IMMEDIATE"/>
 <entry field="true" id="8388757" symbol="currentHeading"/>
 <entry id="8388828" method="true" symbol="onError"/>
 <entry field="true" id="8389104" symbol="event"/>
 <entry field="true" id="8388746" symbol="totalDescent"/>
-<entry id="35" method="true" symbol="timerPantalla"/>
+<entry id="87" method="true" symbol="timerPantalla"/>
 <entry id="8389410" module="true" symbol="AntPlus"/>
 <entry id="8388827" symbol="mOffset"/>
 <entry id="8389135" symbol="mKey"/>
@@ -798,7 +1017,7 @@
 <entry field="true" id="8388993" symbol="KEY_ZOUT"/>
 <entry field="true" id="8389311" symbol="accuracy"/>
 <entry field="true" id="8389218" symbol="MSG_CODE_EVENT_TX"/>
-<entry field="true" id="28" symbol="vo2max"/>
+<entry field="true" id="34" symbol="vo2max"/>
 <entry id="8389277" symbol="mProperties"/>
 <entry field="true" id="8389461" symbol="WEIGHT_SCALE_STATUS_COMPLETE"/>
 <entry id="8389439" object="true" symbol="BikePower"/>
@@ -826,26 +1045,28 @@
 <entry id="8389014" object="true" symbol="ClickEvent"/>
 <entry field="true" id="8388732" symbol="elapsedTime"/>
 <entry field="true" id="8389636" symbol="DEFAULT_NETWORK_KEY"/>
+<entry id="12" object="true" symbol="ParentView"/>
 <entry id="8389256" method="true" symbol="open"/>
 <entry id="8388653" method="true" symbol="testGeometryIterator"/>
 <entry field="true" id="8389063" symbol="identifier"/>
 <entry field="true" id="8389525" symbol="hwRevision"/>
-<entry field="true" id="76" symbol="vo2maxSpeed"/>
+<entry id="55" method="true" symbol="getView"/>
+<entry field="true" id="73" symbol="vo2maxSpeed"/>
 <entry id="6" module="true" symbol="globals_Rez_Layouts"/>
 <entry field="true" id="8389219" symbol="MSG_CODE_EVENT_TRANSFER_RX_FAILED"/>
 <entry id="8389349" symbol="justification"/>
 <entry field="true" id="8388859" symbol="SUB_SPORT_DOWNHILL"/>
 <entry field="true" id="8388744" symbol="maxPower"/>
-<entry field="true" id="73" symbol="hrv"/>
+<entry field="true" id="72" symbol="hrv"/>
 <entry id="8388612" module="true" symbol="Toybox_Test"/>
 <entry id="8389620" symbol="mConfirm"/>
 <entry field="true" id="8389411" symbol="BATT_STATUS_NEW"/>
 <entry id="8389028" object="true" symbol="MenuInputDelegate"/>
-<entry field="true" id="16" symbol="BLACK"/>
+<entry field="true" id="20" symbol="BLACK"/>
 <entry id="8388705" method="true" symbol="callback"/>
 <entry id="8389616" object="true" symbol="PickerDelegate"/>
 <entry field="true" id="8389528" symbol="batteryVoltage"/>
-<entry field="true" id="54" symbol="tiempoDuracionTestMedia"/>
+<entry field="true" id="82" symbol="tiempoDuracionTestMedia"/>
 <entry field="true" id="8389314" symbol="latitude"/>
 <entry id="8388688" method="true" symbol="testSystemError"/>
 <entry id="8388686" method="true" symbol="testLocationDegree"/>
@@ -855,7 +1076,7 @@
 <entry id="8389058" object="true" symbol="Drawable"/>
 <entry field="true" id="8389013" symbol="CLICK_TYPE_RELEASE"/>
 <entry field="true" id="8389077" symbol="BEHAVIOR_ON_PREVIOUS_MODE"/>
-<entry id="57" method="true" symbol="empezarTest"/>
+<entry id="48" method="true" symbol="empezarTest"/>
 <entry id="8389319" symbol="january"/>
 <entry id="8389109" method="true" symbol="onMenuItem"/>
 <entry field="true" id="8389151" symbol="birthYear"/>
@@ -867,8 +1088,9 @@
 <entry field="true" id="8388694" symbol="count1"/>
 <entry id="8389360" symbol="&lt;hun&gt;"/>
 <entry id="8388931" symbol="getMonthHash"/>
-<entry field="true" id="52" symbol="tiempoTestReanudado"/>
-<entry field="true" id="46" symbol="contadorVo2maxSpeedMuestras"/>
+<entry field="true" id="80" symbol="tiempoTestReanudado"/>
+<entry field="true" id="44" symbol="contadorVo2maxSpeedMuestras"/>
+<entry id="14" object="true" symbol="ThreeMinuteStepTestView"/>
 <entry field="true" id="8389146" symbol="sleepTime"/>
 <entry field="true" id="8388996" symbol="KEY_FIND"/>
 <entry field="true" id="8388803" symbol="BLE_SERVER_TIMEOUT"/>
@@ -879,11 +1101,11 @@
 <entry field="true" id="8389074" symbol="BEHAVIOR_ON_MENU"/>
 <entry id="8389052" object="true" symbol="FontResource"/>
 <entry id="8388765" object="true" symbol="Symbol"/>
-<entry field="true" id="19" symbol="ORANGE"/>
+<entry field="true" id="23" symbol="ORANGE"/>
 <entry id="8389284" method="true" symbol="deleteProperty"/>
 <entry field="true" id="8389483" symbol="hint"/>
 <entry field="true" id="8388861" symbol="SUB_SPORT_CYCLOCROSS"/>
-<entry id="36" method="true" symbol="tiempoTestEnCursoDenido"/>
+<entry id="88" method="true" symbol="tiempoTestEnCursoDenido"/>
 <entry id="8389515" method="true" symbol="getCalculatedWheelSpeed"/>
 <entry id="8389533" module="true" symbol="Toybox_PersistedLocations"/>
 <entry id="8388684" object="true" symbol="Object"/>
@@ -904,7 +1126,6 @@
 <entry field="true" id="8389412" symbol="BATT_STATUS_GOOD"/>
 <entry field="true" id="8389222" symbol="MSG_CODE_EVENT_CHANNEL_CLOSED"/>
 <entry field="true" id="8389505" symbol="userProfileId"/>
-<entry field="true" id="33" symbol="vo2maxSpeedDelegate"/>
 <entry id="8388679" method="true" symbol="testObjectLock"/>
 <entry id="8389095" method="true" symbol="addItem"/>
 <entry field="true" id="8389157" symbol="COLOR_WHITE"/>
@@ -915,10 +1136,10 @@
 <entry id="8388693" method="true" symbol="testUserProfile"/>
 <entry id="8388920" object="true" symbol="Moment"/>
 <entry id="8389371" symbol="&lt;cht&gt;"/>
-<entry field="true" id="24" symbol="DK_BLUE"/>
+<entry field="true" id="28" symbol="DK_BLUE"/>
 <entry field="true" id="8388841" symbol="SPORT_WALKING"/>
 <entry field="true" id="8389405" symbol="weightUnits"/>
-<entry id="58" method="true" symbol="detenerTest"/>
+<entry id="49" method="true" symbol="detenerTest"/>
 <entry field="true" id="8389198" symbol="MSG_ID_ASSIGN_CHANNEL"/>
 <entry field="true" id="8388850" symbol="SUB_SPORT_GENERIC"/>
 <entry id="8388818" method="true" symbol="makeJsonRequestNative"/>
@@ -966,7 +1187,7 @@
 <entry field="true" id="8389310" symbol="position"/>
 <entry id="8388633" module="true" symbol="ActivityMonitor"/>
 <entry id="8389249" symbol="thresholdConfiguration"/>
-<entry field="true" id="49" symbol="testDetenido"/>
+<entry field="true" id="85" symbol="testDetenido"/>
 <entry id="8389100" method="true" symbol="onRelease"/>
 <entry id="8389599" method="true" symbol="getEvent"/>
 <entry id="8388709" object="true" symbol="ClockTime"/>
@@ -995,7 +1216,7 @@
 <entry field="true" id="8389056" symbol="SWITCH_VIEW"/>
 <entry field="true" id="8388869" symbol="SUB_SPORT_FLEXIBILITY_TRAINING"/>
 <entry field="true" id="8389386" symbol="FONT_NUMBER_MEDIUM"/>
-<entry field="true" id="56" symbol="mensajeTest"/>
+<entry field="true" id="46" symbol="mensajeTest"/>
 <entry id="8389367" symbol="&lt;slo&gt;"/>
 <entry id="8389345" symbol="rezId"/>
 <entry field="true" id="8389485" symbol="lastTimestamp"/>
@@ -1010,7 +1231,7 @@
 <entry id="8388781" method="true" symbol="hashCode"/>
 <entry field="true" id="8389669" symbol="BUTTON_INPUT_MENU"/>
 <entry id="8389317" symbol="degrees"/>
-<entry field="true" id="70" symbol="spe"/>
+<entry field="true" id="67" symbol="spe"/>
 <entry field="true" id="8389640" symbol="networkKey128Bit"/>
 <entry id="8388636" module="true" symbol="Attention"/>
 <entry field="true" id="8389531" symbol="antfsSupport"/>
@@ -1022,7 +1243,7 @@
 <entry id="8388787" method="true" symbol="equals"/>
 <entry field="true" id="8389144" symbol="gender"/>
 <entry field="true" id="8389211" symbol="MSG_ID_CLOSE_CHANNEL"/>
-<entry id="10" object="true" symbol="OneMileWalkTestView"/>
+<entry id="16" object="true" symbol="OneMileWalkTestView"/>
 <entry id="8389107" method="true" symbol="setBitmap"/>
 <entry id="8388883" method="true" symbol="discard"/>
 <entry id="8389575" symbol="mErrorCode"/>
@@ -1039,7 +1260,7 @@
 <entry id="8389338" symbol="minute"/>
 <entry id="8389086" symbol="mProgressValue"/>
 <entry field="true" id="8389199" symbol="MSG_ID_CHANNEL_ID"/>
-<entry field="true" id="29" symbol="activityrec"/>
+<entry field="true" id="35" symbol="activityrec"/>
 <entry field="true" id="8388836" symbol="SPORT_BASKETBALL"/>
 <entry id="8388626" module="true" symbol="Toybox_UserProfile"/>
 <entry id="8388898" method="true" symbol="cos"/>
@@ -1067,7 +1288,7 @@
 <entry field="true" id="8389266" symbol="DEFAULT_RADIO_FREQUENCY"/>
 <entry field="true" id="8389066" symbol="width"/>
 <entry id="8389078" method="true" symbol="onNextPage"/>
-<entry id="8" object="true" symbol="Vo2maxSpeedView"/>
+<entry id="13" object="true" symbol="Vo2maxSpeedView"/>
 <entry field="true" id="8389296" symbol="QUALITY_USABLE"/>
 <entry id="8389540" method="true" symbol="onTextEntered"/>
 <entry field="true" id="8389168" symbol="COLOR_DK_BLUE"/>
@@ -1080,6 +1301,7 @@
 <entry field="true" id="8389559" symbol="KEY_LAP"/>
 <entry id="8389059" object="true" symbol="Bitmap"/>
 <entry id="8388785" symbol="mHigh"/>
+<entry id="95" symbol="mainView"/>
 <entry id="8389424" object="true" symbol="DeviceState"/>
 <entry field="true" id="8388937" symbol="day_of_week"/>
 <entry id="8389625" method="true" symbol="setOptions"/>
@@ -1088,7 +1310,7 @@
 <entry id="8389111" symbol="mY"/>
 <entry field="true" id="8389009" symbol="ANIM_TYPE_EASE_IN_OUT"/>
 <entry id="8389110" symbol="mX"/>
-<entry field="true" id="23" symbol="BLUE"/>
+<entry field="true" id="27" symbol="BLUE"/>
 <entry id="8389619" method="true" symbol="onSelect"/>
 <entry field="true" id="8388812" symbol="INVALID_HTTP_METHOD_IN_REQUEST"/>
 <entry id="8389182" method="true" symbol="drawRoundedRectangle"/>
@@ -1159,6 +1381,7 @@
 <entry id="8389326" symbol="august"/>
 <entry field="true" id="8388696" symbol="timer1"/>
 <entry field="true" id="8388992" symbol="KEY_ZIN"/>
+<entry field="true" id="38" symbol="threeMinuteStepTestView"/>
 <entry id="8388902" method="true" symbol="sin"/>
 <entry id="8389068" method="true" symbol="draw"/>
 <entry id="8388879" object="true" symbol="Session"/>
@@ -1178,9 +1401,9 @@
 <entry id="8389488" symbol="DEVICE_TYPE_WEIGHT_SCALE"/>
 <entry field="true" id="8389639" symbol="networkKey64Bit"/>
 <entry id="8389179" method="true" symbol="drawEllipse"/>
-<entry id="34" method="true" symbol="resetVariables"/>
+<entry id="39" method="true" symbol="resetVariables"/>
 <entry field="true" id="8389379" symbol="OBSCURE_LEFT"/>
-<entry id="12" object="true" symbol="MeloMetricsMenuDelegate"/>
+<entry id="10" object="true" symbol="MeloMetricsMenuDelegate"/>
 <entry id="8388820" object="true" symbol="MailboxIterator"/>
 <entry field="true" id="8388917" symbol="FORMAT_SHORT"/>
 <entry field="true" id="8389664" symbol="SCREEN_SHAPE_SEMI_ROUND"/>
@@ -1191,6 +1414,7 @@
 <entry id="8388661" method="true" symbol="testBreak"/>
 <entry field="true" id="8388915" symbol="isSleepMode"/>
 <entry id="8389576" method="true" symbol="printStackTrace"/>
+<entry id="52" method="true" symbol="timerCallback"/>
 <entry id="8389022" object="true" symbol="InputEvent"/>
 <entry id="8389627" method="true" symbol="getBackgroundColor"/>
 <entry field="true" id="8389452" symbol="WEIGHT_SCALE_ACTIVITY_LEVEL_6"/>
@@ -1202,11 +1426,12 @@
 <entry field="true" id="8389448" symbol="WEIGHT_SCALE_ACTIVITY_LEVEL_2"/>
 <entry field="true" id="8389447" symbol="WEIGHT_SCALE_ACTIVITY_LEVEL_1"/>
 <entry field="true" id="8389446" symbol="WEIGHT_SCALE_ACTIVITY_LEVEL_0"/>
+<entry id="56" method="true" symbol="getDelegate"/>
 <entry field="true" id="8389387" symbol="FONT_NUMBER_HOT"/>
 <entry id="8389373" symbol="&lt;jpn&gt;"/>
 <entry id="8388762" object="true" symbol="Boolean"/>
 <entry field="true" id="8389164" symbol="COLOR_YELLOW"/>
-<entry field="true" id="82" symbol="prompt"/>
+<entry field="true" id="76" symbol="prompt"/>
 <entry field="true" id="8388907" symbol="MOVE_BAR_LEVEL_MIN"/>
 <entry id="8388674" method="true" symbol="testGreaterThan"/>
 <entry id="8389120" symbol="mLayout"/>
@@ -1240,7 +1465,7 @@
 <entry field="true" id="8389213" symbol="MSG_ID_ACKNOWLEDGED_DATA"/>
 <entry field="true" id="8389224" symbol="MSG_CODE_CHANNEL_IN_WRONG_STATE"/>
 <entry field="true" id="8389221" symbol="MSG_CODE_EVENT_TRANSFER_TX_FAILED"/>
-<entry id="27" object="true" symbol="MeloMetricsApp"/>
+<entry id="31" object="true" symbol="MeloMetricsApp"/>
 <entry id="8389309" method="true" symbol="toGeoString"/>
 <entry id="8388690" method="true" symbol="testMoment"/>
 <entry id="8389024" object="true" symbol="DataField"/>
@@ -1299,8 +1524,8 @@
 <entry id="8389010" object="true" symbol="KeyEvent"/>
 <entry id="8389553" method="true" symbol="onKeyPressed"/>
 <entry field="true" id="8388864" symbol="SUB_SPORT_INDOOR_ROWING"/>
-<entry field="true" id="51" symbol="tiempoTestDetenido"/>
-<entry field="true" id="40" symbol="app"/>
+<entry field="true" id="79" symbol="tiempoTestDetenido"/>
+<entry field="true" id="54" symbol="app"/>
 <entry field="true" id="8388845" symbol="SPORT_ROWING"/>
 <entry field="true" id="8389030" symbol="CONFIRM_YES"/>
 <entry id="8389545" symbol="mWidth"/>
@@ -1319,7 +1544,7 @@
 <entry field="true" id="8389038" symbol="NUMBER_PICKER_HEIGHT"/>
 <entry id="8388702" method="true" symbol="initialize"/>
 <entry field="true" id="8389504" symbol="crankCadence"/>
-<entry id="66" method="true" symbol="drawComplex"/>
+<entry id="61" method="true" symbol="drawComplex"/>
 <entry field="true" id="8389291" symbol="GEO_DMS"/>
 <entry field="true" id="8389665" symbol="SCREEN_SHAPE_RECTANGLE"/>
 <entry field="true" id="8388955" symbol="SENSOR_TEMPERATURE"/>
@@ -1350,7 +1575,7 @@
 <entry id="8389021" method="true" symbol="loadResource"/>
 <entry id="8388764" method="true" symbol="format"/>
 <entry field="true" id="8389428" symbol="BIKE_POWER_SENSOR_TYPE_WHEEL_TORQUE"/>
-<entry field="true" id="32" symbol="vo2maxSpeedView"/>
+<entry field="true" id="37" symbol="vo2maxSpeedView"/>
 <entry id="8388880" method="true" symbol="addLap"/>
 <entry id="8389696" symbol="&lt;kor&gt;"/>
 <entry id="8388660" method="true" symbol="testFetchRegister"/>
@@ -1358,6 +1583,7 @@
 <entry field="true" id="8389507" symbol="activityLevel"/>
 <entry id="8388640" module="true" symbol="Lang"/>
 <entry id="8389333" symbol="tuesday"/>
+<entry id="11" object="true" symbol="MainDelegate2"/>
 <entry field="true" id="8389018" symbol="SWIPE_LEFT"/>
 <entry id="8388682" method="true" symbol="testNaN"/>
 <entry field="true" id="8389444" symbol="WEIGHT_SCALE_GENDER_UNASSIGNED"/>
@@ -1369,151 +1595,112 @@
 <entry id="8389641" method="true" symbol="onEvent"/>
 <entry id="8389126" method="true" symbol="setLayout"/>
 <entry field="true" id="8389274" symbol="searchThreshold"/>
-<entry field="true" id="45" symbol="mediaVo2maxSpeed"/>
+<entry field="true" id="43" symbol="mediaVo2maxSpeed"/>
 <entry field="true" id="8389431" symbol="BIKE_POWER_SENSOR_TYPE_CNT"/>
 </symbolTable>
 <localVars>
-<entry endPc="268436567" name="msgFontSmall" stackId="4" startPc="268435805"/>
-<entry endPc="268436567" name="msgFontMedium" stackId="3" startPc="268435805"/>
-<entry endPc="268436567" name="numFont" stackId="2" startPc="268435805"/>
-<entry endPc="268436567" name="X2" stackId="7" startPc="268435805"/>
-<entry endPc="268436567" name="X1" stackId="6" startPc="268435805"/>
-<entry endPc="268436567" name="Y2" stackId="9" startPc="268435805"/>
-<entry endPc="268436567" name="Y1" stackId="8" startPc="268435805"/>
-<entry endPc="268436567" name="just" stackId="5" startPc="268435805"/>
-<entry endPc="268437677" name="aux" stackId="2" startPc="268437278"/>
-<entry endPc="268437677" name="heartRateReserve" stackId="1" startPc="268437278"/>
-<entry endPc="268437677" name="estimacionVo2maxSpeed" stackId="3" startPc="268437278"/>
-<entry endPc="268438978" name="msgFontSmall" stackId="4" startPc="268438252"/>
-<entry endPc="268438978" name="msgFontMedium" stackId="3" startPc="268438252"/>
-<entry endPc="268438978" name="numFont" stackId="2" startPc="268438252"/>
-<entry endPc="268438978" name="X2" stackId="7" startPc="268438252"/>
-<entry endPc="268438978" name="X1" stackId="6" startPc="268438252"/>
-<entry endPc="268438978" name="Y2" stackId="9" startPc="268438252"/>
-<entry endPc="268438978" name="Y1" stackId="8" startPc="268438252"/>
-<entry endPc="268438978" name="just" stackId="5" startPc="268438252"/>
-<entry endPc="268440288" name="hour" stackId="2" startPc="268440072"/>
-<entry endPc="268440288" name="min" stackId="3" startPc="268440072"/>
-<entry endPc="268440288" name="sec" stackId="4" startPc="268440072"/>
-<entry endPc="268440591" name="pWidth" stackId="4" startPc="268440529"/>
-<entry endPc="268440591" name="pY" stackId="3" startPc="268440529"/>
-<entry endPc="268440591" name="pX" stackId="2" startPc="268440529"/>
-<entry endPc="268440591" name="pHeight" stackId="5" startPc="268440529"/>
-<entry endPc="268441665" name="rez_cmp_local_label_OYGIIL2MV3" stackId="3" startPc="268440957"/>
-<entry endPc="268441665" name="rez_cmp_local_label_6A61QWPDY4" stackId="5" startPc="268440957"/>
-<entry endPc="268441665" name="rez_cmp_local_drawable_reference_dosLineasHorizontalesVo2maxSpeedLayout" stackId="10" startPc="268440957"/>
-<entry endPc="268441665" name="rez_cmp_local_label_H0RM0Q3FVR_font" stackId="8" startPc="268440957"/>
-<entry endPc="268441665" name="rez_cmp_local_label_6A61QWPDY4_font" stackId="4" startPc="268440957"/>
-<entry endPc="268441665" name="rez_cmp_local_label_H0RM0Q3FVR" stackId="9" startPc="268440957"/>
-<entry endPc="268441665" name="rez_cmp_local_label_UL9NGX0QNH_font" stackId="6" startPc="268440957"/>
-<entry endPc="268441665" name="rez_cmp_local_label_OYGIIL2MV3_font" stackId="2" startPc="268440957"/>
-<entry endPc="268441665" name="rez_cmp_local_label_UL9NGX0QNH" stackId="7" startPc="268440957"/>
-<entry endPc="268442376" name="rez_cmp_local_label_C252T5YW72_font" stackId="6" startPc="268441668"/>
-<entry endPc="268442376" name="rez_cmp_local_label_3FBHSTFV96_font" stackId="8" startPc="268441668"/>
-<entry endPc="268442376" name="rez_cmp_local_drawable_reference_dosLineasHorizontalesVo2maxSpeedLayout" stackId="10" startPc="268441668"/>
-<entry endPc="268442376" name="rez_cmp_local_label_C252T5YW72" stackId="7" startPc="268441668"/>
-<entry endPc="268442376" name="rez_cmp_local_label_ZFHGV72WU5_font" stackId="2" startPc="268441668"/>
-<entry endPc="268442376" name="rez_cmp_local_label_ZFHGV72WU5" stackId="3" startPc="268441668"/>
-<entry endPc="268442376" name="rez_cmp_local_label_PTN5IZZRCD" stackId="5" startPc="268441668"/>
-<entry endPc="268442376" name="rez_cmp_local_label_PTN5IZZRCD_font" stackId="4" startPc="268441668"/>
-<entry endPc="268442376" name="rez_cmp_local_label_3FBHSTFV96" stackId="9" startPc="268441668"/>
+<entry endPc="268435773" name="view" stackId="2" startPc="268435624"/>
+<entry endPc="268435925" name="delegate" stackId="2" startPc="268435776"/>
+<entry endPc="268437358" name="view" stackId="2" startPc="268437209"/>
+<entry endPc="268437510" name="delegate" stackId="2" startPc="268437361"/>
+<entry endPc="268438761" name="hour" stackId="2" startPc="268438545"/>
+<entry endPc="268438761" name="min" stackId="3" startPc="268438545"/>
+<entry endPc="268438761" name="sec" stackId="4" startPc="268438545"/>
+<entry endPc="268439867" name="msgFontSmall" stackId="4" startPc="268439008"/>
+<entry endPc="268439867" name="msgFontMedium" stackId="3" startPc="268439008"/>
+<entry endPc="268439867" name="numFont" stackId="2" startPc="268439008"/>
+<entry endPc="268439867" name="X2" stackId="7" startPc="268439008"/>
+<entry endPc="268439867" name="X1" stackId="6" startPc="268439008"/>
+<entry endPc="268439867" name="Y2" stackId="9" startPc="268439008"/>
+<entry endPc="268439867" name="Y1" stackId="8" startPc="268439008"/>
+<entry endPc="268439867" name="just" stackId="5" startPc="268439008"/>
+<entry endPc="268440995" name="aux" stackId="2" startPc="268440578"/>
+<entry endPc="268440995" name="heartRateReserve" stackId="1" startPc="268440578"/>
+<entry endPc="268440995" name="estimacionVo2maxSpeed" stackId="3" startPc="268440578"/>
+<entry endPc="268441946" name="msgFontSmall" stackId="4" startPc="268441220"/>
+<entry endPc="268441946" name="msgFontMedium" stackId="3" startPc="268441220"/>
+<entry endPc="268441946" name="numFont" stackId="2" startPc="268441220"/>
+<entry endPc="268441946" name="X2" stackId="7" startPc="268441220"/>
+<entry endPc="268441946" name="X1" stackId="6" startPc="268441220"/>
+<entry endPc="268441946" name="Y2" stackId="9" startPc="268441220"/>
+<entry endPc="268441946" name="Y1" stackId="8" startPc="268441220"/>
+<entry endPc="268441946" name="just" stackId="5" startPc="268441220"/>
+<entry endPc="268442605" name="hour" stackId="2" startPc="268442389"/>
+<entry endPc="268442605" name="min" stackId="3" startPc="268442389"/>
+<entry endPc="268442605" name="sec" stackId="4" startPc="268442389"/>
+<entry endPc="268443711" name="msgFontSmall" stackId="4" startPc="268442852"/>
+<entry endPc="268443711" name="msgFontMedium" stackId="3" startPc="268442852"/>
+<entry endPc="268443711" name="numFont" stackId="2" startPc="268442852"/>
+<entry endPc="268443711" name="X2" stackId="7" startPc="268442852"/>
+<entry endPc="268443711" name="X1" stackId="6" startPc="268442852"/>
+<entry endPc="268443711" name="Y2" stackId="9" startPc="268442852"/>
+<entry endPc="268443711" name="Y1" stackId="8" startPc="268442852"/>
+<entry endPc="268443711" name="just" stackId="5" startPc="268442852"/>
+<entry endPc="268444839" name="aux" stackId="2" startPc="268444422"/>
+<entry endPc="268444839" name="heartRateReserve" stackId="1" startPc="268444422"/>
+<entry endPc="268444839" name="estimacionVo2maxSpeed" stackId="3" startPc="268444422"/>
+<entry endPc="268445152" name="index" stackId="1" startPc="268445082"/>
+<entry endPc="268445864" name="newIndex" stackId="1" startPc="268445788"/>
+<entry endPc="268446238" name="view" stackId="2" startPc="268446013"/>
+<entry endPc="268446287" name="viewTransicion" stackId="2" startPc="268446241"/>
+<entry endPc="268446287" name="delegate" stackId="3" startPc="268446241"/>
+<entry endPc="268446504" name="pWidth" stackId="4" startPc="268446442"/>
+<entry endPc="268446504" name="pY" stackId="3" startPc="268446442"/>
+<entry endPc="268446504" name="pX" stackId="2" startPc="268446442"/>
+<entry endPc="268446504" name="pHeight" stackId="5" startPc="268446442"/>
+<entry endPc="268447578" name="rez_cmp_local_label_975RNK7H1F_font" stackId="6" startPc="268446870"/>
+<entry endPc="268447578" name="rez_cmp_local_drawable_reference_dosLineasHorizontalesVo2maxSpeedLayout" stackId="10" startPc="268446870"/>
+<entry endPc="268447578" name="rez_cmp_local_label_PBAFG0GPJ6_font" stackId="2" startPc="268446870"/>
+<entry endPc="268447578" name="rez_cmp_local_label_E3EY14PNQR_font" stackId="4" startPc="268446870"/>
+<entry endPc="268447578" name="rez_cmp_local_label_2U97V0MW3I_font" stackId="8" startPc="268446870"/>
+<entry endPc="268447578" name="rez_cmp_local_label_975RNK7H1F" stackId="7" startPc="268446870"/>
+<entry endPc="268447578" name="rez_cmp_local_label_2U97V0MW3I" stackId="9" startPc="268446870"/>
+<entry endPc="268447578" name="rez_cmp_local_label_E3EY14PNQR" stackId="5" startPc="268446870"/>
+<entry endPc="268447578" name="rez_cmp_local_label_PBAFG0GPJ6" stackId="3" startPc="268446870"/>
+<entry endPc="268448289" name="rez_cmp_local_drawable_reference_dosLineasHorizontalesVo2maxSpeedLayout" stackId="10" startPc="268447581"/>
+<entry endPc="268448289" name="rez_cmp_local_label_8GO64JNHZI_font" stackId="2" startPc="268447581"/>
+<entry endPc="268448289" name="rez_cmp_local_label_H00WDRKRTF" stackId="9" startPc="268447581"/>
+<entry endPc="268448289" name="rez_cmp_local_label_R7MGMVVE6K" stackId="7" startPc="268447581"/>
+<entry endPc="268448289" name="rez_cmp_local_label_H00WDRKRTF_font" stackId="8" startPc="268447581"/>
+<entry endPc="268448289" name="rez_cmp_local_label_2QGZI7XDV4" stackId="5" startPc="268447581"/>
+<entry endPc="268448289" name="rez_cmp_local_label_R7MGMVVE6K_font" stackId="6" startPc="268447581"/>
+<entry endPc="268448289" name="rez_cmp_local_label_8GO64JNHZI" stackId="3" startPc="268447581"/>
+<entry endPc="268448289" name="rez_cmp_local_label_2QGZI7XDV4_font" stackId="4" startPc="268447581"/>
 </localVars>
 <annotations/>
 <functions>
-<functionEntry name="resetVariables" parent="Vo2maxSpeedView">
+<functionEntry name="initialize" parent="ThreeMinuteStepTestDelegate">
+<param id="index"/>
 <documentation/>
 </functionEntry>
-<functionEntry name="initialize" parent="Vo2maxSpeedView">
+<functionEntry name="onMenu" parent="ThreeMinuteStepTestDelegate">
 <documentation/>
 </functionEntry>
-<functionEntry name="onLayout" parent="Vo2maxSpeedView">
-<param id="dc"/>
-<documentation><![CDATA[<div class="description"> Load your resources here<br/></div>]]></documentation>
-</functionEntry>
-<functionEntry name="onUpdate" parent="Vo2maxSpeedView">
-<param id="dc"/>
-<documentation><![CDATA[<div class="description"> Update the view<br/></div>]]></documentation>
-</functionEntry>
-<functionEntry name="pintarVista" parent="Vo2maxSpeedView">
-<param id="dc"/>
+<functionEntry name="getView" parent="ThreeMinuteStepTestDelegate">
+<param id="mIndex"/>
 <documentation/>
 </functionEntry>
-<functionEntry name="empezarTest" parent="Vo2maxSpeedView">
+<functionEntry name="getDelegate" parent="ThreeMinuteStepTestDelegate">
+<param id="mIndex"/>
 <documentation/>
 </functionEntry>
-<functionEntry name="detenerTest" parent="Vo2maxSpeedView">
+<functionEntry name="onNextPage" parent="ThreeMinuteStepTestDelegate">
 <documentation/>
 </functionEntry>
-<functionEntry name="continuarTest" parent="Vo2maxSpeedView">
+<functionEntry name="onPreviousPage" parent="ThreeMinuteStepTestDelegate">
 <documentation/>
 </functionEntry>
-<functionEntry name="finalizarTest" parent="Vo2maxSpeedView">
-<documentation/>
-</functionEntry>
-<functionEntry name="timerVo2maxSpeedCallback" parent="Vo2maxSpeedView">
-<documentation/>
-</functionEntry>
-<functionEntry name="initialize" parent="Vo2maxSpeedDelegate">
-<documentation/>
-</functionEntry>
-<functionEntry name="onMenu" parent="Vo2maxSpeedDelegate">
-<documentation/>
-</functionEntry>
-<functionEntry name="onNextPage" parent="Vo2maxSpeedDelegate">
-<documentation/>
-</functionEntry>
-<functionEntry name="onPreviousPage" parent="Vo2maxSpeedDelegate">
-<documentation/>
-</functionEntry>
-<functionEntry name="onBack" parent="Vo2maxSpeedDelegate">
-<documentation/>
-</functionEntry>
-<functionEntry name="onNextMode" parent="Vo2maxSpeedDelegate">
-<documentation/>
-</functionEntry>
-<functionEntry name="onPreviousMode" parent="Vo2maxSpeedDelegate">
-<documentation/>
-</functionEntry>
-<functionEntry name="onTap" parent="Vo2maxSpeedDelegate">
+<functionEntry name="onSwipe" parent="ThreeMinuteStepTestDelegate">
 <param id="evt"/>
 <documentation/>
 </functionEntry>
-<functionEntry name="onHold" parent="Vo2maxSpeedDelegate">
+<functionEntry name="onTap" parent="ThreeMinuteStepTestDelegate">
 <param id="evt"/>
 <documentation/>
 </functionEntry>
-<functionEntry name="onRelease" parent="Vo2maxSpeedDelegate">
+<functionEntry name="onHold" parent="ThreeMinuteStepTestDelegate">
 <param id="evt"/>
 <documentation/>
-</functionEntry>
-<functionEntry name="onSwipe" parent="Vo2maxSpeedDelegate">
-<param id="evt"/>
-<documentation/>
-</functionEntry>
-<functionEntry name="onKey" parent="Vo2maxSpeedDelegate">
-<param id="evt"/>
-<documentation/>
-</functionEntry>
-<functionEntry name="initialize" parent="OneMileWalkTestView">
-<documentation/>
-</functionEntry>
-<functionEntry name="onLayout" parent="OneMileWalkTestView">
-<param id="dc"/>
-<documentation><![CDATA[<div class="description"> Load your resources here<br/></div>]]></documentation>
-</functionEntry>
-<functionEntry name="onShow" parent="OneMileWalkTestView">
-<documentation><![CDATA[<div class="description"> Called when this View is brought to the foreground. Restore<br/> the state of this View and prepare it to be shown. This includes<br/> loading resources into memory.<br/></div>]]></documentation>
-</functionEntry>
-<functionEntry name="onUpdate" parent="OneMileWalkTestView">
-<param id="dc"/>
-<documentation><![CDATA[<div class="description"> Update the view<br/></div>]]></documentation>
-</functionEntry>
-<functionEntry name="pintarVista" parent="OneMileWalkTestView">
-<param id="dc"/>
-<documentation/>
-</functionEntry>
-<functionEntry name="onHide" parent="OneMileWalkTestView">
-<documentation><![CDATA[<div class="description"> Called when this View is removed from the screen. Save the<br/> state of this View here. This includes freeing resources from<br/> memory.<br/></div>]]></documentation>
 </functionEntry>
 <functionEntry name="initialize" parent="OneMileWalkTestDelegate">
 <documentation/>
@@ -1563,6 +1750,166 @@
 <param id="item"/>
 <documentation/>
 </functionEntry>
+<functionEntry name="initialize" parent="MainDelegate2">
+<param id="index"/>
+<documentation/>
+</functionEntry>
+<functionEntry name="onMenu" parent="MainDelegate2">
+<documentation/>
+</functionEntry>
+<functionEntry name="getView" parent="MainDelegate2">
+<param id="mIndex"/>
+<documentation/>
+</functionEntry>
+<functionEntry name="getDelegate" parent="MainDelegate2">
+<param id="mIndex"/>
+<documentation/>
+</functionEntry>
+<functionEntry name="onNextPage" parent="MainDelegate2">
+<documentation/>
+</functionEntry>
+<functionEntry name="onPreviousPage" parent="MainDelegate2">
+<documentation/>
+</functionEntry>
+<functionEntry name="onSwipe" parent="MainDelegate2">
+<param id="evt"/>
+<documentation/>
+</functionEntry>
+<functionEntry name="onTap" parent="MainDelegate2">
+<param id="evt"/>
+<documentation/>
+</functionEntry>
+<functionEntry name="onHold" parent="MainDelegate2">
+<param id="evt"/>
+<documentation/>
+</functionEntry>
+<functionEntry name="resetVariablesParent" parent="ParentView">
+<documentation/>
+</functionEntry>
+<functionEntry name="timerPantalla" parent="ParentView">
+<documentation/>
+</functionEntry>
+<functionEntry name="tiempoTestEnCursoDenido" parent="ParentView">
+<documentation/>
+</functionEntry>
+<functionEntry name="tiempoTestEnCurso" parent="ParentView">
+<documentation/>
+</functionEntry>
+<functionEntry name="timerFormat" parent="ParentView">
+<param id="time"/>
+<documentation/>
+</functionEntry>
+<functionEntry name="initialize" parent="Vo2maxSpeedView">
+<documentation/>
+</functionEntry>
+<functionEntry name="resetVariables" parent="Vo2maxSpeedView">
+<documentation/>
+</functionEntry>
+<functionEntry name="onLayout" parent="Vo2maxSpeedView">
+<param id="dc"/>
+<documentation><![CDATA[<div class="description"> Load your resources here<br/></div>]]></documentation>
+</functionEntry>
+<functionEntry name="onUpdate" parent="Vo2maxSpeedView">
+<param id="dc"/>
+<documentation><![CDATA[<div class="description"> Update the view<br/></div>]]></documentation>
+</functionEntry>
+<functionEntry name="pintarVista" parent="Vo2maxSpeedView">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry name="empezarTest" parent="Vo2maxSpeedView">
+<documentation/>
+</functionEntry>
+<functionEntry name="detenerTest" parent="Vo2maxSpeedView">
+<documentation/>
+</functionEntry>
+<functionEntry name="continuarTest" parent="Vo2maxSpeedView">
+<documentation/>
+</functionEntry>
+<functionEntry name="finalizarTest" parent="Vo2maxSpeedView">
+<documentation/>
+</functionEntry>
+<functionEntry name="timerCallback" parent="Vo2maxSpeedView">
+<documentation/>
+</functionEntry>
+<functionEntry name="onSnsr" parent="Vo2maxSpeedView">
+<param id="sensor_info"/>
+<documentation/>
+</functionEntry>
+<functionEntry name="initialize" parent="ThreeMinuteStepTestView">
+<documentation/>
+</functionEntry>
+<functionEntry name="onLayout" parent="ThreeMinuteStepTestView">
+<param id="dc"/>
+<documentation><![CDATA[<div class="description"> Load your resources here<br/></div>]]></documentation>
+</functionEntry>
+<functionEntry name="onShow" parent="ThreeMinuteStepTestView">
+<documentation><![CDATA[<div class="description"> Called when this View is brought to the foreground. Restore<br/> the state of this View and prepare it to be shown. This includes<br/> loading resources into memory.<br/></div>]]></documentation>
+</functionEntry>
+<functionEntry name="onUpdate" parent="ThreeMinuteStepTestView">
+<param id="dc"/>
+<documentation><![CDATA[<div class="description"> Update the view<br/></div>]]></documentation>
+</functionEntry>
+<functionEntry name="pintarVista" parent="ThreeMinuteStepTestView">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry name="onHide" parent="ThreeMinuteStepTestView">
+<documentation><![CDATA[<div class="description"> Called when this View is removed from the screen. Save the<br/> state of this View here. This includes freeing resources from<br/> memory.<br/></div>]]></documentation>
+</functionEntry>
+<functionEntry name="resetVariablesParent" parent="ParentView2">
+<documentation/>
+</functionEntry>
+<functionEntry name="timerPantalla" parent="ParentView2">
+<documentation/>
+</functionEntry>
+<functionEntry name="tiempoTestEnCursoDenido" parent="ParentView2">
+<documentation/>
+</functionEntry>
+<functionEntry name="tiempoTestEnCurso" parent="ParentView2">
+<documentation/>
+</functionEntry>
+<functionEntry name="timerFormat" parent="ParentView2">
+<param id="time"/>
+<documentation/>
+</functionEntry>
+<functionEntry name="initialize" parent="OneMileWalkTestView">
+<documentation/>
+</functionEntry>
+<functionEntry name="resetVariables" parent="OneMileWalkTestView">
+<documentation/>
+</functionEntry>
+<functionEntry name="onLayout" parent="OneMileWalkTestView">
+<param id="dc"/>
+<documentation><![CDATA[<div class="description"> Load your resources here<br/></div>]]></documentation>
+</functionEntry>
+<functionEntry name="onUpdate" parent="OneMileWalkTestView">
+<param id="dc"/>
+<documentation><![CDATA[<div class="description"> Update the view<br/></div>]]></documentation>
+</functionEntry>
+<functionEntry name="pintarVista" parent="OneMileWalkTestView">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry name="empezarTest" parent="OneMileWalkTestView">
+<documentation/>
+</functionEntry>
+<functionEntry name="detenerTest" parent="OneMileWalkTestView">
+<documentation/>
+</functionEntry>
+<functionEntry name="continuarTest" parent="OneMileWalkTestView">
+<documentation/>
+</functionEntry>
+<functionEntry name="finalizarTest" parent="OneMileWalkTestView">
+<documentation/>
+</functionEntry>
+<functionEntry name="timerCallback" parent="OneMileWalkTestView">
+<documentation/>
+</functionEntry>
+<functionEntry name="onSnsr" parent="OneMileWalkTestView">
+<param id="sensor_info"/>
+<documentation/>
+</functionEntry>
 <functionEntry name="initialize" parent="MeloMetricsApp">
 <documentation/>
 </functionEntry>
@@ -1578,21 +1925,49 @@
 <functionEntry name="onStop" parent="MeloMetricsApp">
 <documentation><![CDATA[<div class="description"> onStop() is called when your application is exiting<br/></div>]]></documentation>
 </functionEntry>
-<functionEntry name="timerPantalla" parent="MeloMetricsApp">
+<functionEntry name="initialize" parent="MainView">
 <documentation/>
 </functionEntry>
-<functionEntry name="tiempoTestEnCursoDenido" parent="MeloMetricsApp">
+<functionEntry name="onLayout" parent="MainView">
+<param id="dc"/>
+<documentation><![CDATA[<div class="description"> Load your resources here<br/></div>]]></documentation>
+</functionEntry>
+<functionEntry name="onUpdate" parent="MainView">
+<param id="dc"/>
+<documentation><![CDATA[<div class="description"> Update the view<br/></div>]]></documentation>
+</functionEntry>
+<functionEntry name="initialize" parent="MainDelegate">
+<param id="index"/>
+<param id="viewQueControla"/>
 <documentation/>
 </functionEntry>
-<functionEntry name="tiempoTestEnCurso" parent="MeloMetricsApp">
+<functionEntry name="onSwipe" parent="MainDelegate">
+<param id="evt"/>
 <documentation/>
 </functionEntry>
-<functionEntry name="timerFormat" parent="MeloMetricsApp">
-<param id="time"/>
+<functionEntry name="onMenu" parent="MainDelegate">
 <documentation/>
 </functionEntry>
-<functionEntry name="onSnsr" parent="MeloMetricsApp">
-<param id="sensor_info"/>
+<functionEntry name="onTap" parent="MainDelegate">
+<param id="evt"/>
+<documentation/>
+</functionEntry>
+<functionEntry name="onHold" parent="MainDelegate">
+<param id="evt"/>
+<documentation/>
+</functionEntry>
+<functionEntry name="onNextPage" parent="MainDelegate">
+<documentation/>
+</functionEntry>
+<functionEntry name="onPreviousPage" parent="MainDelegate">
+<documentation/>
+</functionEntry>
+<functionEntry name="getView" parent="MainDelegate">
+<param id="index"/>
+<documentation/>
+</functionEntry>
+<functionEntry name="getDelegate" parent="MainDelegate">
+<param id="index"/>
 <documentation/>
 </functionEntry>
 <functionEntry name="initialize" parent="MainMenu">

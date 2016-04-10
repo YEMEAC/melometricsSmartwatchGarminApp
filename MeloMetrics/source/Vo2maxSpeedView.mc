@@ -6,23 +6,10 @@ using Toybox.ActivityMonitor as ActivityMonitor;
 using Toybox.ActivityRecording as ActivityRecording;
 using Toybox.Activity as Activity;
 
-class Vo2maxSpeedView extends Ui.View {
+
+class ParentView extends Ui.View{
 
 	var app;
-	//Vo2maxSpeed runninIndex index
-	var	maxHeartRate;
-	var heartRateReserve;
-	var restingHeartRate;
-	var acumuladorVo2maxSpeed;
-	var estimacionVo2maxSpeed;
-	var mediaVo2maxSpeed;
-	var contadorVo2maxSpeedMuestras;
-	var primeraMuestraVo2maxSpeed;
-	
-	//estado del test
-	var testEnEjecucion;
-	var	testDetenido;
-
 	//variables para controlar tiempo/timer
 	var tiempoInicioTest;
 	var tiempoTestDetenido;
@@ -33,17 +20,12 @@ class Vo2maxSpeedView extends Ui.View {
 	var tiempoDuracionTestMedia;
 	var timerTest;
 	
-	var mensajeTest;
-	
-	function resetVariables(){
-		//Vo2maxSpeed running index stuff	
-		primeraMuestraVo2maxSpeed=true;
-		maxHeartRate=186.0d;
-		restingHeartRate=55.0d;
-		heartRateReserve=0.0d;
-		acumuladorVo2maxSpeed=0.0d;
-		contadorVo2maxSpeedMuestras=0.0d;
-		
+	//estado del test
+	var testEnEjecucion;
+	var	testDetenido;
+
+
+function resetVariablesParent(){
 		tiempoInicioTest=0;
 		tiempoTestDetenido=0;
 		tiempoTestReanudado=0;
@@ -53,17 +35,85 @@ class Vo2maxSpeedView extends Ui.View {
 		testEnEjecucion=false;
 		testDetenido=false;
 		mensajeTest = Ui.loadResource(Rez.Strings.mensajeTest1);
-	}
-	
-    function initialize() {
-    	app = App.getApp();
-        View.initialize();
+
+}
+
+function timerPantalla() {
+    	if(testEnEjecucion==true && testDetenido==false){
+			return timerFormat(tiempoDuracionTest-tiempoTestEnCurso());	
+		}else if(testEnEjecucion==true && testDetenido==true){
+			return timerFormat(tiempoDuracionTest-tiempoTestEnCursoDenido());
+		}else{
+			return timerFormat(0);
+		}
+    }
+    
+    //return cuando tiempo lleva denido el test
+    function tiempoTestEnCursoDenido(){
+    	return tiempoTestDetenido-tiempoInicioTest;
+    }
+    
+    function tiempoTestEnCurso(){
+    	//si el test se ha denido 
+    	if(tiempoTestDetenido>0 && tiempoTestReanudado>0){
+    		//el tiempo que lleva en curso es al actual - el de inicio pero sumandole el tiempo que estuvo parado
+			//para que no cuente el tiempo parado como si hubiera estado en curso
+    		return Time.now().value() - (tiempoInicioTest+(tiempoTestReanudado-tiempoTestDetenido));
+    	}else{
+    		//si nunca se pa detenido es al actual - el inicio
+    		return Time.now().value() - tiempoInicioTest;
+    	}
+    }
+    
+    function timerFormat(time) {
+    	var hour = time / 3600;
+		var min = (time / 60) % 60;
+		var sec = time % 60;
+		if(0 < hour) {
+			return format("$1$:$2$:$3$",[hour.format("%01d"),min.format("%02d"),sec.format("%02d")]);
+		}
+		else {
+			return format("$1$:$2$",[min.format("%02d"),sec.format("%02d")]);
+		}
     }
 
+}
+
+class Vo2maxSpeedView extends ParentView {
+
+	//Vo2maxSpeed runninIndex index
+	var	maxHeartRate;
+	var heartRateReserve;
+	var restingHeartRate;
+	var acumuladorVo2maxSpeed;
+	var estimacionVo2maxSpeed;
+	var mediaVo2maxSpeed;
+	var contadorVo2maxSpeedMuestras;
+	var primeraMuestraVo2maxSpeed;
+	
+	var mensajeTest;
+	
+	 function initialize() {
+    	app = App.getApp();
+    	resetVariablesParent();
+    	resetVariables();
+        View.initialize();
+    }
+    
+	function resetVariables(){
+		//Vo2maxSpeed running index stuff	
+		primeraMuestraVo2maxSpeed=true;
+		maxHeartRate=186.0d;
+		restingHeartRate=55.0d;
+		heartRateReserve=0.0d;
+		acumuladorVo2maxSpeed=0.0d;
+		contadorVo2maxSpeedMuestras=0.0d;
+		
+	}
+	
     //! Load your resources here
     function onLayout(dc) {
-        setLayout(Rez.Layouts.Vo2maxSpeedLayout(dc));
-		
+        setLayout(Rez.Layouts.Vo2maxSpeedLayout(dc));	
     }
 
     //! Update the view
@@ -94,12 +144,18 @@ class Vo2maxSpeedView extends Ui.View {
     	}
     	
     	dc.setColor(WHITE, -1);
-    	if(testEnEjecucion){
+    	if(testEnEjecucion && Snsr.getInfo().heartRate!=null){
     		//sino esta ene ejecucion el sensor esta apagado y no puede hacer getinfo
 			dc.drawText(X1, Y1, numFont, Snsr.getInfo().heartRate.toString(), just);
-			dc.drawText(X1, Y2, numFont, Snsr.getInfo().speed.format("%.2f") , just);
+
 		}else{
 			dc.drawText(X1, Y1, numFont, "000", just);
+			dc.drawText(X1, Y2, numFont, "00.00" , just);
+		}
+		
+		if(testEnEjecucion && Snsr.getInfo().speed!=null){	
+			dc.drawText(X1, Y2, numFont, Snsr.getInfo().speed.format("%.2f") , just);
+		}else{
 			dc.drawText(X1, Y2, numFont, "00.00" , just);
 		}
 		
@@ -136,7 +192,7 @@ class Vo2maxSpeedView extends Ui.View {
     	 	
     	tiempoInicioTest=Time.now().value();
     	timerTest= new Timer.Timer();
-    	timerTest.start(method(:timerVo2maxSpeedCallback),tiempoDuracionTest*1000,false);
+    	timerTest.start(method(:timerCallback),tiempoDuracionTest*1000,false);
     	 	
     	System.println("Empezando test Vo2maxSpeed");
     }
@@ -159,9 +215,9 @@ class Vo2maxSpeedView extends Ui.View {
     	//se reinicia el timer que llama a la funcion callback de finalizartest, al tiempo de duracion del test
 		//se le resta se le resta el tiempo que el test llevaba ejecutandose
 		if(primeraMuestraVo2maxSpeed==true){
-    		timerTest.start(method(:timerVo2maxSpeedCallback),(tiempoDuracionTest -(tiempoTestDetenido-tiempoInicioTest))*1000,false);
+    		timerTest.start(method(:timerCallback),(tiempoDuracionTest -(tiempoTestDetenido-tiempoInicioTest))*1000,false);
     	}else{
-    		timerTest.start(method(:timerVo2maxSpeedCallback),(tiempoDuracionTestMedia -(tiempoTestDetenido-tiempoInicioTest))*1000,false);
+    		timerTest.start(method(:timerCallback),(tiempoDuracionTestMedia -(tiempoTestDetenido-tiempoInicioTest))*1000,false);
     	}
     	
     	mensajeTest = Ui.loadResource(Rez.Strings.mensajeTest2);
@@ -173,13 +229,13 @@ class Vo2maxSpeedView extends Ui.View {
     	System.println("Finalizar test");
     }
     
-    function timerVo2maxSpeedCallback(){	
+    function timerCallback(){	
     	System.println("Estimacion VO2Max Speed");
     	
     	var heartRateReserve=maxHeartRate-restingHeartRate;	
     	//aux=current runnig heart rate as a percentage of hr reserve
-    	var aux=(heartRate-restingHeartRate)/heartRateReserve;
-    	var estimacionVo2maxSpeed=speed/aux;
+    	var aux=(app.heartRate-restingHeartRate)/heartRateReserve;
+    	var estimacionVo2maxSpeed=app.speed/aux;
     	
 		acumuladorVo2maxSpeed=acumuladorVo2maxSpeed+estimacionVo2maxSpeed;
 		contadorVo2maxSpeedMuestras=contadorVo2maxSpeedMuestras+1;
@@ -188,15 +244,30 @@ class Vo2maxSpeedView extends Ui.View {
 		System.println("max hr "+maxHeartRate);
 		System.println("resting hr "+restingHeartRate);
 		System.println("reserve hr "+heartRateReserve);
-		System.println("current hr "+heartRate);
+		System.println("current hr "+app.heartRate);
 		System.println("percent. of hr reserve "+ aux);
 		System.println("Vo2maxSpeed "+ mediaVo2maxSpeed);
 
 		primeraMuestraVo2maxSpeed=false;
-    	timerTest.start(method(:timerVo2maxSpeedCallback),tiempoDuracionTestMedia*1000,false);
+    	timerTest.start(method(:timerCallback),tiempoDuracionTestMedia*1000,false);
     	//finalizarTest();
     	//timerTest.stop();
     	Ui.requestUpdate();
     }
-    
+     
+    function onSnsr(sensor_info){
+    	if(sensor_info.heartRate!=null){
+    		app.heartRate=sensor_info.heartRate;
+    	}
+    	
+    	if(sensor_info.speed!=null){
+    		app.speed=sensor_info.speed;
+    	}
+    	Ui.requestUpdate();
+    	return true; 
+    }  
 }
+
+
+
+

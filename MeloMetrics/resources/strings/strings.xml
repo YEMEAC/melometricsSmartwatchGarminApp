@@ -1,21 +1,21 @@
 <strings>
-    <string id="AppName">MeloMetrics</string>
+	<string id="AppName">MeloMetrics</string>
 
-    <string id="prompt">Click the menu button</string>
+	<string id="prompt">Click the menu button</string>
 
-    <string id="menu_label_1">Item 1</string>
-    <string id="menu_label_2">Item 2</string>
-    
-    
-    <string id="vo2maxSpeed"> VO2max Speed</string>
-    <string id="hrv">HRV</string>
-    <string id="spe">SPD</string>
-    <string id="timer">TIMER</string>
-    
-     <string id="mensajeTest1">Tab to start test</string>
-     <string id="mensajeTest2">Corre, capturando datos</string>
-     <string id="mensajeTest3">Tab to restart the test</string>
-     <string id="esperando">Esperando</string>
-      <string id="estimacionContinua">Estimación continua</string>
-    
+	<string id="menu_label_1">Item 1</string>
+	<string id="menu_label_2">Item 2</string>
+
+
+	<string id="vo2maxSpeed"> VO2max Speed</string>
+	<string id="hrv">HRV</string>
+	<string id="spe">SPD</string>
+	<string id="timer">TIMER</string>
+
+	<string id="mensajeTest1">Tab to start test</string>
+	<string id="mensajeTest2">Corre, capturando datos</string>
+	<string id="mensajeTest3">Tab to restart the test</string>
+	<string id="esperando">Esperando</string>
+	<string id="estimacionContinua">Estimación continua</string>
+
 </strings>
