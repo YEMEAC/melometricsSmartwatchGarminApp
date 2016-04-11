@@ -23,6 +23,8 @@ class ParentView extends Ui.View{
 	//estado del test
 	var testEnEjecucion;
 	var	testDetenido;
+	
+	var  activityrec;
 
 
 function resetVariablesParent(){
@@ -86,7 +88,6 @@ class Vo2maxSpeedView extends ParentView {
 	var heartRateReserve;
 	var restingHeartRate;
 	var acumuladorVo2maxSpeed;
-	var estimacionVo2maxSpeed;
 	var mediaVo2maxSpeed;
 	var contadorVo2maxSpeedMuestras;
 	var primeraMuestraVo2maxSpeed;
@@ -174,7 +175,7 @@ class Vo2maxSpeedView extends ParentView {
 		}
 		
 		
-		System.println(app.heartRate + " - " + app.speed + " - " + Activity.getActivityInfo().currentHeartRate );
+		//System.println(app.heartRate + " - " + app.speed + " - " + Activity.getActivityInfo().currentHeartRate );
     }
 
     
@@ -217,7 +218,7 @@ class Vo2maxSpeedView extends ParentView {
 		if(primeraMuestraVo2maxSpeed==true){
     		timerTest.start(method(:timerCallback),(tiempoDuracionTest -(tiempoTestDetenido-tiempoInicioTest))*1000,false);
     	}else{
-    		timerTest.start(method(:timerCallback),(tiempoDuracionTestMedia -(tiempoTestDetenido-tiempoInicioTest))*1000,false);
+    		timerTest.start(method(:timerCallback),1*1000,false);
     	}
     	
     	mensajeTest = Ui.loadResource(Rez.Strings.mensajeTest2);
@@ -225,13 +226,14 @@ class Vo2maxSpeedView extends ParentView {
     }
     
     function finalizarTest(){
+    	//activityrec.stop();
+		//activityrec.save();
     	resetVariables();
     	System.println("Finalizar test");
     }
     
     function timerCallback(){	
-    	System.println("Estimacion VO2Max Speed");
-    	
+
     	var heartRateReserve=maxHeartRate-restingHeartRate;	
     	//aux=current runnig heart rate as a percentage of hr reserve
     	var aux=(app.heartRate-restingHeartRate)/heartRateReserve;
@@ -249,9 +251,9 @@ class Vo2maxSpeedView extends ParentView {
 		System.println("Vo2maxSpeed "+ mediaVo2maxSpeed);
 
 		primeraMuestraVo2maxSpeed=false;
-    	timerTest.start(method(:timerCallback),tiempoDuracionTestMedia*1000,false);
-    	//finalizarTest();
-    	//timerTest.stop();
+		//estimacion continua despues de la primera
+    	timerTest.start(method(:timerCallback),1*1000,false);
+
     	Ui.requestUpdate();
     }
      

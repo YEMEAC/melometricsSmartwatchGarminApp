@@ -11,9 +11,9 @@ class ThreeMinuteStepTestDelegate extends Ui.BehaviorDelegate {
 
     function initialize(index) {
    		//guardo un apuntadoe a al view que controla y a la aplicacion
-		app = App.getApp();
-   		vo2maxSpeedView=app.vo2maxSpeedView;
-   		mIndex=index;
+		//app = App.getApp();
+   		//vo2maxSpeedView=app.vo2maxSpeedView;
+   		//mIndex=index;
         BehaviorDelegate.initialize();
     }
 
