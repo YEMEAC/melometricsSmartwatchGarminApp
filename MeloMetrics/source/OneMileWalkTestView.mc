@@ -12,12 +12,15 @@ class OneMileWalkTestView extends ParentView {
 	var genero;
 	var edad;
 	var peso;
-	var heartRate; 
+	var heartRate;
+	var distanciaRecorrer; 
 	
 	var acumulador;
 	var contadorMuestras;
 	var primeraMuestra;
 	var media;
+	
+	
 	
 	var mensajeTest;
 	
@@ -39,6 +42,11 @@ class OneMileWalkTestView extends ParentView {
 		media=0.0d;
 		acumulador=0.0d;
 		contadorMuestras=0.0d;
+		
+		//1 milla = 1.60934 km = 1609.34 m
+		//distanciaRecorrer=1609.34d;
+		distanciaRecorrer=20.34d;
+		tiempoDuracionTest=1; //llamar timer cada segundo para comprobar la distancia
 		
 		
 	}
@@ -84,12 +92,8 @@ class OneMileWalkTestView extends ParentView {
 			dc.drawText(X1, Y2, numFont, "00.00" , just);
 		}
 		
-		if(primeraMuestra==true){
-			dc.drawText(X2, Y2, numFont, timerPantalla(), just);
-		}else{
-			dc.setColor(LT_GRAY, -1);
-    		dc.drawText(X2, Y2, msgFontSmall, Ui.loadResource(Rez.Strings.estimacionContinua) , just);
-		}
+
+		dc.drawText(X2, Y2, numFont, timerPantalla(), just);
 		
 		dc.setColor(WHITE, -1);
     	if(testEnEjecucion==true){
@@ -99,7 +103,7 @@ class OneMileWalkTestView extends ParentView {
 		}
 		
 		if(Activity.getActivityInfo().elapsedDistance!=null){
-			System.println("Distancia recorrida" + Activity.getActivityInfo().elapsedDistance);
+			System.println("Distancia recorrida " + Activity.getActivityInfo().elapsedDistance);
 		}else{
 			System.println("Distance null");
 		}
@@ -121,7 +125,10 @@ class OneMileWalkTestView extends ParentView {
     	tiempoInicioTest=Time.now().value();
     	timerTest= new Timer.Timer();
     	timerTest.start(method(:timerCallback),tiempoDuracionTest*1000,false);
-    	 	
+    	
+    	//asegurar que no cuenta distancias anteriores
+		//parece que no deja modificar el activity directamente mal asunto
+    	//Activity.getActivityInfo().elapsedDistance=0;		
     	System.println("Empezando test onemilewalk");
     }
     
@@ -140,8 +147,7 @@ class OneMileWalkTestView extends ParentView {
     	testDetenido=false;
     	tiempoTestReanudado=Time.now().value();
     	
-    	//cada segundo a timercallback para ver si ya hemos recorrido el espacio
-    	timerTest.start(method(:timerCallback),1*1000,false);
+    	timerTest.start(method(:timerCallback),tiempoDuracionTest*1000,false);
     	
     	mensajeTest = Ui.loadResource(Rez.Strings.mensajeTest2);
     	System.println("Continuar test");
@@ -153,23 +159,35 @@ class OneMileWalkTestView extends ParentView {
     }
     
     function timerCallback(){	
-    	    			
-    	var estimacion=app.speed;
     	
-		acumulador=acumulador+estimacion;
-		contadorMuestras=contadorMuestras+1;
-		media=media/contadorMuestras;
-            	
-		
-		System.println("current hr "+app.heartRate);
-		System.println("estimacion onemilewalktest "+ media);
-
-		primeraMuestra=false;
-    	timerTest.start(method(:timerCallback),1*1000,false);
-    	//finalizarTest();
-    	//timerTest.stop();
-    	Ui.requestUpdate();
+    	if(Activity.getActivityInfo().elapsedDistance != null && 
+    		distanciaRecorrer<= Activity.getActivityInfo().elapsedDistance){    			
+	    	
+	    	var estimacion=app.speed;
+	    	
+			acumulador=acumulador+estimacion;
+			contadorMuestras=contadorMuestras+1;
+			media=media/contadorMuestras;
+	            	
+			
+			System.println("current hr "+app.heartRate);
+			System.println("estimacion onemilewalktest "+ media);
+	
+			primeraMuestra=false;
+		}else{
+			if(Activity.getActivityInfo().elapsedDistance != null){
+				var a=Activity.getActivityInfo().elapsedDistance.toFloat();
+				var aux= distanciaRecorrer-a;
+				System.println("Falta " + aux  + " por recorrer");
+			}else{
+				System.println("Falta " +distanciaRecorrer+ " por recorrer");
+			}
+			timerTest.start(method(:timerCallback),tiempoDuracionTest*1000,false);
+		}
+			
+	    	Ui.requestUpdate();
     }
+     
      
     function onSnsr(sensor_info){
     	if(sensor_info.heartRate!=null){

@@ -42,7 +42,12 @@ function resetVariablesParent(){
 
 function timerPantalla() {
     	if(testEnEjecucion==true && testDetenido==false){
-			return timerFormat(tiempoDuracionTest-tiempoTestEnCurso());	
+    		if(tiempoDuracionTest>1) {
+				return timerFormat(tiempoDuracionTest-tiempoTestEnCurso());	
+			}else{
+				//test que no dependen del tiempo que dure
+				return timerFormat(tiempoTestEnCurso());
+			}
 		}else if(testEnEjecucion==true && testDetenido==true){
 			return timerFormat(tiempoDuracionTest-tiempoTestEnCursoDenido());
 		}else{
@@ -50,10 +55,6 @@ function timerPantalla() {
 		}
     }
     
-    //return cuando tiempo lleva denido el test
-    function tiempoTestEnCursoDenido(){
-    	return tiempoTestDetenido-tiempoInicioTest;
-    }
     
     function tiempoTestEnCurso(){
     	//si el test se ha denido 
@@ -65,6 +66,11 @@ function timerPantalla() {
     		//si nunca se pa detenido es al actual - el inicio
     		return Time.now().value() - tiempoInicioTest;
     	}
+    }
+    
+      //return cuando tiempo lleva denido el test
+    function tiempoTestEnCursoDenido(){
+    	return tiempoTestDetenido-tiempoInicioTest;
     }
     
     function timerFormat(time) {
