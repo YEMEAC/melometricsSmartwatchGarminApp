@@ -25,6 +25,8 @@ class OneMileWalkTestView extends ParentView {
 	var mensajeTest;
 	
 	 function initialize() {
+	 
+	 	
     	app = App.getApp();
     	resetVariablesParent();
     	resetVariables();
@@ -103,7 +105,7 @@ class OneMileWalkTestView extends ParentView {
 		}
 		
 		if(Activity.getActivityInfo().elapsedDistance!=null){
-			System.println("Distancia recorrida " + Activity.getActivityInfo().elapsedDistance);
+			System.println("Distancia d activity recorrida " + Activity.getActivityInfo().elapsedDistance);
 		}else{
 			System.println("Distance null");
 		}
@@ -115,11 +117,8 @@ class OneMileWalkTestView extends ParentView {
     	
  		Snsr.setEnabledSensors( [Snsr.SENSOR_HEARTRATE] );
 		Snsr.enableSensorEvents( method(:onSnsr) );	
-		
-		var options = { :name => "onemilewalk"  };
-		activityrec=ActivityRecording.createSession(options);
-		activityrec.start();
-		
+		Snsr.setEnabledSensors();
+				
     	mensajeTest = Ui.loadResource(Rez.Strings.mensajeTest2);
     	 	
     	tiempoInicioTest=Time.now().value();
@@ -128,7 +127,11 @@ class OneMileWalkTestView extends ParentView {
     	
     	//asegurar que no cuenta distancias anteriores
 		//parece que no deja modificar el activity directamente mal asunto
-    	//Activity.getActivityInfo().elapsedDistance=0;		
+
+		var options = { :name => "OneMileWalkTest"  };
+		activityrec=ActivityRecording.createSession(options);
+		activityrec.start();
+	
     	System.println("Empezando test onemilewalk");
     }
     
@@ -138,8 +141,9 @@ class OneMileWalkTestView extends ParentView {
     	timerTest.stop();
     	tiempoTestDetenido=Time.now().value();
     	mensajeTest = Ui.loadResource(Rez.Strings.mensajeTest3);
-		activityrec.stop();
-		activityrec.save();
+		if(activityrec.isRecording()){
+			activityrec.stop();
+		}
     	System.println("Detener test");
     }
     
@@ -150,12 +154,8 @@ class OneMileWalkTestView extends ParentView {
     	timerTest.start(method(:timerCallback),tiempoDuracionTest*1000,false);
     	
     	mensajeTest = Ui.loadResource(Rez.Strings.mensajeTest2);
+    	activityrec.start();
     	System.println("Continuar test");
-    }
-    
-    function finalizarTest(){
-    	resetVariables();
-    	System.println("Finalizar test");
     }
     
     function timerCallback(){	
@@ -174,6 +174,8 @@ class OneMileWalkTestView extends ParentView {
 			System.println("estimacion onemilewalktest "+ media);
 	
 			primeraMuestra=false;
+			activityrec.stop();
+			activityrec.save();
 		}else{
 			if(Activity.getActivityInfo().elapsedDistance != null){
 				var a=Activity.getActivityInfo().elapsedDistance.toFloat();
@@ -188,7 +190,11 @@ class OneMileWalkTestView extends ParentView {
 	    	Ui.requestUpdate();
     }
      
-     
+    function finalizarTest(){
+    	resetVariables();
+    	System.println("Finalizar test");
+    }
+    
     function onSnsr(sensor_info){
     	if(sensor_info.heartRate!=null){
     		app.heartRate=sensor_info.heartRate;
