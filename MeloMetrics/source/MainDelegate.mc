@@ -1,6 +1,11 @@
 using Toybox.Application as App;
 using Toybox.WatchUi as Ui;
 using Toybox.Graphics as Gfx;
+using Toybox.Sensor as Snsr;
+using Toybox.ActivityMonitor as ActivityMonitor;
+using Toybox.ActivityRecording as ActivityRecording;
+using Toybox.Activity as Activity;
+
 
 //behavior extiende a inputdelegate por lo atnto tiene sus metodos
 //si el compartamientode lso delegate no cambia quizas al final solo haga falta uno
@@ -36,13 +41,18 @@ class MainDelegate extends Ui.BehaviorDelegate {
     
          
         function onTap( evt ){
-        	if(view.testEnEjecucion==false){
-        		view.empezarTest();
-        	}else if (view.testEnEjecucion==true && view.testDetenido==false){
-        		view.detenerTest();
-        	}else if (view.testEnEjecucion==true && view.testDetenido==true){
-        		view.continuarTest();
-        	}
+        
+        	if(Activity.getActivityInfo().elapsedDistance!=null){
+	        	if(view.testEnEjecucion==false){
+	        		view.empezarTest();
+	        	}else if (view.testEnEjecucion==true && view.testDetenido==false){
+	        		view.detenerTest();
+	        	}else if (view.testEnEjecucion==true && view.testDetenido==true){
+	        		view.continuarTest();
+	        	}
+	        }else{
+	        	System.println("El seguidor de actividad debe estar activado para ejecutar la aplicación");
+	        }
         	
 	        return true; 
         }

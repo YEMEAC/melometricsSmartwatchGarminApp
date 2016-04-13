@@ -14,10 +14,12 @@ class OneMileWalkTestView extends ParentView {
 	var peso;
 	var heartRate;
 	var distanciaRecorrer; 
+	var distanciaInicioActivity;
+	var distanciaDetenerActivity;
+	var distanciaContinuarActivity;
 	
 	var acumulador;
 	var contadorMuestras;
-	var primeraMuestra;
 	var media;
 	
 	
@@ -35,20 +37,31 @@ class OneMileWalkTestView extends ParentView {
     
 	function resetVariables(){
 		
-		genero=0.0d;
+		genero=1.0d;
 		edad=24.0d;
 		peso=73.0d;
 		heartRate=0.0d;
 		
-		primeraMuestra=true;
-		media=0.0d;
+		testEnEjecucion=false;
+		testDetenido=false;
+		tiempoInicioTest=0.0d;
+		tiempoTestDetenido=0.0d;
+		tiempoTestReanudado=0.0d;
+		tiempoDuracionTest=1; //llamar timer cada segundo para comprobar la distancia
+		
+		//media=0.0d;
 		acumulador=0.0d;
 		contadorMuestras=0.0d;
 		
+		
+
+		//distancia al comienzo del test para no tenerla en cuenta
+		distanciaInicioActivity=0.0d;
+		distanciaDetenerActivity=0.0d;
+		distanciaContinuarActivity=0.0d;
 		//1 milla = 1.60934 km = 1609.34 m
 		//distanciaRecorrer=1609.34d;
 		distanciaRecorrer=20.34d;
-		tiempoDuracionTest=1; //llamar timer cada segundo para comprobar la distancia
 		
 		
 	}
@@ -77,7 +90,7 @@ class OneMileWalkTestView extends ParentView {
 		var	Y2 = 127;
 		  	
     	
-    	if(media!=null){
+    	if(media!=null && !testEnEjecucion){
     		dc.setColor(GREEN, -1);
     		dc.drawText(X2, Y1, numFont, media.format("%.2f"), just);
     	}else{
@@ -86,7 +99,7 @@ class OneMileWalkTestView extends ParentView {
     	}
     	
     	dc.setColor(WHITE, -1);
-    	if(testEnEjecucion){
+    	if(testEnEjecucion || !primeraMuestra){
 			dc.drawText(X1, Y1, numFont, app.heartRate.toString(), just);
 			dc.drawText(X1, Y2, numFont, app.speed.format("%.2f") , just);
 		}else{
@@ -104,11 +117,6 @@ class OneMileWalkTestView extends ParentView {
 			dc.drawText(105, 74, msgFontMedium, mensajeTest, just);
 		}
 		
-		if(Activity.getActivityInfo().elapsedDistance!=null){
-			System.println("Distancia d activity recorrida " + Activity.getActivityInfo().elapsedDistance);
-		}else{
-			System.println("Distance null");
-		}
     }
 
     
@@ -117,7 +125,7 @@ class OneMileWalkTestView extends ParentView {
     	
  		Snsr.setEnabledSensors( [Snsr.SENSOR_HEARTRATE] );
 		Snsr.enableSensorEvents( method(:onSnsr) );	
-		Snsr.setEnabledSensors();
+		//Snsr.setEnabledSensors();
 				
     	mensajeTest = Ui.loadResource(Rez.Strings.mensajeTest2);
     	 	
@@ -131,7 +139,8 @@ class OneMileWalkTestView extends ParentView {
 		var options = { :name => "OneMileWalkTest"  };
 		activityrec=ActivityRecording.createSession(options);
 		activityrec.start();
-	
+		distanciaInicioActivity=Activity.getActivityInfo().elapsedDistance;
+		
     	System.println("Empezando test onemilewalk");
     }
     
@@ -141,6 +150,7 @@ class OneMileWalkTestView extends ParentView {
     	timerTest.stop();
     	tiempoTestDetenido=Time.now().value();
     	mensajeTest = Ui.loadResource(Rez.Strings.mensajeTest3);
+    	distanciaDetenerActivity=Activity.getActivityInfo().elapsedDistance;
 		if(activityrec.isRecording()){
 			activityrec.stop();
 		}
@@ -155,39 +165,43 @@ class OneMileWalkTestView extends ParentView {
     	
     	mensajeTest = Ui.loadResource(Rez.Strings.mensajeTest2);
     	activityrec.start();
+    	distanciaContinuarActivity=Activity.getActivityInfo().elapsedDistance;
+
     	System.println("Continuar test");
     }
     
     function timerCallback(){	
     	
-    	if(Activity.getActivityInfo().elapsedDistance != null && 
-    		distanciaRecorrer<= Activity.getActivityInfo().elapsedDistance){    			
+    	if(distanciaRecorrer<= distanciaRecorridaTest()){    			
 	    	
-	    	var estimacion=app.speed;
+	    	System.println("Peso "+peso);
+			System.println("Edad "+edad);
+			System.println("Genero "+genero);
+			System.println("tiempoTestEnCurso "+tiempoTestEnCurso());
+			System.println("Current hr "+app.heartRate);
 	    	
-			acumulador=acumulador+estimacion;
-			contadorMuestras=contadorMuestras+1;
-			media=media/contadorMuestras;
-	            	
-			
-			System.println("current hr "+app.heartRate);
-			System.println("estimacion onemilewalktest "+ media);
+	    	var aux =	 132.853 - 0.0769*peso - 0.3877*edad + 6.315*genero - 3.2649*tiempoTestEnCurso() - 0.1565*heartRate;           	
+			System.println("estimacion onemilewalktest "+ aux);
 	
 			primeraMuestra=false;
 			activityrec.stop();
 			activityrec.save();
+			resetVariables();
+			media=aux;
 		}else{
-			if(Activity.getActivityInfo().elapsedDistance != null){
-				var a=Activity.getActivityInfo().elapsedDistance.toFloat();
-				var aux= distanciaRecorrer-a;
-				System.println("Falta " + aux  + " por recorrer");
-			}else{
-				System.println("Falta " +distanciaRecorrer+ " por recorrer");
-			}
+			var aux= distanciaRecorrer-distanciaRecorridaTest();
+			System.println("Falta " + aux  + " por recorrer, distancia recorrida " + distanciaRecorridaTest());
 			timerTest.start(method(:timerCallback),tiempoDuracionTest*1000,false);
 		}
-			
-	    	Ui.requestUpdate();
+		
+	    Ui.requestUpdate();
+    }
+    
+    function distanciaRecorridaTest(){
+    	//parecido al calculo del tiempo con el timer en vo2maxspeed
+    	var result = 0.0d;
+    	result=Activity.getActivityInfo().elapsedDistance;
+    	return result - (distanciaInicioActivity +(distanciaContinuarActivity-distanciaDetenerActivity));   	
     }
      
     function finalizarTest(){

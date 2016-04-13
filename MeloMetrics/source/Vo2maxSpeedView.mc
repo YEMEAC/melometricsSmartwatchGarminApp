@@ -16,14 +16,12 @@ class ParentView extends Ui.View{
 	var tiempoTestReanudado;
 	//segundos que debe durar el test antes de tener suficientes muestras
 	var tiempoDuracionTest;
-	//segundos para hacer la media con mas muestrasdespues de tener la primera estimacion
-	var tiempoDuracionTestMedia;
 	var timerTest;
 	
 	//estado del test
 	var testEnEjecucion;
 	var	testDetenido;
-	
+	var primeraMuestra=true;
 	var  activityrec;
 
 
@@ -32,7 +30,6 @@ function resetVariablesParent(){
 		tiempoTestDetenido=0;
 		tiempoTestReanudado=0;
 		tiempoDuracionTest=5;
-		tiempoDuracionTestMedia=5;
 		
 		testEnEjecucion=false;
 		testDetenido=false;
@@ -96,7 +93,6 @@ class Vo2maxSpeedView extends ParentView {
 	var acumuladorVo2maxSpeed;
 	var mediaVo2maxSpeed;
 	var contadorVo2maxSpeedMuestras;
-	var primeraMuestraVo2maxSpeed;
 	
 	var mensajeTest;
 	
@@ -109,7 +105,6 @@ class Vo2maxSpeedView extends ParentView {
     
 	function resetVariables(){
 		//Vo2maxSpeed running index stuff	
-		primeraMuestraVo2maxSpeed=true;
 		maxHeartRate=186.0d;
 		restingHeartRate=55.0d;
 		heartRateReserve=0.0d;
@@ -151,22 +146,22 @@ class Vo2maxSpeedView extends ParentView {
     	}
     	
     	dc.setColor(WHITE, -1);
-    	if(testEnEjecucion && Snsr.getInfo().heartRate!=null){
+    	if(testEnEjecucion || !primeraMuestra){
     		//sino esta ene ejecucion el sensor esta apagado y no puede hacer getinfo
-			dc.drawText(X1, Y1, numFont, Snsr.getInfo().heartRate.toString(), just);
+			dc.drawText(X1, Y1, numFont, app.heartRate.toString(), just);
 
 		}else{
 			dc.drawText(X1, Y1, numFont, "000", just);
 			dc.drawText(X1, Y2, numFont, "00.00" , just);
 		}
 		
-		if(testEnEjecucion && Snsr.getInfo().speed!=null){	
-			dc.drawText(X1, Y2, numFont, Snsr.getInfo().speed.format("%.2f") , just);
+		if(testEnEjecucion || !primeraMuestra){	
+			dc.drawText(X1, Y2, numFont, app.speed.format("%.2f") , just);
 		}else{
 			dc.drawText(X1, Y2, numFont, "00.00" , just);
 		}
 		
-		if(primeraMuestraVo2maxSpeed==true){
+		if(primeraMuestra){
 			dc.drawText(X2, Y2, numFont, timerPantalla(), just);
 		}else{
 			dc.setColor(LT_GRAY, -1);
@@ -221,7 +216,7 @@ class Vo2maxSpeedView extends ParentView {
     	
     	//se reinicia el timer que llama a la funcion callback de finalizartest, al tiempo de duracion del test
 		//se le resta se le resta el tiempo que el test llevaba ejecutandose
-		if(primeraMuestraVo2maxSpeed==true){
+		if(primeraMuestra==true){
     		timerTest.start(method(:timerCallback),(tiempoDuracionTest -(tiempoTestDetenido-tiempoInicioTest))*1000,false);
     	}else{
     		timerTest.start(method(:timerCallback),1*1000,false);
@@ -230,14 +225,7 @@ class Vo2maxSpeedView extends ParentView {
     	mensajeTest = Ui.loadResource(Rez.Strings.mensajeTest2);
     	System.println("Continuar test");
     }
-    
-    function finalizarTest(){
-    	//activityrec.stop();
-		//activityrec.save();
-    	resetVariables();
-    	System.println("Finalizar test");
-    }
-    
+        
     function timerCallback(){	
 
     	var heartRateReserve=maxHeartRate-restingHeartRate;	
@@ -256,7 +244,7 @@ class Vo2maxSpeedView extends ParentView {
 		System.println("percent. of hr reserve "+ aux);
 		System.println("Vo2maxSpeed "+ mediaVo2maxSpeed);
 
-		primeraMuestraVo2maxSpeed=false;
+		primeraMuestra=false;
 		//estimacion continua despues de la primera
     	timerTest.start(method(:timerCallback),1*1000,false);
 
