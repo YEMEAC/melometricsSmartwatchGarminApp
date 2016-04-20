@@ -8,13 +8,20 @@
 
 
 	<string id="vo2maxSpeed"> VO2max Speed</string>
+	<string id="vomax"> VO2max</string>
 	<string id="hrv">HRV</string>
-	<string id="spe">SPD</string>
+	<string id="spd">SPD</string>
 	<string id="timer">TIMER</string>
+	<string id="time">TIME</string>
+	<string id="Distancia">Distancia</string>
+	<string id="dist">Dist</string>
+	<string id="km">km</string>
 
 	<string id="mensajeTest1">Tab to start test</string>
 	<string id="mensajeTest2">Corre, capturando datos</string>
 	<string id="mensajeTest3">Tab to restart the test</string>
+	
+	<string id="mensajeTest4">Recorre una milla caminando</string>
 	<string id="esperando">Esperando</string>
 	<string id="estimacionContinua">Estimación continua</string>
 

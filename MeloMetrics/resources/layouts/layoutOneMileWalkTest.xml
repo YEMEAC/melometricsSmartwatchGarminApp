@@ -1,17 +1,25 @@
 <layout id="OneMileWalkTestLayout">
 
 
-	<label x="20" y="6" font="Gfx.FONT_SMALL" text="@Strings.vo2maxSpeed"
+	<!-- <label x="20" y="6" font="Gfx.FONT_SMALL" text="@Strings.vo2max"
+		color="Gfx.COLOR_BLUE" /> -->
+	
+	<label x="85" y="22" font="Gfx.FONT_SMALL" text="@Strings.km"
 		color="Gfx.COLOR_BLUE" />
-	<label x="146" y="6" font="Gfx.FONT_SMALL" text="@Strings.hrv"
+	
+	<label x="0" y="22" font="Gfx.FONT_SMALL" text="@Strings.dist"
+		color="Gfx.COLOR_BLUE" />
+		
+	<label x="120" y="22" font="Gfx.FONT_SMALL" text="@Strings.hrv"
 		color="Gfx.COLOR_BLUE" />
 
-	<label x="146" y="90" font="Gfx.FONT_SMALL" text="@Strings.spe"
+	<label x="120" y="122" font="Gfx.FONT_SMALL" text="@Strings.spd"
 		color="Gfx.COLOR_BLUE" />
-	<label x="40" y="90" font="Gfx.FONT_SMALL" text="@Strings.timer"
+		
+	<label x="0" y="122" font="Gfx.FONT_SMALL" text="@Strings.time"
 		color="Gfx.COLOR_BLUE" />
 
-	<drawable id="dosLineasHorizontalesVo2maxSpeedLayout" />
+	<drawable id="dosLineasHorizontalesOneMileWalkTest" />
 
 
 
