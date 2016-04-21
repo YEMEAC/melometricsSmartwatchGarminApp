@@ -58,7 +58,7 @@ class MeloMetricsApp extends App.AppBase {
 
     //! Return the initial view of your application here
     function getInitialView() {
-    	var index=1;
+    	var index=2;
         return [   oneMileWalkTestView, new MainDelegate(index,oneMileWalkTestView) ];
     }
     

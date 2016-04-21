@@ -18,11 +18,16 @@ class ParentView extends Ui.View{
 	var tiempoDuracionTest;
 	var timerTest;
 	
+	var meloMetricsTimer; 
+	
 	//estado del test
 	var testEnEjecucion;
 	var	testDetenido;
 	var primeraMuestra=true;
-	var  activityrec;
+	var activityrec;
+	
+	//estimacidor del test a mostrar en pantalla
+	var media;
 
 
 function resetVariablesParent(){
@@ -33,23 +38,26 @@ function resetVariablesParent(){
 		
 		testEnEjecucion=false;
 		testDetenido=false;
-		mensajeTest = Ui.loadResource(Rez.Strings.mensajeTest1);
-
+		tiempoTestReanudado=false;
+	
+		timerTest= new Timer.Timer();
 }
 
 function timerPantalla() {
     	if(testEnEjecucion==true && testDetenido==false){
-    		if(tiempoDuracionTest>1) {
+    		if(tiempoDuracionTest>1) { //cuenta atras   			
 				return timerFormat(tiempoDuracionTest-tiempoTestEnCurso());	
-			}else{
-				//test que no dependen del tiempo que dure
+			}else{ //cuenta hacia delante
 				return timerFormat(tiempoTestEnCurso());
 			}
 		}else if(testEnEjecucion==true && testDetenido==true){
-			return timerFormat(tiempoDuracionTest-tiempoTestEnCursoDenido());
-		}else{
-			return timerFormat(0);
+			if(tiempoDuracionTest>1) {
+				return timerFormat(tiempoDuracionTest-tiempoTestEnCursoDenido());
+			}else{
+				return timerFormat( tiempoTestEnCurso()-(Time.now().value()-tiempoTestDetenido));
+			}
 		}
+			return timerFormat(0);	
     }
     
     
@@ -58,8 +66,10 @@ function timerPantalla() {
     	if(tiempoTestDetenido>0 && tiempoTestReanudado>0){
     		//el tiempo que lleva en curso es al actual - el de inicio pero sumandole el tiempo que estuvo parado
 			//para que no cuente el tiempo parado como si hubiera estado en curso
+			System.println("aki111");
     		return Time.now().value() - (tiempoInicioTest+(tiempoTestReanudado-tiempoTestDetenido));
     	}else{
+    		System.println("akiiii222");
     		//si nunca se pa detenido es al actual - el inicio
     		return Time.now().value() - tiempoInicioTest;
     	}
@@ -91,7 +101,6 @@ class Vo2maxSpeedView extends ParentView {
 	var heartRateReserve;
 	var restingHeartRate;
 	var acumuladorVo2maxSpeed;
-	var mediaVo2maxSpeed;
 	var contadorVo2maxSpeedMuestras;
 	
 	var mensajeTest;
@@ -137,9 +146,9 @@ class Vo2maxSpeedView extends ParentView {
 		var	Y2 = 127;
 		  	
     	
-    	if(mediaVo2maxSpeed!=null){
+    	if(media!=null){
     		dc.setColor(GREEN, -1);
-    		dc.drawText(X2, Y1, numFont, mediaVo2maxSpeed.format("%.2f"), just);
+    		dc.drawText(X2, Y1, numFont, media.format("%.2f"), just);
     	}else{
     		dc.setColor(RED, -1);
     		dc.drawText(X2, Y1, msgFontSmall, Ui.loadResource(Rez.Strings.esperando) , just);
@@ -168,14 +177,18 @@ class Vo2maxSpeedView extends ParentView {
     		dc.drawText(X2, Y2, msgFontSmall, Ui.loadResource(Rez.Strings.estimacionContinua) , just);
 		}
 		
+		
 		dc.setColor(WHITE, -1);
-    	if(testEnEjecucion==true){
-			dc.drawText(105, 74, msgFontSmall, mensajeTest, just);
+		if(testEnEjecucion){
+			dc.drawText(105, 74, msgFontSmall, Ui.loadResource(Rez.Strings.capturandoDatos), just);
+		}else if (media!=null){
+			dc.drawText(155, 74, msgFontMedium, Ui.loadResource(Rez.Strings.vo2maxSpeed), just);
+		}else if(testDetenido){
+			dc.drawText(105, 74, msgFontMedium, Ui.loadResource(Rez.Strings.tabToRestart), just);
 		}else{
-			dc.drawText(105, 74, msgFontMedium, mensajeTest, just);
+			dc.drawText(105, 74, msgFontMedium, Ui.loadResource(Rez.Strings.tabToStart), just);
 		}
-		
-		
+				
 		//System.println(app.heartRate + " - " + app.speed + " - " + Activity.getActivityInfo().currentHeartRate );
     }
 
@@ -189,9 +202,7 @@ class Vo2maxSpeedView extends ParentView {
 		//var options = { :name => "Vo2maxSpeed"  };
 		//activityrec=ActivityRecording.createSession(options);
 		//activityrec.start();
-		
-    	mensajeTest = Ui.loadResource(Rez.Strings.mensajeTest2);
-    	 	
+			 	
     	tiempoInicioTest=Time.now().value();
     	timerTest= new Timer.Timer();
     	timerTest.start(method(:timerCallback),tiempoDuracionTest*1000,false);
@@ -204,7 +215,6 @@ class Vo2maxSpeedView extends ParentView {
     	testDetenido=true;
     	timerTest.stop();
     	tiempoTestDetenido=Time.now().value();
-    	mensajeTest = Ui.loadResource(Rez.Strings.mensajeTest3);
 		//activityrec.stop();
 		//activityrec.save();
     	System.println("Detener test");
@@ -222,7 +232,6 @@ class Vo2maxSpeedView extends ParentView {
     		timerTest.start(method(:timerCallback),1*1000,false);
     	}
     	
-    	mensajeTest = Ui.loadResource(Rez.Strings.mensajeTest2);
     	System.println("Continuar test");
     }
         
@@ -235,14 +244,14 @@ class Vo2maxSpeedView extends ParentView {
     	
 		acumuladorVo2maxSpeed=acumuladorVo2maxSpeed+estimacionVo2maxSpeed;
 		contadorVo2maxSpeedMuestras=contadorVo2maxSpeedMuestras+1;
-		mediaVo2maxSpeed=acumuladorVo2maxSpeed/contadorVo2maxSpeedMuestras;
+		media=acumuladorVo2maxSpeed/contadorVo2maxSpeedMuestras;
             	
 		System.println("max hr "+maxHeartRate);
 		System.println("resting hr "+restingHeartRate);
 		System.println("reserve hr "+heartRateReserve);
 		System.println("current hr "+app.heartRate);
 		System.println("percent. of hr reserve "+ aux);
-		System.println("Vo2maxSpeed "+ mediaVo2maxSpeed);
+		System.println("Vo2maxSpeed "+ media);
 
 		primeraMuestra=false;
 		//estimacion continua despues de la primera

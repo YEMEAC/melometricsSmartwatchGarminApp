@@ -17,11 +17,11 @@
 	<string id="dist">Dist</string>
 	<string id="km">km</string>
 
-	<string id="mensajeTest1">Tab to start test</string>
-	<string id="mensajeTest2">Corre, capturando datos</string>
-	<string id="mensajeTest3">Tab to restart the test</string>
+	<string id="tabToStart">Tab to start test</string>
+	<string id="capturandoDatos">Corre, capturando datos</string>
+	<string id="tabToRestart">Tab to restart the test</string>
 	
-	<string id="mensajeTest4">Recorre una milla caminando</string>
+	<string id="recorreUnaMilla">Recorre una milla caminando</string>
 	<string id="esperando">Esperando</string>
 	<string id="estimacionContinua">Estimación continua</string>
 
