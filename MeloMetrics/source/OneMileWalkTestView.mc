@@ -77,7 +77,7 @@ class OneMileWalkTestView extends ParentView {
     }
     
     function pintarVista(dc){
-    	System.println("pintar");
+
     	var numFont = 6; 	
     	var msgFontMedium = 3;	// Gfx.FONT_MEDIUM
 		var msgFontSmall = 2;	// Gfx.FONT_MEDIUM
@@ -140,6 +140,8 @@ class OneMileWalkTestView extends ParentView {
 		activityrec=ActivityRecording.createSession(options);
 		activityrec.start();
 		distanciaInicioActivity=Activity.getActivityInfo().elapsedDistance;
+		
+
 		
     	System.println("Empezando test onemilewalk"  + Time.now().value());
     }
@@ -206,7 +208,7 @@ class OneMileWalkTestView extends ParentView {
 		//((distanciaInicioActivity +(distanciaContinuarActivity-distanciaDetenerActivity)));
 		var aux;
 		if(media == null && testEnEjecucion == true && testDetenido==false){
-    		aux=distanciaARecorrer - (Activity.getActivityInfo().elapsedDistance/1000);
+    		aux=distanciaARecorrer - ((Activity.getActivityInfo().elapsedDistance-(distanciaContinuarActivity-distanciaDetenerActivity))/1000);
     		if(aux<0){
     				distanciaFaltaRecorrer=0;
     		}else{
