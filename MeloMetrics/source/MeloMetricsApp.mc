@@ -58,7 +58,7 @@ class MeloMetricsApp extends App.AppBase {
 		vo2maxSpeedView = new Vo2maxSpeedView();
 		
 		speed=0.0d;
-		heartRate=0;
+		heartRate=0.0d;
 
 	}
 

@@ -41,13 +41,13 @@ class OneMileWalkTestView extends ParentView {
 		profile = UserProfile.getProfile();
 		if( profile != null ) {
             genero=profile.gender;
-			edad=profile.birthYear;
+			edad=Time.Gregorian.info(Time.now(), Time.FORMAT_LONG).year - profile.birthYear;
 			peso=profile.weight*0.0022;  //g to pounds
 		}   
 		heartRate=0.0d;
 		
-		System.println("keso "+Time.Gregorian.info());
-		
+		System.println("keso "+ edad + " " + Time.Gregorian.info(Time.now(), Time.FORMAT_LONG).year + " " + profile.birthYear);
+		System.println("peso" + profile.weight + " " + peso);
 		
 		tiempoInicioTest=0.0d;
 		tiempoTestDetenido=0.0d;
@@ -63,8 +63,8 @@ class OneMileWalkTestView extends ParentView {
 		distanciaDetenerActivity=0.0d;
 		distanciaContinuarActivity=0.0d;
 		//1 milla = 1.60934 km = 1609.34 m
-		//distanciaARecorrer=1.61d;
-		distanciaARecorrer=0.05d;
+		distanciaARecorrer=1.60d;
+		//distanciaARecorrer=0.05d;
 		distanciaFaltaRecorrer=distanciaARecorrer;
 		//distanciaARecorrer=20.34d;	
 		
@@ -181,22 +181,26 @@ class OneMileWalkTestView extends ParentView {
     	
     	if(0 >= distanciaFaltaRecorrerTest() && testEnEjecucion && !testDetenido){
     		//app.meloMetricsTimer.stop(); 
-			
-	    	System.println("Peso "+peso);
-			System.println("Edad "+edad);
-			System.println("Genero "+genero);
-			System.println("tiempoTestEnCurso "+tiempoTestEnCurso());
-			System.println("Current hr "+app.heartRate);
+			testEnEjecucion=false;
 	    	
-	    	var segundos = meloMetricsTimer.segundos();
-	    	var edad =  profile.birthYear;
-	    	var aux = 132.853 - 0.0769 * peso - 0.3877*edad + 6.315*genero - 3.2649*(segundos/60) - 0.1565*app.heartRate;           	
-			System.println("estimacion onemilewalktest "+ aux);
-	
+	  		//asegurar no perdida de decimales
+			genero =genero+0.0;
+			edad=edad+0.0;
+			peso=peso+0.0;
+			var minutos=meloMetricsTimer.contadorSegundos/60.0;
+			
+	    	var aux = 132.853 - 0.0769*peso - 0.3877*edad + 6.315*genero - 3.2649*minutos - 0.1565*app.heartRate;           	
+			
 			activityrec.stop();
 			activityrec.save();
 			media=aux;
-			testEnEjecucion=false;
+	
+			System.println("Peso "+peso);
+			System.println("Edad "+edad);
+			System.println("Genero "+genero);
+			System.println("tiempo "+minutos + " seg" +meloMetricsTimer.contadorSegundos);
+			System.println("pusalciones" + app.heartRate*0.1565 + "calculo " + 0.1565*app.heartRate + " hearrate "+ app.heartRate);
+					
 		}
 		
 		//System.println("Falta por recorrer " + distanciaFaltaRecorrer.format("%.2f") + " de " + distanciaARecorrer);
