@@ -11,16 +11,19 @@ using Toybox.Activity as Activity;
 //si el compartamientode lso delegate no cambia quizas al final solo haga falta uno
 class MeloMetricsTimer  {
 
-	var timer;
+	var timer = new Timer.Timer();
 	var contadorSegundos;
 	
-	
-	function inicializar(){
-		timer= new Timer.Timer();
-    	start();
+	//HAY QUE CONFIGURAR El cambio de contexto porque el segundero se sigue moviendo
+//en uno que este denido porque otro lo esta ejecutando ver si se puede los dos a la vez o solo uno
+//definitivamente
+
+	function reset(){
+		contadorSegundos=0;
+		timer.stop();
 	}
 	
-	function callBack(){
+	function aumentarSegundos(){
 		contadorSegundos=contadorSegundos+1;
 	}
 	
@@ -29,16 +32,16 @@ class MeloMetricsTimer  {
 	}
 
 	function start(){
-		contadorSegundos=0;
-		timer.start(method(:callBack),1000,true);
+		reiniciarSegundos();
 	}
 	
-	function reStart(){
-		timer.start(method(:callBack),1000,true);
-	}
 	
 	function segundos(){
 		return contadorSegundos;
+	}
+	
+	function reiniciarSegundos(){
+		contadorSegundos=0;
 	}
 	
 	function tiempoTranscurrido() {

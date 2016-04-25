@@ -20,6 +20,7 @@
 	<string id="tabToStart">Tab to start test</string>
 	<string id="capturandoDatos">Corre, capturando datos</string>
 	<string id="tabToRestart">Tab to restart the test</string>
+	<string id="tabToContinue">Tab to Continue the test</string>
 	
 	<string id="recorreUnaMilla">Recorre una milla caminando</string>
 	<string id="esperando">Esperando</string>

@@ -12,6 +12,7 @@
 		<iq:permissions>
 			<iq:uses-permission id="Sensor" />
 			<iq:uses-permission id="FIT" />
+			<iq:uses-permission id="UserProfile"/>
 		</iq:permissions>
 
 		<iq:languages>

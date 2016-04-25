@@ -87,8 +87,10 @@ class MainDelegate extends Ui.BehaviorDelegate {
 
 	   function getView(index)
     {
-        var view;
-
+        
+		view.resetVariablesParent();
+    	view.resetVariables();
+    	
         if(0 == index)
         {
             //view = new MainView(mIndex);
@@ -117,12 +119,16 @@ class MainDelegate extends Ui.BehaviorDelegate {
             view = app.threeMinuteStepTestView;
              
         }
-
+		
+		view.resetVariablesParent();
+    	view.resetVariables();
         return view;
     }
 
     function getDelegate(index)
     {
+    
+    	//deberia retocar esto para que use el mismo delegate todo el rato
        var viewTransicion = getView(index);
        var delegate = new MainDelegate(index,viewTransicion);
        return delegate;

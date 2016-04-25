@@ -40,8 +40,14 @@ class MeloMetricsApp extends App.AppBase {
 	var oneMileWalkTestView;
 	var vo2maxSpeedView;
 	var threeMinuteStepTestView;
+	
+	//var meloMetricsTimer;
+	//var timerTest;
 		
     function initialize() {
+    	//meloMetricsTimer= new MeloMetricsTimer();
+		//timerTest= new Timer.Timer();
+					
     	resetVariables();
         AppBase.initialize();
     }
@@ -53,7 +59,7 @@ class MeloMetricsApp extends App.AppBase {
 		
 		speed=0.0d;
 		heartRate=0;
-					
+
 	}
 
     //! Return the initial view of your application here

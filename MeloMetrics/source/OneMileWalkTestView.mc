@@ -5,6 +5,7 @@ using Toybox.Sensor as Snsr;
 using Toybox.ActivityMonitor as ActivityMonitor;
 using Toybox.ActivityRecording as ActivityRecording;
 using Toybox.Activity as Activity;
+using Toybox.UserProfile as UserProfile;
 
 
 class OneMileWalkTestView extends ParentView {
@@ -21,11 +22,9 @@ class OneMileWalkTestView extends ParentView {
 	
 	var acumulador;
 	var contadorMuestras;
-	var contadorSegundos;	
+	var profile;
 
-		
-	 function initialize() {
-	 
+	 function initialize() {	 
 	 	
     	app = App.getApp();
     	resetVariablesParent();
@@ -34,14 +33,22 @@ class OneMileWalkTestView extends ParentView {
     }
     
 	function resetVariables(){
-		meloMetricsTimer= new MeloMetricsTimer();
-		genero=1.0d;
-		edad=24.0d;
-		peso=73.0d;
+		
+		//FALLTA PULIR AQUI VARAIBLES QUE deberian estar el reset en el paadre
+	//pero creo que lohago aki de nuevo por un tema de decfinir como decimales para que 
+//LUEGO LA ESTIMACION NO SE LOS COMA
+
+		profile = UserProfile.getProfile();
+		if( profile != null ) {
+            genero=profile.gender;
+			edad=profile.birthYear;
+			peso=profile.weight*0.0022;  //g to pounds
+		}   
 		heartRate=0.0d;
 		
-		testEnEjecucion=false;
-		testDetenido=false;
+		System.println("keso "+Time.Gregorian.info());
+		
+		
 		tiempoInicioTest=0.0d;
 		tiempoTestDetenido=0.0d;
 		tiempoTestReanudado=0.0d;
@@ -59,8 +66,7 @@ class OneMileWalkTestView extends ParentView {
 		//distanciaARecorrer=1.61d;
 		distanciaARecorrer=0.05d;
 		distanciaFaltaRecorrer=distanciaARecorrer;
-		//distanciaARecorrer=20.34d;
-		contadorSegundos=0;
+		//distanciaARecorrer=20.34d;	
 		
 	}
 	
@@ -96,28 +102,22 @@ class OneMileWalkTestView extends ParentView {
     	}
     	
     	dc.setColor(WHITE, -1);
-    	//if(testEnEjecucion){
-			dc.drawText(X1, Y1, numFont, app.heartRate.toString(), just);
-			dc.drawText(X1, Y2, numFont, app.speed.format("%.2f") , just);
-			dc.drawText(X2+4, Y2, numFont, meloMetricsTimer.tiempoTranscurrido(), just);
-			dc.drawText(X3+4, Y1, numFont, distanciaFaltaRecorrer.format("%.2f"), just);
-		//}else{
-			//dc.drawText(X1, Y1, numFont, "000", just);
-			//dc.drawText(X1, Y2, numFont, "00.0" , just);
-			//dc.drawText(X2+4, Y2, numFont, "00:00", just);
-			///dc.drawText(X3+4, Y1, numFont, distanciaARecorrer.format("%.2f"), just);
-		//}
+
+		dc.drawText(X1, Y1, numFont, app.heartRate.toString(), just);
+		dc.drawText(X1, Y2, numFont, app.speed.format("%.2f") , just);
+			
+		dc.drawText(X2+4, Y2, numFont, meloMetricsTimer.tiempoTranscurrido(), just);
+		dc.drawText(X3+4, Y1, numFont, distanciaFaltaRecorrer.format("%.2f"), just);
 		
 		if(testEnEjecucion){
 			dc.drawText(105, 74, msgFontSmall, Ui.loadResource(Rez.Strings.recorreUnaMilla), just);	
     	}else if(testDetenido){
 			dc.drawText(105, 74, msgFontMedium, Ui.loadResource(Rez.Strings.tabToRestart), just);
-		}else if (media!=null){
+		}else if (media){
 			dc.drawText(155, 74, msgFontMedium, Ui.loadResource(Rez.Strings.vomax), just);
 		}else{
 			dc.drawText(105, 74, msgFontMedium, Ui.loadResource(Rez.Strings.tabToStart), just);
 		}
-		
     }
 
     
@@ -128,10 +128,11 @@ class OneMileWalkTestView extends ParentView {
 		//Snsr.setEnabledSensors();
 		
 		testEnEjecucion=true;
-    
-    	meloMetricsTimer.inicializar();
+    	
     	tiempoInicioTest=Time.now().value();
-    	timerTest.start(method(:timerCallback),tiempoDuracionTest*1000,true);
+    	
+    	//app.meloMetricsTimer.start();
+    	//app.meloMetricsTimer.timer.start(method(:timerCallback),1*1000,true);
     		
     	//asegurar que no cuenta distancias anteriores
 		//parece que no deja modificar el activity directamente mal asunto
@@ -141,19 +142,18 @@ class OneMileWalkTestView extends ParentView {
 		activityrec.start();
 		distanciaInicioActivity=Activity.getActivityInfo().elapsedDistance;
 		
-
-		
     	System.println("Empezando test onemilewalk"  + Time.now().value());
+    	
     }
     
     //no hace bien la detencion cuando esta en modo de estiamcion continua
     function detenerTest(){
     	
     	testDetenido=true;
-    	timerTest.stop();  
-    	meloMetricsTimer.stop();
+    	//app.timerTest.stop();  
+    	//timer.stop();
     	tiempoTestDetenido=Time.now().value();
-    		
+
     	distanciaDetenerActivity=Activity.getActivityInfo().elapsedDistance;
 		if(activityrec.isRecording()){
 			activityrec.stop();
@@ -165,21 +165,22 @@ class OneMileWalkTestView extends ParentView {
     function continuarTest(){
     
     	testDetenido=false;
-    	meloMetricsTimer.reStart();
     	tiempoTestReanudado=Time.now().value();
-    	timerTest.start(method(:timerCallback),tiempoDuracionTest*1000,true);
+		//timer.start(method(:timerCallback),1*1000,true);
     		
-    	activityrec.start();
+    	//activityrec.start();
     	distanciaContinuarActivity=Activity.getActivityInfo().elapsedDistance;
 
     	System.println("Continuar test");
     }
     
-    function timerCallback(){	
+    function timerCallback(){
+    	if(testEnEjecucion &&  !testDetenido){	
+    		meloMetricsTimer.aumentarSegundos();
+    	}
     	
-    	if(0 >= distanciaFaltaRecorrerTest()){
-    		timerTest.stop();   
-    		meloMetricsTimer.stop(); 
+    	if(0 >= distanciaFaltaRecorrerTest() && testEnEjecucion && !testDetenido){
+    		//app.meloMetricsTimer.stop(); 
 			
 	    	System.println("Peso "+peso);
 			System.println("Edad "+edad);
@@ -188,17 +189,17 @@ class OneMileWalkTestView extends ParentView {
 			System.println("Current hr "+app.heartRate);
 	    	
 	    	var segundos = meloMetricsTimer.segundos();
-	    	var aux = 132.853 - 0.0769*peso - 0.3877*edad + 6.315*genero - 3.2649*(segundos/60) - 0.1565*app.heartRate;           	
+	    	var edad =  profile.birthYear;
+	    	var aux = 132.853 - 0.0769 * peso - 0.3877*edad + 6.315*genero - 3.2649*(segundos/60) - 0.1565*app.heartRate;           	
 			System.println("estimacion onemilewalktest "+ aux);
 	
 			activityrec.stop();
 			activityrec.save();
 			media=aux;
 			testEnEjecucion=false;
-		}else{
-			System.println("Falta por recorrer " + distanciaFaltaRecorrer.format("%.2f") + " de " + distanciaARecorrer);
 		}
 		
+		//System.println("Falta por recorrer " + distanciaFaltaRecorrer.format("%.2f") + " de " + distanciaARecorrer);
 	    Ui.requestUpdate();
     }
     
@@ -214,6 +215,8 @@ class OneMileWalkTestView extends ParentView {
     		}else{
     			distanciaFaltaRecorrer = aux;
     		}
+		}else if (testDetenido==true){
+    		aux= distanciaFaltaRecorrer;
     	}else{
     		aux= 0.0d;
     	}
