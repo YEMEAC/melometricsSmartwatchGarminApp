@@ -14,10 +14,6 @@ class MeloMetricsTimer  {
 	var timer = new Timer.Timer();
 	var contadorSegundos;
 	
-	//HAY QUE CONFIGURAR El cambio de contexto porque el segundero se sigue moviendo
-//en uno que este denido porque otro lo esta ejecutando ver si se puede los dos a la vez o solo uno
-//definitivamente
-
 	function reset(){
 		contadorSegundos=0;
 		timer.stop();

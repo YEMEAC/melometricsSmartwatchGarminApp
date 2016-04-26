@@ -13,7 +13,6 @@ class OneMileWalkTestView extends ParentView {
 	var genero;
 	var edad;
 	var peso;
-	var heartRate;
 	var distanciaARecorrer; 
 	var distanciaFaltaRecorrer;
 	var distanciaInicioActivity;
@@ -34,9 +33,6 @@ class OneMileWalkTestView extends ParentView {
     
 	function resetVariables(){
 		
-		//FALLTA PULIR AQUI VARAIBLES QUE deberian estar el reset en el paadre
-	//pero creo que lohago aki de nuevo por un tema de decfinir como decimales para que 
-//LUEGO LA ESTIMACION NO SE LOS COMA
 
 		profile = UserProfile.getProfile();
 		if( profile != null ) {
@@ -44,29 +40,19 @@ class OneMileWalkTestView extends ParentView {
 			edad=Time.Gregorian.info(Time.now(), Time.FORMAT_LONG).year - profile.birthYear;
 			peso=profile.weight*0.0022;  //g to pounds
 		}   
-		heartRate=0.0d;
 		
-		System.println("keso "+ edad + " " + Time.Gregorian.info(Time.now(), Time.FORMAT_LONG).year + " " + profile.birthYear);
-		System.println("peso" + profile.weight + " " + peso);
-		
-		tiempoInicioTest=0.0d;
-		tiempoTestDetenido=0.0d;
-		tiempoTestReanudado=0.0d;
-		tiempoDuracionTest=1; //llamar timer cada segundo para comprobar la distancia
-		
+				
 		//media=0.0d;
 		acumulador=0.0d;
 		contadorMuestras=0.0d;
 		
-		//distancia al comienzo del test para no tenerla en cuenta
+		//distancia al comienzo del test para no tenerla en cuenta por el activity
 		distanciaInicioActivity=0.0d;
 		distanciaDetenerActivity=0.0d;
 		distanciaContinuarActivity=0.0d;
 		//1 milla = 1.60934 km = 1609.34 m
 		distanciaARecorrer=1.60d;
-		//distanciaARecorrer=0.05d;
 		distanciaFaltaRecorrer=distanciaARecorrer;
-		//distanciaARecorrer=20.34d;	
 		
 	}
 	
@@ -130,10 +116,7 @@ class OneMileWalkTestView extends ParentView {
 		testEnEjecucion=true;
     	
     	tiempoInicioTest=Time.now().value();
-    	
-    	//app.meloMetricsTimer.start();
-    	//app.meloMetricsTimer.timer.start(method(:timerCallback),1*1000,true);
-    		
+    	  		
     	//asegurar que no cuenta distancias anteriores
 		//parece que no deja modificar el activity directamente mal asunto
 
@@ -146,7 +129,6 @@ class OneMileWalkTestView extends ParentView {
     	
     }
     
-    //no hace bien la detencion cuando esta en modo de estiamcion continua
     function detenerTest(){
     	
     	testDetenido=true;
@@ -183,12 +165,8 @@ class OneMileWalkTestView extends ParentView {
     		//app.meloMetricsTimer.stop(); 
 			testEnEjecucion=false;
 	    	
-	  		//asegurar no perdida de decimales
-			genero =genero+0.0;
-			edad=edad+0.0;
-			peso=peso+0.0;
 			var minutos=meloMetricsTimer.contadorSegundos/60.0;
-			
+			// probado con exrx.net/Calculators/Rockport.html && brianmac.co.uk/rockport.htm
 	    	var aux = 132.853 - 0.0769*peso - 0.3877*edad + 6.315*genero - 3.2649*minutos - 0.1565*app.heartRate;           	
 			
 			activityrec.stop();
@@ -199,8 +177,7 @@ class OneMileWalkTestView extends ParentView {
 			System.println("Edad "+edad);
 			System.println("Genero "+genero);
 			System.println("tiempo "+minutos + " seg" +meloMetricsTimer.contadorSegundos);
-			System.println("pusalciones" + app.heartRate*0.1565 + "calculo " + 0.1565*app.heartRate + " hearrate "+ app.heartRate);
-					
+			System.println("pusalciones " + app.heartRate*0.1565 + " hearrate "+ app.heartRate);	
 		}
 		
 		//System.println("Falta por recorrer " + distanciaFaltaRecorrer.format("%.2f") + " de " + distanciaARecorrer);
@@ -208,9 +185,6 @@ class OneMileWalkTestView extends ParentView {
     }
     
     function distanciaFaltaRecorrerTest(){
-    	//parecido al calculo del tiempo con el timer en vo2maxspeed
-		// /100 porque el activity trabaja con metros
-		//((distanciaInicioActivity +(distanciaContinuarActivity-distanciaDetenerActivity)));
 		var aux;
 		if(media == null && testEnEjecucion == true && testDetenido==false){
     		aux=distanciaARecorrer - ((Activity.getActivityInfo().elapsedDistance-(distanciaContinuarActivity-distanciaDetenerActivity))/1000);

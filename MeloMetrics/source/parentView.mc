@@ -31,11 +31,11 @@ class ParentView extends Ui.View{
 
 
 function resetVariablesParent(){
-		tiempoInicioTest=0;
-		tiempoTestDetenido=0;
-		tiempoTestReanudado=0;
-		tiempoDuracionTest=5;
-		
+		tiempoInicioTest=0.0d;
+		tiempoTestDetenido=0.0d;
+		tiempoTestReanudado=0.0d;
+		tiempoDuracionTest=1.0d;
+			
 		meloMetricsTimer.contadorSegundos=0;
 		meloMetricsTimer.stop();
 		timer.stop();
@@ -44,10 +44,12 @@ function resetVariablesParent(){
 		testDetenido=false;
 		primeraMuestra=true;
 		tiempoTestReanudado=false;
-		timer.start(method(:timerCallback),1*1000,true);
+		timer.start(method(:timerCallback),tiempoDuracionTest*1000,true);
 		media=null;
 }
 
+
+//todas estas funciones bajar a vo2ma si no se comarten por el resto en un futuro
 function timerPantalla() {
     	if(testEnEjecucion==true && testDetenido==false){
     		if(tiempoDuracionTest>1) { //cuenta atras   			
