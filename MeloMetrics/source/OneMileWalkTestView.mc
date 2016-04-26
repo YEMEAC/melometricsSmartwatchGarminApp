@@ -23,8 +23,7 @@ class OneMileWalkTestView extends ParentView {
 	var contadorMuestras;
 	var profile;
 
-	 function initialize() {	 
-	 	
+	 function initialize() {	 	 	
     	app = App.getApp();
     	resetVariablesParent();
     	resetVariables();
@@ -33,7 +32,6 @@ class OneMileWalkTestView extends ParentView {
     
 	function resetVariables(){
 		
-
 		profile = UserProfile.getProfile();
 		if( profile != null ) {
             genero=profile.gender;
@@ -51,7 +49,8 @@ class OneMileWalkTestView extends ParentView {
 		distanciaDetenerActivity=0.0d;
 		distanciaContinuarActivity=0.0d;
 		//1 milla = 1.60934 km = 1609.34 m
-		distanciaARecorrer=1.60d;
+		//distanciaARecorrer=1.60d;
+		distanciaARecorrer=0.03d;
 		distanciaFaltaRecorrer=distanciaARecorrer;
 		
 	}
@@ -89,7 +88,7 @@ class OneMileWalkTestView extends ParentView {
     	
     	dc.setColor(WHITE, -1);
 
-		dc.drawText(X1, Y1, numFont, app.heartRate.toString(), just);
+		dc.drawText(X1, Y1, numFont, app.heartRate.format("%.0f"), just);
 		dc.drawText(X1, Y2, numFont, app.speed.format("%.2f") , just);
 			
 		dc.drawText(X2+4, Y2, numFont, meloMetricsTimer.tiempoTranscurrido(), just);
@@ -106,7 +105,12 @@ class OneMileWalkTestView extends ParentView {
 		}
     }
 
-    
+    //una idea podria generar los activities con diferentes laps por ejecucion de test
+	//si un test se detiene acabar el lap e iniciar otro con un nombre que indetifique 
+	// que es una parada de un lap empezado y cuando se continue lo mismo pero con un nombre
+	//que indique que es una continuación etc etc
+	//tambien de la clase Toybox » Application » AppBase los ge y save properties a ver si quizas generan un archivo
+	//que se pueda encontrar en el reloj
     function empezarTest(){
     	resetVariables();  	
  		Snsr.setEnabledSensors( [Snsr.SENSOR_HEARTRATE] );
@@ -123,6 +127,7 @@ class OneMileWalkTestView extends ParentView {
 		var options = { :name => "OneMileWalkTest"  };
 		activityrec=ActivityRecording.createSession(options);
 		activityrec.start();
+		activityrec.addLap();
 		distanciaInicioActivity=Activity.getActivityInfo().elapsedDistance;
 		
     	System.println("Empezando test onemilewalk"  + Time.now().value());
@@ -169,8 +174,10 @@ class OneMileWalkTestView extends ParentView {
 			// probado con exrx.net/Calculators/Rockport.html && brianmac.co.uk/rockport.htm
 	    	var aux = 132.853 - 0.0769*peso - 0.3877*edad + 6.315*genero - 3.2649*minutos - 0.1565*app.heartRate;           	
 			
-			activityrec.stop();
+			
 			activityrec.save();
+			activityrec.stop();
+			//activityrec.discard();
 			media=aux;
 	
 			System.println("Peso "+peso);

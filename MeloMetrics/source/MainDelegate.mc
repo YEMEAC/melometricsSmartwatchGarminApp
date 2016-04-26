@@ -93,30 +93,27 @@ class MainDelegate extends Ui.BehaviorDelegate {
     	
         if(0 == index)
         {
-            //view = new MainView(mIndex);
 			System.println("Cambiando a visto: " + "mainView" );
 			view = app.mainView;
 			
         }
         else if(1 == index)
         {
-            //view = new Vo2maxSpeedView(mIndex);
 			System.println("Cambiando a visto: " + "vo2maxSpeedView" );
 			view = app.vo2maxSpeedView;
 			
         }
         else if(2 == index)
         {
-            //view = new OneMileWalkTestView(mIndex);
 			System.println("Cambiando a visto: " + "oneMileWalkTestView" );
             view = app.oneMileWalkTestView;
             
         }
         else
         {
-            //view = new ThreeMinuteStepTestView(mIndex);
-			System.println("Cambiando a visto: " + "threeMinuteStepTestView" );
-            view = app.threeMinuteStepTestView;
+			//System.println("Cambiando a visto: " + "threeMinuteStepTestView" );
+            //view = app.threeMinuteStepTestView;
+			app.onStop();
              
         }
 		

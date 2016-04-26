@@ -54,7 +54,7 @@ class MeloMetricsApp extends App.AppBase {
     
     function resetVariables(){
 		oneMileWalkTestView = new OneMileWalkTestView();
-		threeMinuteStepTestView = ThreeMinuteStepTestView;
+		threeMinuteStepTestView = new ThreeMinuteStepTestView();
 		vo2maxSpeedView = new Vo2maxSpeedView();
 		
 		speed=0.0d;
@@ -75,6 +75,8 @@ class MeloMetricsApp extends App.AppBase {
 
     //! onStop() is called when your application is exiting
     function onStop() {
+    	System.println("Saliendo de la aplicacion");
+    	Sys.exit();
     }
        
     
