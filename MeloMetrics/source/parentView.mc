@@ -46,6 +46,13 @@ function resetVariablesParent(){
 		tiempoTestReanudado=false;
 		timer.start(method(:timerCallback),tiempoDuracionTest*1000,true);
 		media=null;
+		
+		if(activityrec!= null) { //si cambio en medio de un test
+			if(activityrec.isRecording()){
+				activityrec.discard();
+				activityrec=null;
+			}
+		}
 }
 
 

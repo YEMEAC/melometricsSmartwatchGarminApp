@@ -9,7 +9,6 @@ using Toybox.Activity as Activity;
 
 class Vo2maxSpeedView extends ParentView {
 
-	//Vo2maxSpeed runninIndex index
 	var	maxHeartRate;
 	var heartRateReserve;
 	var restingHeartRate;
@@ -25,12 +24,14 @@ class Vo2maxSpeedView extends ParentView {
     }
     
 	function resetVariables(){
-		//Vo2maxSpeed running index stuff	
+
 		maxHeartRate=186.0d;
 		restingHeartRate=55.0d;
 		heartRateReserve=0.0d;
 		acumuladorVo2maxSpeed=0.0d;
 		contadorVo2maxSpeedMuestras=0.0d;
+		//tiempoDuracionTest=60.0*12.0; 12 minutos
+		//tiempoDuracionTest=10.0d;
 		
 	}
 	
@@ -50,7 +51,7 @@ class Vo2maxSpeedView extends ParentView {
     	var numFont = 6; 	
     	var msgFontMedium = 3;	// Gfx.FONT_MEDIUM
 		var msgFontSmall = 2;	// Gfx.FONT_MEDIUM
-		var just = 5;		// Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER
+		var just = 5;			// Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER
     	
     	var	X1 = 160;
 		var	X2 = 60;
@@ -99,29 +100,36 @@ class Vo2maxSpeedView extends ParentView {
     	Snsr.setEnabledSensors( [Snsr.SENSOR_HEARTRATE] );
 		Snsr.enableSensorEvents( method(:onSnsr) );	
 		
-		//var options = { :name => "Vo2maxSpeed"  };
-		//activityrec=ActivityRecording.createSession(options);
-		//activityrec.start();
+		var options = { :name => "Vo2maxSpeed"  };
+		activityrec=ActivityRecording.createSession(options);
+		activityrec.start();
 			 	
     	tiempoInicioTest=Time.now().value();
-    	//app.meloMetricsTimer.timer.start(method(:timerCallback),1*1000,true);
-    	 	
+
     	System.println("Empezando test Vo2maxSpeed");
     }
     
+    //se puede pasar arriba creo
     function detenerTest(){
     	testDetenido=true;
-    	//app.meloMetricsTimer.stop();
-		//timer.stop();
     	tiempoTestDetenido=Time.now().value();
-		//activityrec.stop();
-		//activityrec.save();
+		
+		//por ahora no guardo el calculo continuo
+	    if(primeraMuestra && activityrec.isRecording()){
+			activityrec.stop();
+			System.println("Detenido activity recording");
+		}
+
     	System.println("Detener test");
     }
     
     function continuarTest(){
     	testDetenido=false;
     	tiempoTestReanudado=Time.now().value();
+    	if(primeraMuestra && activityrec.isRecording()){
+    		activityrec.start();
+    		System.println("Continuar grabando activity");
+    	}
     	System.println("Continuar test");
     }
         
@@ -141,7 +149,14 @@ class Vo2maxSpeedView extends ParentView {
 			acumuladorVo2maxSpeed=acumuladorVo2maxSpeed+estimacionVo2maxSpeed;
 			contadorVo2maxSpeedMuestras=contadorVo2maxSpeedMuestras+1;
 			media=acumuladorVo2maxSpeed/contadorVo2maxSpeedMuestras;
-	            	
+	        
+	        //por ahora no guardo el calculo continuo
+	        if(primeraMuestra && activityrec.isRecording()){
+				activityrec.save();
+				activityrec=null;
+				System.println("Activity  Guardado ");
+			}
+	        	
 			System.println("max hr "+maxHeartRate);
 			System.println("resting hr "+restingHeartRate);
 			System.println("reserve hr "+heartRateReserve);

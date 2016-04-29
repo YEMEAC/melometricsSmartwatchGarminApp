@@ -52,6 +52,7 @@ class OneMileWalkTestView extends ParentView {
 		//distanciaARecorrer=1.60d;
 		distanciaARecorrer=0.03d;
 		distanciaFaltaRecorrer=distanciaARecorrer;
+		//tiempoDuracionTest=1.0d;
 		
 	}
 	
@@ -127,35 +128,38 @@ class OneMileWalkTestView extends ParentView {
 		var options = { :name => "OneMileWalkTest"  };
 		activityrec=ActivityRecording.createSession(options);
 		activityrec.start();
-		activityrec.addLap();
+
 		distanciaInicioActivity=Activity.getActivityInfo().elapsedDistance;
 		
     	System.println("Empezando test onemilewalk"  + Time.now().value());
     	
     }
     
+    //se puede pasar arriba creo
     function detenerTest(){
     	
     	testDetenido=true;
-    	//app.timerTest.stop();  
-    	//timer.stop();
     	tiempoTestDetenido=Time.now().value();
 
     	distanciaDetenerActivity=Activity.getActivityInfo().elapsedDistance;
-		if(activityrec.isRecording()){
+		//por ahora no guardo el calculo continuo
+	    if(primeraMuestra && activityrec.isRecording()){
 			activityrec.stop();
 			System.println("Detenido activity recording");
 		}
     	System.println("Detener test");
     }
     
+    //se puede pasar arriba una parte
     function continuarTest(){
     
     	testDetenido=false;
     	tiempoTestReanudado=Time.now().value();
-		//timer.start(method(:timerCallback),1*1000,true);
-    		
-    	//activityrec.start();
+    	if(primeraMuestra && activityrec.isRecording()){
+    		activityrec.start();
+    		System.println("Continuar grabando activity");
+    	}
+    	
     	distanciaContinuarActivity=Activity.getActivityInfo().elapsedDistance;
 
     	System.println("Continuar test");
@@ -174,11 +178,15 @@ class OneMileWalkTestView extends ParentView {
 			// probado con exrx.net/Calculators/Rockport.html && brianmac.co.uk/rockport.htm
 	    	var aux = 132.853 - 0.0769*peso - 0.3877*edad + 6.315*genero - 3.2649*minutos - 0.1565*app.heartRate;           	
 			
-			
-			activityrec.save();
-			activityrec.stop();
-			//activityrec.discard();
+			//por ahora no guardo el calculo continuo
+	        if(primeraMuestra && activityrec.isRecording()){
+				activityrec.save();
+				activityrec=null;
+				System.println("Activity  Guardado ");
+			}
+
 			media=aux;
+			primeraMuestra=false;
 	
 			System.println("Peso "+peso);
 			System.println("Edad "+edad);

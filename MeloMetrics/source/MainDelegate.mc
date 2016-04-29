@@ -13,15 +13,13 @@ class MainDelegate extends Ui.BehaviorDelegate {
 
 	var app;
 	var view;
-	var mIndex;
+	var index;
 
-
-
-	 function initialize(index, viewQueControla) {
+	 function initialize(Nindex, viewQueControla) {
    		//guardo un apuntadoe a al view que controla y a la aplicacion
 		app = App.getApp();
    		view=viewQueControla;
-   		mIndex=index;
+   		index=Nindex;
         BehaviorDelegate.initialize();
     }
 
@@ -64,55 +62,46 @@ class MainDelegate extends Ui.BehaviorDelegate {
 
 
         function onNextPage(){
-        	//mIndex = (mIndex + 1) % 4;
-        	//con esta implementacion de next y previous se vuelve a crear delegates siempre lo he 
-			//lo he cambiado para que no pase asi con los view y podamos guardar el estado de una pantalla
-			//quizas mas adelante combiene hacerlo mismo con los delegate
-
-			//modifique lo del index para que nos e machaque el que ya tiene el delegate
-			//porque daba igual ya que siempre se ira creando uno nuevo
-			//pero si al final los reutilizo lo correcto es que mantengan su index
-			var newIndex=(mIndex + 1) % 4;
-        	Ui.switchToView(getView(newIndex), getDelegate(newIndex), Ui.SLIDE_LEFT);
+			index=(index + 1) % 4;
+			
+        	Ui.switchToView(getView(), getDelegate(), Ui.SLIDE_LEFT);
     	}
 
     	function onPreviousPage() {
-        mIndex = mIndex - 1;
-	        if (mIndex < 0){
-	            mIndex = 3;
+        	index = index - 1;
+	        if (index < 0){
+	            index = 4;
 	        }
-	        mIndex = mIndex % 4;
-	        Ui.switchToView(getView(mIndex), getDelegate(mIndex), Ui.SLIDE_RIGHT);
+	        index = index % 4;
+	        Ui.switchToView(getView(index), getDelegate(), Ui.SLIDE_RIGHT);
     	}
 
-	   function getView(index)
-    {
+	   function getView(){
         
 		view.resetVariablesParent();
     	view.resetVariables();
     	
         if(0 == index)
         {
-			System.println("Cambiando a visto: " + "mainView" );
-			view = app.mainView;
-			
-        }
-        else if(1 == index)
-        {
 			System.println("Cambiando a visto: " + "vo2maxSpeedView" );
 			view = app.vo2maxSpeedView;
 			
         }
-        else if(2 == index)
+        else if(1 == index)
         {
 			System.println("Cambiando a visto: " + "oneMileWalkTestView" );
             view = app.oneMileWalkTestView;
-            
+			
+        }
+        else if(2 == index)
+        {
+			
+            //System.println("Cambiando a visto: " + "threeMinuteStepTestView" );
+            //view = app.threeMinuteStepTestView;
         }
         else
         {
-			//System.println("Cambiando a visto: " + "threeMinuteStepTestView" );
-            //view = app.threeMinuteStepTestView;
+
 			app.onStop();
              
         }
@@ -122,13 +111,15 @@ class MainDelegate extends Ui.BehaviorDelegate {
         return view;
     }
 
-    function getDelegate(index)
+    function getDelegate()
     {
     
-    	//deberia retocar esto para que use el mismo delegate todo el rato
-       var viewTransicion = getView(index);
-       var delegate = new MainDelegate(index,viewTransicion);
-       return delegate;
+       //deberia retocar esto para que use el mismo delegate todo el rato
+       //var viewTransicion = getView(index);
+       //var delegate = new MainDelegate(index,viewTransicion);
+      // return delegate;
+		//en realidad me estoy devolviendo a mi mismo pero este lengua no comprende un this
+		return	app.mainDelegate;
     }
 
 }
