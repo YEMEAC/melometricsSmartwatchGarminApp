@@ -6,7 +6,7 @@ using Toybox.ActivityMonitor as ActivityMonitor;
 using Toybox.ActivityRecording as ActivityRecording;
 using Toybox.Activity as Activity;
 
-
+//mirar http://www.brianmac.co.uk/vo2max.htm#vo2 para la docu hay una tabla sobre velocidades
 class Vo2maxSpeedView extends ParentView {
 
 	var	maxHeartRate;
@@ -69,7 +69,7 @@ class Vo2maxSpeedView extends ParentView {
     	
     	dc.setColor(WHITE, -1);
 
-		dc.drawText(X1, Y1, numFont, app.heartRate.toString(), just);
+		dc.drawText(X1, Y1, numFont, app.heartRate.format("%.0f"), just);
 		dc.drawText(X1, Y2, numFont, app.speed.format("%.2f") , just);
 
 		if(primeraMuestra){
@@ -169,18 +169,6 @@ class Vo2maxSpeedView extends ParentView {
 
     	Ui.requestUpdate();
     }
-     
-    function onSnsr(sensor_info){
-    	if(sensor_info.heartRate!=null){
-    		app.heartRate=sensor_info.heartRate;
-    	}
-    	
-    	if(sensor_info.speed!=null){
-    		app.speed=sensor_info.speed;
-    	}
-    	Ui.requestUpdate();
-    	return true; 
-    }  
 }
 
 

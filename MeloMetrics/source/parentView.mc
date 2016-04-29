@@ -103,5 +103,16 @@ function timerPantalla() {
 			return format("$1$:$2$",[min.format("%02d"),sec.format("%02d")]);
 		}
     }
-
+    
+    function onSnsr(sensor_info){
+    	if(sensor_info.heartRate!=null){
+    		app.heartRate=sensor_info.heartRate;
+    	}
+    	
+    	if(sensor_info.speed!=null){
+    		app.speed=sensor_info.speed;
+    	}
+    	Ui.requestUpdate();
+    	return true; 
+    }  
 }

@@ -96,8 +96,8 @@ class MainDelegate extends Ui.BehaviorDelegate {
         else if(2 == index)
         {
 			
-            //System.println("Cambiando a visto: " + "threeMinuteStepTestView" );
-            //view = app.threeMinuteStepTestView;
+            System.println("Cambiando a visto: " + "OneHalfMileRunTest" );
+            view = app.oneHalfMileRunTest;
         }
         else
         {

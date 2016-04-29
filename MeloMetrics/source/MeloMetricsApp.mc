@@ -39,7 +39,7 @@ class MeloMetricsApp extends App.AppBase {
 	
 	var oneMileWalkTestView;
 	var vo2maxSpeedView;
-	var threeMinuteStepTestView;
+	var oneHalfMileRunTest;
 	var mainDelegate;
 	
 	//var meloMetricsTimer;
@@ -56,7 +56,7 @@ class MeloMetricsApp extends App.AppBase {
     function resetVariables(){
     	vo2maxSpeedView = new Vo2maxSpeedView(); 					//vista 0
 		oneMileWalkTestView = new OneMileWalkTestView();			//vista 1
-		threeMinuteStepTestView = new ThreeMinuteStepTestView();	//vista 2
+		oneHalfMileRunTest = new OneHalfMileRunTest();				//vista 2
 		
 		var index=1; //vista inicial
 		mainDelegate = new MainDelegate(index,oneMileWalkTestView);

@@ -5,12 +5,10 @@ using Toybox.Sensor as Snsr;
 using Toybox.ActivityMonitor as ActivityMonitor;
 using Toybox.ActivityRecording as ActivityRecording;
 using Toybox.Activity as Activity;
-using Toybox.UserProfile as UserProfile;
 
+class OneHalfMileRunTest extends ParentView {
 
-class OneMileWalkTestView extends ParentView {
-
-	var genero;
+var genero;
 	var edad;
 	var peso;
 	var distanciaARecorrer; 
@@ -19,7 +17,6 @@ class OneMileWalkTestView extends ParentView {
 	var distanciaDetenerActivity;
 	var distanciaContinuarActivity;
 	
-	var profile;
 
 	 function initialize() {	 	 	
     	app = App.getApp();
@@ -30,20 +27,13 @@ class OneMileWalkTestView extends ParentView {
     
 	function resetVariables(){
 		
-		profile = UserProfile.getProfile();
-		if( profile != null ) {
-            genero=profile.gender;
-			edad=Time.Gregorian.info(Time.now(), Time.FORMAT_LONG).year - profile.birthYear;
-			peso=profile.weight*0.0022;  //g to pounds
-		}   
-		
-	
 		//distancia al comienzo del test para no tenerla en cuenta por el activity
 		distanciaInicioActivity=0.0d;
 		distanciaDetenerActivity=0.0d;
 		distanciaContinuarActivity=0.0d;
-		//1 milla = 1.60934 km = 1609.34 m
-		distanciaARecorrer=1.61d;
+		//1 milla = 1,60934 km = 1609,34 m
+		//1,5 milla = 2,41402 km = 2414,02 m
+		distanciaARecorrer=2.42d;
 		//distanciaARecorrer=0.03d;
 		distanciaFaltaRecorrer=distanciaARecorrer;
 		//tiempoDuracionTest=1.0d;
@@ -100,17 +90,11 @@ class OneMileWalkTestView extends ParentView {
 		}
     }
 
-    //una idea podria generar los activities con diferentes laps por ejecucion de test
-	//si un test se detiene acabar el lap e iniciar otro con un nombre que indetifique 
-	// que es una parada de un lap empezado y cuando se continue lo mismo pero con un nombre
-	//que indique que es una continuación etc etc
-	//tambien de la clase Toybox » Application » AppBase los ge y save properties a ver si quizas generan un archivo
-	//que se pueda encontrar en el reloj
+
     function empezarTest(){
     	resetVariables();  	
  		Snsr.setEnabledSensors( [Snsr.SENSOR_HEARTRATE] );
 		Snsr.enableSensorEvents( method(:onSnsr) );	
-		//Snsr.setEnabledSensors();
 		
 		testEnEjecucion=true;
     	
@@ -119,13 +103,13 @@ class OneMileWalkTestView extends ParentView {
     	//asegurar que no cuenta distancias anteriores
 		//parece que no deja modificar el activity directamente mal asunto
 
-		var options = { :name => "OneMileWalkTest"  };
+		var options = { :name => "OneHalfMileRunTest"  };
 		activityrec=ActivityRecording.createSession(options);
 		activityrec.start();
 
 		distanciaInicioActivity=Activity.getActivityInfo().elapsedDistance;
 		
-    	System.println("Empezando test onemilewalk"  + Time.now().value());
+    	System.println("Empezando test OneHalfMileRunTest"  + Time.now().value());
     	
     }
     
@@ -136,7 +120,7 @@ class OneMileWalkTestView extends ParentView {
     	tiempoTestDetenido=Time.now().value();
 
     	distanciaDetenerActivity=Activity.getActivityInfo().elapsedDistance;
-
+		//por ahora no guardo el calculo continuo
 	    if(primeraMuestra && activityrec.isRecording()){
 			activityrec.stop();
 			System.println("Detenido activity recording");
@@ -168,28 +152,26 @@ class OneMileWalkTestView extends ParentView {
     		//app.meloMetricsTimer.stop(); 
 			testEnEjecucion=false;
 	    	
+	    	//comparada con http://www.exrx.net/Calculators/OneAndHalf.html http://www.shapesense.com/fitness-exercise/calculators/vo2max-calculator.shtml
+			//da lo mismo
 			var minutos=meloMetricsTimer.contadorSegundos/60.0;
-			// probado con exrx.net/Calculators/Rockport.html && brianmac.co.uk/rockport.htm
-	    	var aux = 132.853 - 0.0769*peso - 0.3877*edad + 6.315*genero - 3.2649*minutos - 0.1565*app.heartRate;           	
 			
-			//por ahora no guardo el calculo continuo
+	    	var aux = 483.0d;
+	    	var auxdos = 3.5d;
+	    	media = (aux/minutos) +3.5;         	
+			
 	        if(primeraMuestra && activityrec.isRecording()){
 				activityrec.save();
 				activityrec=null;
 				System.println("Activity  Guardado ");
 			}
 
-			media=aux;
 			primeraMuestra=false;
 	
-			System.println("Peso "+peso);
-			System.println("Edad "+edad);
-			System.println("Genero "+genero);
 			System.println("tiempo "+minutos + " seg" +meloMetricsTimer.contadorSegundos);
 			System.println("pusalciones " + app.heartRate*0.1565 + " hearrate "+ app.heartRate);	
 		}
 		
-		//System.println("Falta por recorrer " + distanciaFaltaRecorrer.format("%.2f") + " de " + distanciaARecorrer);
 	    Ui.requestUpdate();
     }
     
@@ -210,7 +192,3 @@ class OneMileWalkTestView extends ParentView {
     	return aux;
     }
 }
-
-
-
-
