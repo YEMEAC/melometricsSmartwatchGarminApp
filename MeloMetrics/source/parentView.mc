@@ -13,6 +13,7 @@ class ParentView extends Ui.View{
 	var tiempoInicioTest;
 	var tiempoTestDetenido;
 	var tiempoTestReanudado;
+	var duracionPausas;
 	//segundos que debe durar el test antes de tener suficientes muestras
 	var tiempoDuracionTest;
 	
@@ -31,20 +32,20 @@ class ParentView extends Ui.View{
 
 
 function resetVariablesParent(){
-		tiempoInicioTest=0.0d;
-		tiempoTestDetenido=0.0d;
-		tiempoTestReanudado=0.0d;
-		tiempoDuracionTest=1.0d;
+		tiempoInicioTest=0;
+		tiempoTestDetenido=0;
+		tiempoTestReanudado=0;
+		duracionPausas=0;
+		//tiempoDuracionTest=720;
 			
 		meloMetricsTimer.contadorSegundos=0;
 		meloMetricsTimer.stop();
-		timer.stop();
-		
+			
 		testEnEjecucion=false;
 		testDetenido=false;
 		primeraMuestra=true;
 		tiempoTestReanudado=false;
-		timer.start(method(:timerCallback),tiempoDuracionTest*1000,true);
+
 		media=null;
 		
 		if(activityrec!= null) { //si cambio en medio de un test
@@ -56,40 +57,34 @@ function resetVariablesParent(){
 }
 
 
-//todas estas funciones bajar a vo2ma si no se comarten por el resto en un futuro
-function timerPantalla() {
+	//todas estas funciones bajar a vo2ma si no se comarten por el resto en un futuro
+	//si tiempoDuracionTest > 1 es una cuenta atras, test que depende de un tiempo
+	function timerPantalla() {
     	if(testEnEjecucion==true && testDetenido==false){
-    		if(tiempoDuracionTest>1) { //cuenta atras   			
+    		if(tiempoDuracionTest>1) { 		
 				return timerFormat(tiempoDuracionTest-tiempoTestEnCurso());	
-			}else{ //cuenta hacia delante
+			}else{ 
 				return timerFormat(tiempoTestEnCurso());
 			}
-		}else if(testEnEjecucion==true && testDetenido==true){
+		 }else if(testEnEjecucion==true && testDetenido==true){
 			if(tiempoDuracionTest>1) {
-				return timerFormat(tiempoDuracionTest-tiempoTestEnCursoDenido());
+				return timerFormat(tiempoDuracionTest-tiempoTestEnCurso()+tiempoTestEnCursoDenido());
 			}else{
-				return timerFormat( tiempoTestEnCurso()-(Time.now().value()-tiempoTestDetenido));
+				return timerFormat( tiempoTestEnCurso()+tiempoTestEnCursoDenido);
 			}
 		}
-			return timerFormat(0);	
+		return timerFormat(0);	
     }
     
     
     function tiempoTestEnCurso(){
-    	//si el test se ha denido 
-    	if(tiempoTestDetenido>0 && tiempoTestReanudado>0){
-    		//el tiempo que lleva en curso es al actual - el de inicio pero sumandole el tiempo que estuvo parado
-			//para que no cuente el tiempo parado como si hubiera estado en curso
-    		return Time.now().value() - (tiempoInicioTest+(tiempoTestReanudado-tiempoTestDetenido));
-    	}else{
-    		//si nunca se pa detenido es al actual - el inicio
-    		return Time.now().value() - tiempoInicioTest;
-    	}
+		//duracionPausas siempre => 0 acumulador de las detenciones anteriores
+    	return Time.now().value() - tiempoInicioTest-duracionPausas;
     }
     
-      //return cuando tiempo lleva denido el test
+    //return cuando tiempo lleva denido el test, detencion en curso
     function tiempoTestEnCursoDenido(){
-    	return tiempoTestDetenido-tiempoInicioTest;
+    	return Time.now().value()-tiempoTestDetenido;
     }
     
     function timerFormat(time) {
@@ -115,4 +110,31 @@ function timerPantalla() {
     	Ui.requestUpdate();
     	return true; 
     }  
+    
+    
+    //hacer subclase para rest de recorrido de distancia
+    function distanciaFaltaRecorrerTest(){
+		var aux;
+		if(media == null && testEnEjecucion == true && testDetenido==false){
+			//quiar la distancia recorrida con el test detenido 
+			//distanciaInicioActivity = distancia que ya tenia recorrida antes de iniciar el test
+			
+			var distanciaTestDenido=distanciaContinuarActivity-distanciaDetenerActivity;
+			var distanciaRecorrida= (Activity.getActivityInfo().elapsedDistance-distanciaTestDenido-distanciaInicioActivity)/1000; //km
+    		aux=distanciaARecorrer - distanciaRecorrida;
+    		
+    		
+    		if(aux<0){
+    				distanciaFaltaRecorrer=0;
+    		}else{
+    			distanciaFaltaRecorrer = aux;
+    		}
+		}else if (testDetenido==true){
+    		aux= distanciaFaltaRecorrer;
+    	}else{
+    		aux= 0.0d;
+    	}
+    	System.println("distancia test denitod0 "  + (distanciaContinuarActivity-distanciaDetenerActivity)/1000);
+    	return aux;
+    }
 }

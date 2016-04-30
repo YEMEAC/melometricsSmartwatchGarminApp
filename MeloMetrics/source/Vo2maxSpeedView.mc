@@ -5,8 +5,10 @@ using Toybox.Sensor as Snsr;
 using Toybox.ActivityMonitor as ActivityMonitor;
 using Toybox.ActivityRecording as ActivityRecording;
 using Toybox.Activity as Activity;
+using Toybox.UserProfile as UserProfile;
 
 //mirar http://www.brianmac.co.uk/vo2max.htm#vo2 para la docu hay una tabla sobre velocidades
+//FALTA DESAROLLAR EL IMPUT DEL MAX HEARRATE! Y ACCEDER al restingHeartRate del profile o hacer imput tmb
 class Vo2maxSpeedView extends ParentView {
 
 	var	maxHeartRate;
@@ -25,13 +27,13 @@ class Vo2maxSpeedView extends ParentView {
     
 	function resetVariables(){
 
-		maxHeartRate=186.0d;
-		restingHeartRate=55.0d;
+		maxHeartRate=186.0d;	
+		restingHeartRate=UserProfile.getProfile().restingHeartRate;
 		heartRateReserve=0.0d;
 		acumuladorVo2maxSpeed=0.0d;
 		contadorVo2maxSpeedMuestras=0.0d;
-		//tiempoDuracionTest=60.0*12.0; 12 minutos
-		//tiempoDuracionTest=10.0d;
+		//tiempoDuracionTest=60.0*12.0;  //12 minutos
+		tiempoDuracionTest=720;
 		
 	}
 	
@@ -125,7 +127,10 @@ class Vo2maxSpeedView extends ParentView {
     
     function continuarTest(){
     	testDetenido=false;
-    	tiempoTestReanudado=Time.now().value();
+    	tiempoTestReanudado=Time.now().value(); //
+    	
+    	duracionPausas=duracionPausas+(Time.now().value()-tiempoTestDetenido);
+    	
     	if(primeraMuestra && activityrec.isRecording()){
     		activityrec.start();
     		System.println("Continuar grabando activity");

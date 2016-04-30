@@ -36,7 +36,7 @@ var genero;
 		distanciaARecorrer=2.42d;
 		//distanciaARecorrer=0.03d;
 		distanciaFaltaRecorrer=distanciaARecorrer;
-		//tiempoDuracionTest=1.0d;
+		tiempoDuracionTest=1;
 		
 	}
 	
@@ -98,11 +98,10 @@ var genero;
 		
 		testEnEjecucion=true;
     	
+    	timer.stop();
+		timer.start(method(:timerCallback),1*1000,true);
     	tiempoInicioTest=Time.now().value();
     	  		
-    	//asegurar que no cuenta distancias anteriores
-		//parece que no deja modificar el activity directamente mal asunto
-
 		var options = { :name => "OneHalfMileRunTest"  };
 		activityrec=ActivityRecording.createSession(options);
 		activityrec.start();
@@ -137,13 +136,14 @@ var genero;
     		activityrec.start();
     		System.println("Continuar grabando activity");
     	}
-    	
+    	duracionPausas=duracionPausas+(Time.now().value()-tiempoTestDetenido);
     	distanciaContinuarActivity=Activity.getActivityInfo().elapsedDistance;
 
     	System.println("Continuar test");
     }
     
     function timerCallback(){
+    
     	if(testEnEjecucion &&  !testDetenido){	
     		meloMetricsTimer.aumentarSegundos();
     	}
@@ -171,24 +171,7 @@ var genero;
 			System.println("tiempo "+minutos + " seg" +meloMetricsTimer.contadorSegundos);
 			System.println("pusalciones " + app.heartRate*0.1565 + " hearrate "+ app.heartRate);	
 		}
-		
+		System.println("Falta por recorrer " + distanciaFaltaRecorrer.format("%.2f") + " de " + distanciaARecorrer);
 	    Ui.requestUpdate();
-    }
-    
-    function distanciaFaltaRecorrerTest(){
-		var aux;
-		if(media == null && testEnEjecucion == true && testDetenido==false){
-    		aux=distanciaARecorrer - ((Activity.getActivityInfo().elapsedDistance-(distanciaContinuarActivity-distanciaDetenerActivity))/1000);
-    		if(aux<0){
-    				distanciaFaltaRecorrer=0;
-    		}else{
-    			distanciaFaltaRecorrer = aux;
-    		}
-		}else if (testDetenido==true){
-    		aux= distanciaFaltaRecorrer;
-    	}else{
-    		aux= 0.0d;
-    	}
-    	return aux;
     }
 }

@@ -46,7 +46,7 @@ class OneMileWalkTestView extends ParentView {
 		distanciaARecorrer=1.61d;
 		//distanciaARecorrer=0.03d;
 		distanciaFaltaRecorrer=distanciaARecorrer;
-		//tiempoDuracionTest=1.0d;
+		tiempoDuracionTest=1;
 		
 	}
 	
@@ -107,7 +107,9 @@ class OneMileWalkTestView extends ParentView {
 	//tambien de la clase Toybox » Application » AppBase los ge y save properties a ver si quizas generan un archivo
 	//que se pueda encontrar en el reloj
     function empezarTest(){
-    	resetVariables();  	
+    	resetVariablesParent();
+    	resetVariables();
+    	 	
  		Snsr.setEnabledSensors( [Snsr.SENSOR_HEARTRATE] );
 		Snsr.enableSensorEvents( method(:onSnsr) );	
 		//Snsr.setEnabledSensors();
@@ -115,10 +117,11 @@ class OneMileWalkTestView extends ParentView {
 		testEnEjecucion=true;
     	
     	tiempoInicioTest=Time.now().value();
+    	
+    	timer.stop();
+		timer.start(method(:timerCallback),1*1000,true);
     	  		
-    	//asegurar que no cuenta distancias anteriores
-		//parece que no deja modificar el activity directamente mal asunto
-
+    
 		var options = { :name => "OneMileWalkTest"  };
 		activityrec=ActivityRecording.createSession(options);
 		activityrec.start();
@@ -135,6 +138,7 @@ class OneMileWalkTestView extends ParentView {
     	testDetenido=true;
     	tiempoTestDetenido=Time.now().value();
 
+		
     	distanciaDetenerActivity=Activity.getActivityInfo().elapsedDistance;
 
 	    if(primeraMuestra && activityrec.isRecording()){
@@ -154,12 +158,16 @@ class OneMileWalkTestView extends ParentView {
     		System.println("Continuar grabando activity");
     	}
     	
+    	duracionPausas=duracionPausas+(Time.now().value()-tiempoTestDetenido);
     	distanciaContinuarActivity=Activity.getActivityInfo().elapsedDistance;
 
     	System.println("Continuar test");
     }
     
     function timerCallback(){
+    
+    	 //se puede afinar mas esto si no llama a ++segundo al estar detenido no hace
+		//falta restar el tiempo parado al de ejecucion
     	if(testEnEjecucion &&  !testDetenido){	
     		meloMetricsTimer.aumentarSegundos();
     	}
@@ -189,25 +197,8 @@ class OneMileWalkTestView extends ParentView {
 			System.println("pusalciones " + app.heartRate*0.1565 + " hearrate "+ app.heartRate);	
 		}
 		
-		//System.println("Falta por recorrer " + distanciaFaltaRecorrer.format("%.2f") + " de " + distanciaARecorrer);
+		System.println("Falta por recorrer " + distanciaFaltaRecorrer.format("%.2f") + " de " + distanciaARecorrer);
 	    Ui.requestUpdate();
-    }
-    
-    function distanciaFaltaRecorrerTest(){
-		var aux;
-		if(media == null && testEnEjecucion == true && testDetenido==false){
-    		aux=distanciaARecorrer - ((Activity.getActivityInfo().elapsedDistance-(distanciaContinuarActivity-distanciaDetenerActivity))/1000);
-    		if(aux<0){
-    				distanciaFaltaRecorrer=0;
-    		}else{
-    			distanciaFaltaRecorrer = aux;
-    		}
-		}else if (testDetenido==true){
-    		aux= distanciaFaltaRecorrer;
-    	}else{
-    		aux= 0.0d;
-    	}
-    	return aux;
     }
 }
 
