@@ -86,7 +86,7 @@ class OneMileWalkTestView extends ParentView {
 		dc.drawText(X1, Y1, numFont, app.heartRate.format("%.0f"), just);
 		dc.drawText(X1, Y2, numFont, app.speed.format("%.2f") , just);
 			
-		dc.drawText(X2+4, Y2, numFont, meloMetricsTimer.tiempoTranscurrido(), just);
+		dc.drawText(X2+4, Y2, numFont, meloMetricsTimer.tiempoTranscurridoCuentaAlante(), just);
 		dc.drawText(X3+4, Y1, numFont, distanciaFaltaRecorrer.format("%.2f"), just);
 		
 		if(testEnEjecucion){
@@ -116,10 +116,10 @@ class OneMileWalkTestView extends ParentView {
 		
 		testEnEjecucion=true;
     	
-    	tiempoInicioTest=Time.now().value();
+    	//tiempoInicioTest=Time.now().value();
     	
-    	timer.stop();
-		timer.start(method(:timerCallback),1*1000,true);
+    	meloMetricsTimer.timer.stop();
+		meloMetricsTimer.timer.start(method(:timerCallback),1*1000,true);
     	  		
     
 		var options = { :name => "OneMileWalkTest"  };
@@ -136,9 +136,8 @@ class OneMileWalkTestView extends ParentView {
     function detenerTest(){
     	
     	testDetenido=true;
-    	tiempoTestDetenido=Time.now().value();
 
-		
+		meloMetricsTimer.timer.stop();
     	distanciaDetenerActivity=Activity.getActivityInfo().elapsedDistance;
 
 	    if(primeraMuestra && activityrec.isRecording()){
@@ -152,13 +151,12 @@ class OneMileWalkTestView extends ParentView {
     function continuarTest(){
     
     	testDetenido=false;
-    	tiempoTestReanudado=Time.now().value();
+    	meloMetricsTimer.timer.start(method(:timerCallback),1*1000,true);
     	if(primeraMuestra && activityrec.isRecording()){
     		activityrec.start();
     		System.println("Continuar grabando activity");
     	}
     	
-    	duracionPausas=duracionPausas+(Time.now().value()-tiempoTestDetenido);
     	distanciaContinuarActivity=Activity.getActivityInfo().elapsedDistance;
 
     	System.println("Continuar test");

@@ -75,7 +75,7 @@ class Vo2maxSpeedView extends ParentView {
 		dc.drawText(X1, Y2, numFont, app.speed.format("%.2f") , just);
 
 		if(primeraMuestra){
-			dc.drawText(X2, Y2, numFont, timerPantalla(), just);
+			dc.drawText(X2, Y2, numFont,meloMetricsTimer.tiempoTranscurridoCuentaAtras(tiempoDuracionTest), just);
 		}else{
 			dc.setColor(LT_GRAY, -1);
     		dc.drawText(X2, Y2, msgFontSmall, Ui.loadResource(Rez.Strings.estimacionContinua) , just);
@@ -106,7 +106,8 @@ class Vo2maxSpeedView extends ParentView {
 		activityrec=ActivityRecording.createSession(options);
 		activityrec.start();
 			 	
-    	tiempoInicioTest=Time.now().value();
+    	meloMetricsTimer.timer.stop();
+		meloMetricsTimer.timer.start(method(:timerCallback),1*1000,true);
 
     	System.println("Empezando test Vo2maxSpeed");
     }
@@ -114,8 +115,7 @@ class Vo2maxSpeedView extends ParentView {
     //se puede pasar arriba creo
     function detenerTest(){
     	testDetenido=true;
-    	tiempoTestDetenido=Time.now().value();
-		
+		meloMetricsTimer.timer.stop();
 		//por ahora no guardo el calculo continuo
 	    if(primeraMuestra && activityrec.isRecording()){
 			activityrec.stop();
@@ -127,10 +127,7 @@ class Vo2maxSpeedView extends ParentView {
     
     function continuarTest(){
     	testDetenido=false;
-    	tiempoTestReanudado=Time.now().value(); //
-    	
-    	duracionPausas=duracionPausas+(Time.now().value()-tiempoTestDetenido);
-    	
+    	meloMetricsTimer.timer.start(method(:timerCallback),1*1000,true);
     	if(primeraMuestra && activityrec.isRecording()){
     		activityrec.start();
     		System.println("Continuar grabando activity");

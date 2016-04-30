@@ -9,8 +9,7 @@ using Toybox.Activity as Activity;
 class OneHalfMileRunTest extends ParentView {
 
 var genero;
-	var edad;
-	var peso;
+	
 	var distanciaARecorrer; 
 	var distanciaFaltaRecorrer;
 	var distanciaInicioActivity;
@@ -76,7 +75,7 @@ var genero;
 		dc.drawText(X1, Y1, numFont, app.heartRate.format("%.0f"), just);
 		dc.drawText(X1, Y2, numFont, app.speed.format("%.2f") , just);
 			
-		dc.drawText(X2+4, Y2, numFont, meloMetricsTimer.tiempoTranscurrido(), just);
+		dc.drawText(X2+4, Y2, numFont, meloMetricsTimer.tiempoTranscurridoCuentaAlante(), just);
 		dc.drawText(X3+4, Y1, numFont, distanciaFaltaRecorrer.format("%.2f"), just);
 		
 		if(testEnEjecucion){
@@ -98,9 +97,9 @@ var genero;
 		
 		testEnEjecucion=true;
     	
-    	timer.stop();
-		timer.start(method(:timerCallback),1*1000,true);
-    	tiempoInicioTest=Time.now().value();
+    	meloMetricsTimertimer.stop();
+		meloMetricsTimertimer.start(method(:timerCallback),1*1000,true);
+    	
     	  		
 		var options = { :name => "OneHalfMileRunTest"  };
 		activityrec=ActivityRecording.createSession(options);
@@ -116,8 +115,7 @@ var genero;
     function detenerTest(){
     	
     	testDetenido=true;
-    	tiempoTestDetenido=Time.now().value();
-
+		meloMetricsTimer.timer.stop();
     	distanciaDetenerActivity=Activity.getActivityInfo().elapsedDistance;
 		//por ahora no guardo el calculo continuo
 	    if(primeraMuestra && activityrec.isRecording()){
@@ -131,12 +129,12 @@ var genero;
     function continuarTest(){
     
     	testDetenido=false;
-    	tiempoTestReanudado=Time.now().value();
+		meloMetricsTimer.timer.start(method(:timerCallback),1*1000,true);
     	if(primeraMuestra && activityrec.isRecording()){
     		activityrec.start();
     		System.println("Continuar grabando activity");
     	}
-    	duracionPausas=duracionPausas+(Time.now().value()-tiempoTestDetenido);
+
     	distanciaContinuarActivity=Activity.getActivityInfo().elapsedDistance;
 
     	System.println("Continuar test");

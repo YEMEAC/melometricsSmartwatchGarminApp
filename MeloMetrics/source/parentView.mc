@@ -9,11 +9,7 @@ using Toybox.Activity as Activity;
 class ParentView extends Ui.View{
 
 	var app;
-	//variables para controlar tiempo/timer
-	var tiempoInicioTest;
-	var tiempoTestDetenido;
-	var tiempoTestReanudado;
-	var duracionPausas;
+
 	//segundos que debe durar el test antes de tener suficientes muestras
 	var tiempoDuracionTest;
 	
@@ -28,14 +24,8 @@ class ParentView extends Ui.View{
 	//estimacidor del test a mostrar en pantalla
 	var media;
 	
-	var timer = new Timer.Timer();
-
 
 function resetVariablesParent(){
-		tiempoInicioTest=0;
-		tiempoTestDetenido=0;
-		tiempoTestReanudado=0;
-		duracionPausas=0;
 		//tiempoDuracionTest=720;
 			
 		meloMetricsTimer.contadorSegundos=0;
@@ -44,7 +34,6 @@ function resetVariablesParent(){
 		testEnEjecucion=false;
 		testDetenido=false;
 		primeraMuestra=true;
-		tiempoTestReanudado=false;
 
 		media=null;
 		
@@ -56,49 +45,6 @@ function resetVariablesParent(){
 		}
 }
 
-
-	//todas estas funciones bajar a vo2ma si no se comarten por el resto en un futuro
-	//si tiempoDuracionTest > 1 es una cuenta atras, test que depende de un tiempo
-	function timerPantalla() {
-    	if(testEnEjecucion==true && testDetenido==false){
-    		if(tiempoDuracionTest>1) { 		
-				return timerFormat(tiempoDuracionTest-tiempoTestEnCurso());	
-			}else{ 
-				return timerFormat(tiempoTestEnCurso());
-			}
-		 }else if(testEnEjecucion==true && testDetenido==true){
-			if(tiempoDuracionTest>1) {
-				return timerFormat(tiempoDuracionTest-tiempoTestEnCurso()+tiempoTestEnCursoDenido());
-			}else{
-				return timerFormat( tiempoTestEnCurso()+tiempoTestEnCursoDenido);
-			}
-		}
-		return timerFormat(0);	
-    }
-    
-    
-    function tiempoTestEnCurso(){
-		//duracionPausas siempre => 0 acumulador de las detenciones anteriores
-    	return Time.now().value() - tiempoInicioTest-duracionPausas;
-    }
-    
-    //return cuando tiempo lleva denido el test, detencion en curso
-    function tiempoTestEnCursoDenido(){
-    	return Time.now().value()-tiempoTestDetenido;
-    }
-    
-    function timerFormat(time) {
-    	var hour = time / 3600;
-		var min = (time / 60) % 60;
-		var sec = time % 60;
-		if(0 < hour) {
-			return format("$1$:$2$:$3$",[hour.format("%01d"),min.format("%02d"),sec.format("%02d")]);
-		}
-		else {
-			return format("$1$:$2$",[min.format("%02d"),sec.format("%02d")]);
-		}
-    }
-    
     function onSnsr(sensor_info){
     	if(sensor_info.heartRate!=null){
     		app.heartRate=sensor_info.heartRate;
@@ -116,7 +62,7 @@ function resetVariablesParent(){
     function distanciaFaltaRecorrerTest(){
 		var aux;
 		if(media == null && testEnEjecucion == true && testDetenido==false){
-			//quiar la distancia recorrida con el test detenido 
+			//distanciaTestDenido = quiar la distancia recorrida con el test detenido 
 			//distanciaInicioActivity = distancia que ya tenia recorrida antes de iniciar el test
 			
 			var distanciaTestDenido=distanciaContinuarActivity-distanciaDetenerActivity;

@@ -40,14 +40,23 @@ class MeloMetricsTimer  {
 		contadorSegundos=0;
 	}
 	
-	function tiempoTranscurrido() {
-		if (contadorSegundos==null){
-			contadorSegundos=0;
+	function tiempoTranscurridoCuentaAtras(duracion){
+		return  tiempoTranscurrido(duracion-contadorSegundos);
+	}
+	
+	function tiempoTranscurridoCuentaAlante(){
+		return  tiempoTranscurrido(contadorSegundos);
+	}
+	
+	function tiempoTranscurrido(contadorSegundosAux) {
+		
+		if (contadorSegundosAux==null){
+			contadorSegundosAux=0;
 		}
 		
-    	var hour = contadorSegundos / 3600;
-		var min = (contadorSegundos / 60) % 60;
-		var sec = contadorSegundos % 60;
+    	var hour = contadorSegundosAux / 3600;
+		var min = (contadorSegundosAux / 60) % 60;
+		var sec = contadorSegundosAux % 60;
 		if(0 < hour) {
 			return format("$1$:$2$:$3$",[hour.format("%01d"),min.format("%02d"),sec.format("%02d")]);
 		}

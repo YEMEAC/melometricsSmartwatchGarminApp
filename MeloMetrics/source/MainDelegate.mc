@@ -80,7 +80,7 @@ class MainDelegate extends Ui.BehaviorDelegate {
         
 		view.resetVariablesParent();
     	view.resetVariables();
-    	view.timer.stop();
+    	view.meloMetricsTimer.timer.stop();
     	
         if(0 == index)
         {
