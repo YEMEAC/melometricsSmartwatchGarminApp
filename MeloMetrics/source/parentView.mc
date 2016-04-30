@@ -26,10 +26,9 @@ class ParentView extends Ui.View{
 	
 
 function resetVariablesParent(){
-		//tiempoDuracionTest=720;
 			
 		meloMetricsTimer.contadorSegundos=0;
-		meloMetricsTimer.stop();
+		meloMetricsTimer.timer.stop();
 			
 		testEnEjecucion=false;
 		testDetenido=false;
@@ -38,10 +37,10 @@ function resetVariablesParent(){
 		media=null;
 		
 		if(activityrec!= null) { //si cambio en medio de un test
-			if(activityrec.isRecording()){
+			//if(activityrec.isRecording()){
 				activityrec.discard();
 				activityrec=null;
-			}
+			//}
 		}
 }
 

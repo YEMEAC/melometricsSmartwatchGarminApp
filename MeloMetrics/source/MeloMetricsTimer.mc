@@ -22,10 +22,6 @@ class MeloMetricsTimer  {
 	function aumentarSegundos(){
 		contadorSegundos=contadorSegundos+1;
 	}
-	
-	function stop(){
-		timer.stop();
-	}
 
 	function start(){
 		reiniciarSegundos();

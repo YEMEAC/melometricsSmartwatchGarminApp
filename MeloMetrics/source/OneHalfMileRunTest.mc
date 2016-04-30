@@ -97,8 +97,8 @@ var genero;
 		
 		testEnEjecucion=true;
     	
-    	meloMetricsTimertimer.stop();
-		meloMetricsTimertimer.start(method(:timerCallback),1*1000,true);
+    	meloMetricsTimer.timer.stop();
+		meloMetricsTimer.timer.start(method(:timerCallback),1*1000,true);
     	
     	  		
 		var options = { :name => "OneHalfMileRunTest"  };
