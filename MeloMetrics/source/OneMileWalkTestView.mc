@@ -37,6 +37,7 @@ class OneMileWalkTestView extends ParentView {
 			peso=profile.weight*0.0022;  //g to pounds
 		}   
 		
+		System.println(profile.weight + " " + peso);
 	
 		//distancia al comienzo del test para no tenerla en cuenta por el activity
 		distanciaInicioActivity=0.0d;
@@ -175,7 +176,7 @@ class OneMileWalkTestView extends ParentView {
 			testEnEjecucion=false;
 	    	
 			var minutos=meloMetricsTimer.contadorSegundos/60.0;
-			// probado con exrx.net/Calculators/Rockport.html && brianmac.co.uk/rockport.htm
+			// probado con exrx.net/Calculators/Rockport.html && brianmac.co.uk/rockport.htm && www.shapesense.com/fitness-exercise/calculators/vo2max-calculator.shtml
 	    	var aux = 132.853 - 0.0769*peso - 0.3877*edad + 6.315*genero - 3.2649*minutos - 0.1565*app.heartRate;           	
 			
 			//por ahora no guardo el calculo continuo
