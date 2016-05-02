@@ -8,7 +8,7 @@ using Toybox.Activity as Activity;
 using Toybox.UserProfile as UserProfile;
 
 //mirar http://www.brianmac.co.uk/vo2max.htm#vo2 para la docu hay una tabla sobre velocidades
-//FALTA DESAROLLAR EL IMPUT DEL MAX HEARRATE! Y ACCEDER al restingHeartRate del profile o hacer imput tmb
+//FALTA DESAROLLAR EL IMPUT DEL MAX HEARRATE!
 class Vo2maxSpeedView extends ParentView {
 
 	var	maxHeartRate;

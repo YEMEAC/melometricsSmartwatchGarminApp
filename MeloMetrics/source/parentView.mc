@@ -79,7 +79,7 @@ function resetVariablesParent(){
     	}else{
     		aux= 0.0d;
     	}
-    	System.println("distancia test denitod0 "  + (distanciaContinuarActivity-distanciaDetenerActivity)/1000);
+    	//System.println("distancia test denitod0 "  + (distanciaContinuarActivity-distanciaDetenerActivity)/1000);
     	return aux;
     }
 }
