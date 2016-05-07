@@ -9,6 +9,7 @@ using Toybox.UserProfile as UserProfile;
 
 //mirar http://www.brianmac.co.uk/vo2max.htm#vo2 para la docu hay una tabla sobre velocidades
 //FALTA DESAROLLAR EL IMPUT DEL MAX HEARRATE!
+//falta modificar la velocidad ESTO HAY QUE CAMBIARLO la velocidad esta en m/s y tiene que estar en mph millar por hora
 class Vo2maxSpeedView extends ParentView {
 
 	var	maxHeartRate;
@@ -146,7 +147,7 @@ class Vo2maxSpeedView extends ParentView {
 	    	var heartRateReserve=maxHeartRate-restingHeartRate;	
 	    	//aux=current runnig heart rate as a percentage of hr reserve
 	    	var aux=(app.heartRate-restingHeartRate)/heartRateReserve;
-	    	var estimacionVo2maxSpeed=app.speed/aux;
+	    	var estimacionVo2maxSpeed=app.speed/aux; //<-- ESTO HAY QUE CAMBIARLO la velocidad esta en m/s y tiene que estar en mph millar por hora
 	    	
 			acumuladorVo2maxSpeed=acumuladorVo2maxSpeed+estimacionVo2maxSpeed;
 			contadorVo2maxSpeedMuestras=contadorVo2maxSpeedMuestras+1;
