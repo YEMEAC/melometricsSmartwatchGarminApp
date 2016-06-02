@@ -34,7 +34,7 @@ class Vo2maxSpeedView extends ParentView {
 		acumuladorVo2maxSpeed=0.0d;
 		contadorVo2maxSpeedMuestras=0.0d;
 		//tiempoDuracionTest=60.0*12.0;  //12 minutos
-		tiempoDuracionTest=20;
+		tiempoDuracionTest=720;
 		
 	}
 	
@@ -147,7 +147,9 @@ class Vo2maxSpeedView extends ParentView {
 	    	var heartRateReserve=maxHeartRate-restingHeartRate;	
 	    	//aux=current runnig heart rate as a percentage of hr reserve
 	    	var aux=(app.heartRate-restingHeartRate)/heartRateReserve;
-	    	var estimacionVo2maxSpeed=app.speed/aux; //<-- ESTO HAY QUE CAMBIARLO la velocidad esta en m/s y tiene que estar en mph millar por hora
+	    	
+	    	var velocidad = app.speed * 2.23694;
+	    	var estimacionVo2maxSpeed=velocidad/aux; //<-- ESTO HAY QUE CAMBIARLO la velocidad esta en m/s y tiene que estar en mph millar por hora
 	    	
 			acumuladorVo2maxSpeed=acumuladorVo2maxSpeed+estimacionVo2maxSpeed;
 			contadorVo2maxSpeedMuestras=contadorVo2maxSpeedMuestras+1;
