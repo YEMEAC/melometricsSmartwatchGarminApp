@@ -22,7 +22,9 @@
 	<string id="tabToRestart">Tab to restart the test</string>
 	<string id="tabToContinue">Tab to Continue the test</string>
 	
-	<string id="recorreUnaMilla">Recorre una milla caminando</string>
+	<string id="recorreUnaMilla">Camina una milla</string>
+	<string id="correUnaMillaYMedia">Corre una milla y media</string>
+	
 	<string id="esperando">Esperando</string>
 	<string id="estimacionContinua">Estimación continua</string>
 

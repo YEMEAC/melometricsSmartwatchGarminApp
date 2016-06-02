@@ -149,7 +149,7 @@ class Vo2maxSpeedView extends ParentView {
 	    	var aux=(app.heartRate-restingHeartRate)/heartRateReserve;
 	    	
 	    	var velocidad = app.speed * 2.23694;
-	    	var estimacionVo2maxSpeed=velocidad/aux; //<-- ESTO HAY QUE CAMBIARLO la velocidad esta en m/s y tiene que estar en mph millar por hora
+	    	var estimacionVo2maxSpeed=velocidad/aux; 
 	    	
 			acumuladorVo2maxSpeed=acumuladorVo2maxSpeed+estimacionVo2maxSpeed;
 			contadorVo2maxSpeedMuestras=contadorVo2maxSpeedMuestras+1;

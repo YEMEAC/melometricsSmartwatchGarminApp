@@ -91,7 +91,7 @@ class OneMileWalkTestView extends ParentView {
 		dc.drawText(X3+4, Y1, numFont, distanciaFaltaRecorrer.format("%.2f"), just);
 		
 		if(testEnEjecucion){
-			dc.drawText(105, 74, msgFontSmall, Ui.loadResource(Rez.Strings.recorreUnaMilla), just);	
+			dc.drawText(105, 74, msgFontSmall, Ui.loadResource(Rez.Strings.correUnaMillaYMedia), just);	
     	}else if(testDetenido){
 			dc.drawText(105, 74, msgFontMedium, Ui.loadResource(Rez.Strings.tabToRestart), just);
 		}else if (media){
