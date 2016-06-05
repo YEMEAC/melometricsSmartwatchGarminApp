@@ -8,8 +8,9 @@
 
 	<label x="136" y="90" font="Gfx.FONT_SMALL" text="@Strings.spdms"
 		color="Gfx.COLOR_BLUE" />
-	<label x="40" y="90" font="Gfx.FONT_SMALL" text="@Strings.timer"
-		color="Gfx.COLOR_BLUE" />
+	
+	<!--  <label x="40" y="90" font="Gfx.FONT_SMALL" text="@Strings.timer"
+		color="Gfx.COLOR_BLUE" /> -->
 
 	<drawable id="dosLineasHorizontalesVo2maxSpeedLayout" />
 </layout>

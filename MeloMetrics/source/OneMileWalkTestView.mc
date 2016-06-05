@@ -19,7 +19,6 @@ class OneMileWalkTestView extends ParentView {
 	var distanciaInicioActivity;
 	var distanciaDetenerActivity;
 	var distanciaContinuarActivity;
-	
 	var profile;
 
 	 function initialize() {	 	 	
@@ -95,7 +94,7 @@ class OneMileWalkTestView extends ParentView {
 		dc.drawText(X3+4, Y1, numFont, distanciaFaltaRecorrer.format("%.2f"), just);
 		
 		if(testEnEjecucion){
-			dc.drawText(105, 74, msgFontSmall, Ui.loadResource(Rez.Strings.correUnaMillaYMedia), just);	
+			dc.drawText(101, 74, msgFontSmall, Ui.loadResource(Rez.Strings.correUnaMillaYMedia), just);	
     	}else if(testDetenido){
 			dc.drawText(105, 74, msgFontMedium, Ui.loadResource(Rez.Strings.tabToRestart), just);
 		}else if (media){
@@ -112,29 +111,26 @@ class OneMileWalkTestView extends ParentView {
 	//tambien de la clase Toybox » Application » AppBase los ge y save properties a ver si quizas generan un archivo
 	//que se pueda encontrar en el reloj
     function empezarTest(){
-    	resetVariablesParent();
-    	resetVariables();
-    	 	
- 		Snsr.setEnabledSensors( [Snsr.SENSOR_HEARTRATE] );
-		Snsr.enableSensorEvents( method(:onSnsr) );	
-		//Snsr.setEnabledSensors();
-		
-		testEnEjecucion=true;
     	
-    	//tiempoInicioTest=Time.now().value();
-    	
-    	meloMetricsTimer.timer.stop();
-		meloMetricsTimer.timer.start(method(:timerCallback),1*1000,true);
-    	  		
-    
-		var options = { :name => "OneMileWalkTest"  };
-		activityrec=ActivityRecording.createSession(options);
-		activityrec.start();
-
-		distanciaInicioActivity=Activity.getActivityInfo().elapsedDistance;
-		
-    	System.println("Empezando test onemilewalk"  + Time.now().value());
-    	
+	    	resetVariablesParent();
+	    	resetVariables();
+	    	 	
+	 		Snsr.setEnabledSensors( [Snsr.SENSOR_HEARTRATE] );
+			Snsr.enableSensorEvents( method(:onSnsr) );	
+			
+			testEnEjecucion=true;
+	    	
+	    	meloMetricsTimer.timer.stop();
+			meloMetricsTimer.timer.start(method(:timerCallback),1*1000,true);
+	    	  		
+	    
+			var options = { :name => "OneMileWalkTest"  };
+			activityrec=ActivityRecording.createSession(options);
+			activityrec.start();
+	
+			distanciaInicioActivity=Activity.getActivityInfo().elapsedDistance;
+			
+	    	System.println("Empezando test onemilewalk"  + Time.now().value());
     }
     
     //se puede pasar arriba creo

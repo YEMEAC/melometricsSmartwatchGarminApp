@@ -56,7 +56,7 @@ class MainDelegate extends Ui.BehaviorDelegate {
         }
 
         function onHold( evt ){
-        	 Ui.pushView(new Rez.Menus.MainMenu(), new MeloMetricsMenuDelegate(), Ui.SLIDE_UP);
+        	 //Ui.pushView(new Rez.Menus.MainMenu(), new MeloMetricsMenuDelegate(), Ui.SLIDE_UP);
 	        return true; 
         }
 

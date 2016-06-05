@@ -38,7 +38,7 @@ class Vo2maxSpeedView extends ParentView {
 		acumuladorVo2maxSpeed=0.0d;
 		contadorVo2maxSpeedMuestras=0.0d;
 		//tiempoDuracionTest=60.0*12.0;  //12 minutos
-		tiempoDuracionTest=9;
+		tiempoDuracionTest=10;
 		
 	}
 	
@@ -80,10 +80,13 @@ class Vo2maxSpeedView extends ParentView {
 		dc.drawText(X1, Y2, numFont, app.speed.format("%.2f") , just);
 
 		if(primeraMuestra){
+			dc.drawText(40, 90, numFont, Ui.loadResource(Rez.Strings.timer), just);
 			dc.drawText(X2, Y2, numFont,meloMetricsTimer.tiempoTranscurridoCuentaAtras(tiempoDuracionTest), just);
 		}else{
-			dc.setColor(LT_GRAY, -1);
-    		dc.drawText(X2, Y2, msgFontSmall, Ui.loadResource(Rez.Strings.estimacionContinua) , just);
+			dc.setColor(BLUE, -1);
+    		dc.drawText(65, 98, msgFontSmall, Ui.loadResource(Rez.Strings.estimacionContinua) , just);
+    		dc.setColor(WHITE, -1);
+    		dc.drawText(X2, Y2, numFont,meloMetricsTimer.tiempoTranscurridoCuentaAlante(), just);
 		}
 		
 		
@@ -172,6 +175,7 @@ class Vo2maxSpeedView extends ParentView {
 			System.println("resting hr "+restingHeartRate);
 			System.println("reserve hr "+heartRateReserve);
 			System.println("current hr "+app.heartRate);
+			System.println("percent. of hr reserve "+ aux);
 			System.println("percent. of hr reserve "+ aux);
 			System.println("Vo2maxSpeed "+ media);
 	
