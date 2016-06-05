@@ -166,7 +166,7 @@ var genero;
 
 			primeraMuestra=false;
 	
-			System.println("tiempo "+minutos + " seg" +meloMetricsTimer.contadorSegundos);
+			System.println("tiempo "+minutos + " segundos " +meloMetricsTimer.contadorSegundos);
 			System.println("pusalciones " + app.heartRate*0.1565 + " hearrate "+ app.heartRate);	
 		}
 		System.println("Falta por recorrer " + distanciaFaltaRecorrer.format("%.2f") + " de " + distanciaARecorrer);

@@ -9,7 +9,11 @@ using Toybox.UserProfile as UserProfile;
 
 //mirar http://www.brianmac.co.uk/vo2max.htm#vo2 para la docu hay una tabla sobre velocidades
 //FALTA DESAROLLAR EL IMPUT DEL MAX HEARRATE!
-//falta modificar la velocidad ESTO HAY QUE CAMBIARLO la velocidad esta en m/s y tiene que estar en mph millar por hora
+
+//falta poner las unidades de la velocidad y que el mensaje este en kilometros en los test
+//intentar que siga guardando el activity durante la estiamcion continua
+//descartar activity si es test no esta completo
+
 class Vo2maxSpeedView extends ParentView {
 
 	var	maxHeartRate;
@@ -34,7 +38,7 @@ class Vo2maxSpeedView extends ParentView {
 		acumuladorVo2maxSpeed=0.0d;
 		contadorVo2maxSpeedMuestras=0.0d;
 		//tiempoDuracionTest=60.0*12.0;  //12 minutos
-		tiempoDuracionTest=720;
+		tiempoDuracionTest=9;
 		
 	}
 	
@@ -148,6 +152,7 @@ class Vo2maxSpeedView extends ParentView {
 	    	//aux=current runnig heart rate as a percentage of hr reserve
 	    	var aux=(app.heartRate-restingHeartRate)/heartRateReserve;
 	    	
+	    	System.println("velocidad "+app.speed);	
 	    	var velocidad = app.speed * 2.23694;
 	    	var estimacionVo2maxSpeed=velocidad/aux; 
 	    	
@@ -161,7 +166,8 @@ class Vo2maxSpeedView extends ParentView {
 				activityrec=null;
 				System.println("Activity  Guardado ");
 			}
-	        	
+	        
+	        System.println("velocidad "+app.speed);	
 			System.println("max hr "+maxHeartRate);
 			System.println("resting hr "+restingHeartRate);
 			System.println("reserve hr "+heartRateReserve);

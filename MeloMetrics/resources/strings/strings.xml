@@ -10,7 +10,9 @@
 	<string id="vo2maxSpeed"> VO2max Speed</string>
 	<string id="vomax"> VO2max</string>
 	<string id="hrv">HRV</string>
+	<string id="spdms">SPD m/s</string>
 	<string id="spd">SPD</string>
+	<string id="ms">m/s</string>
 	<string id="timer">TIMER</string>
 	<string id="time">TIME</string>
 	<string id="Distancia">Distancia</string>

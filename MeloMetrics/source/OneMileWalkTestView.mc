@@ -12,7 +12,8 @@ class OneMileWalkTestView extends ParentView {
 
 	var genero;
 	var edad;
-	var peso;
+	var pesoPounds;
+	var pesoGramos;
 	var distanciaARecorrer; 
 	var distanciaFaltaRecorrer;
 	var distanciaInicioActivity;
@@ -34,11 +35,14 @@ class OneMileWalkTestView extends ParentView {
 		if( profile != null ) {
             genero=profile.gender;
 			edad=Time.Gregorian.info(Time.now(), Time.FORMAT_LONG).year - profile.birthYear;
-			peso=profile.weight*0.0022;  //g to pounds
+			pesoPounds=profile.weight*0.00220462;  //g to pounds
+			pesoGramos= profile.weight;
+			
+			System.println("Peso pounds " + pesoPounds + " peso gramos" + pesoGramos);
+			System.println("Edad "+edad);
+			System.println("Genero "+genero);
 		}   
 		
-		System.println(profile.weight + " " + peso);
-	
 		//distancia al comienzo del test para no tenerla en cuenta por el activity
 		distanciaInicioActivity=0.0d;
 		distanciaDetenerActivity=0.0d;
@@ -177,7 +181,7 @@ class OneMileWalkTestView extends ParentView {
 	    	
 			var minutos=meloMetricsTimer.contadorSegundos/60.0;
 			// probado con exrx.net/Calculators/Rockport.html && brianmac.co.uk/rockport.htm && www.shapesense.com/fitness-exercise/calculators/vo2max-calculator.shtml
-	    	var aux = 132.853 - 0.0769*peso - 0.3877*edad + 6.315*genero - 3.2649*minutos - 0.1565*app.heartRate;           	
+	    	var aux = 132.853 - 0.0769*pesoPounds - 0.3877*edad + 6.315*genero - 3.2649*minutos - 0.1565*app.heartRate;           	
 			
 			//por ahora no guardo el calculo continuo
 	        if(primeraMuestra && activityrec.isRecording()){
@@ -189,11 +193,11 @@ class OneMileWalkTestView extends ParentView {
 			media=aux;
 			primeraMuestra=false;
 	
-			System.println("Peso "+peso);
+			System.println("Peso pounds " + pesoPounds + " peso gramos" + pesoGramos);
 			System.println("Edad "+edad);
 			System.println("Genero "+genero);
 			System.println("tiempo "+minutos + " seg" +meloMetricsTimer.contadorSegundos);
-			System.println("pusalciones " + app.heartRate*0.1565 + " hearrate "+ app.heartRate);	
+			System.println("hearrate "+ app.heartRate);	
 		}
 		
 		System.println("Falta por recorrer " + distanciaFaltaRecorrer.format("%.2f") + " de " + distanciaARecorrer);
