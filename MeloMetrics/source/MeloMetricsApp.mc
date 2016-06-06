@@ -42,7 +42,9 @@ class MeloMetricsApp extends App.AppBase {
 	var oneHalfMileRunTest;
 	var mainDelegate;
 	
-
+	
+	var keyboardDelegate;
+	var keyboardView;
 		
     function initialize() {
     	resetVariables();
@@ -50,12 +52,15 @@ class MeloMetricsApp extends App.AppBase {
     }
     
     function resetVariables(){
+    
     	vo2maxSpeedView = new Vo2maxSpeedView(); 					//vista 0
-		oneMileWalkTestView = new OneMileWalkTestView();			//vista 1
-		oneHalfMileRunTest = new OneHalfMileRunTest();				//vista 2
+    	keyboardView = new KeyboardView();							//vista 1
+		oneMileWalkTestView = new OneMileWalkTestView();			//vista 2
+		oneHalfMileRunTest = new OneHalfMileRunTest();				//vista 3
 		
-		var index=1; //vista inicial
+		var index=2; //vista inicial
 		mainDelegate = new MainDelegate(index,oneMileWalkTestView);
+		keyboardDelegate = new KeyboardDelegate();
 		
 		speed=0.0d;
 		heartRate=0.0d;

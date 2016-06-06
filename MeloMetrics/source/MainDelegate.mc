@@ -62,7 +62,7 @@ class MainDelegate extends Ui.BehaviorDelegate {
 
 
         function onNextPage(){
-			index=(index + 1) % 4;
+			index=(index + 1) % 5;
 			
         	Ui.switchToView(getView(), getDelegate(), Ui.SLIDE_LEFT);
     	}
@@ -70,18 +70,21 @@ class MainDelegate extends Ui.BehaviorDelegate {
     	function onPreviousPage() {
         	index = index - 1;
 	        if (index < 0){
-	            index = 4;
+	            index = 5;
 	        }
-	        index = index % 4;
+	        index = index % 5;
 	        Ui.switchToView(getView(index), getDelegate(), Ui.SLIDE_RIGHT);
     	}
 
 	   function getView(){
         
         //reset view antes de dejarlo
-		view.resetVariablesParent();
-    	view.resetVariables();
-    	view.meloMetricsTimer.timer.stop();
+		System.println(index );
+		if (index != 0 && index != 2){
+			view.resetVariablesParent();
+    		view.resetVariables();
+    		view.meloMetricsTimer.timer.stop();
+    	}
     	
         if(0 == index)
         {
@@ -91,26 +94,33 @@ class MainDelegate extends Ui.BehaviorDelegate {
         }
         else if(1 == index)
         {
-			System.println("Cambiando a visto: " + "oneMileWalkTestView" );
-            view = app.oneMileWalkTestView;
+			System.println("Cambiando a visto: " + "keyboardView" );
+			view = app.keyboardView;
 			
         }
         else if(2 == index)
         {
+			System.println("Cambiando a visto: " + "oneMileWalkTestView" );
+            view = app.oneMileWalkTestView;
 			
+        }
+        else if(3 == index)
+        {	
             System.println("Cambiando a visto: " + "OneHalfMileRunTest" );
             view = app.oneHalfMileRunTest;
         }
         else
-        {
+        {//index =4
 
 			app.onStop();
              
         }
 		
 		//reset de la view nueva
-		view.resetVariablesParent();
-    	view.resetVariables();
+		if ( index != 1){
+			view.resetVariablesParent();
+    		view.resetVariables();
+    	}
         return view;
     }
 
@@ -118,6 +128,9 @@ class MainDelegate extends Ui.BehaviorDelegate {
     {
     	//app tiene un apuntar al mismo main delegate que lo esta llamando para hacerse un get asi mismo
 		//una unica instancia de delegate
+		if(index == 1){
+			return app.keyboardDelegate;
+		}
 		return	app.mainDelegate;
     }
 

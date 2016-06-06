@@ -16,7 +16,9 @@ using Toybox.UserProfile as UserProfile;
 
 class Vo2maxSpeedView extends ParentView {
 
-	var	maxHeartRate;
+	var	maxHeartRate=1;
+	var	maxHeartRateInt=1;
+	
 	var heartRateReserve;
 	var restingHeartRate;
 	var acumuladorVo2maxSpeed;
@@ -30,9 +32,17 @@ class Vo2maxSpeedView extends ParentView {
         View.initialize();
     }
     
+    function setMaxHeartRate(n){    	
+    	if(n instanceof Number){
+    		maxHeartRateInt = n;
+    		maxHeartRate= n+0.0d;	//hacerlo decimal
+    	}
+    			
+		System.println("Max Heart Rate " + maxHeartRate);
+    }
+    
 	function resetVariables(){
 
-		maxHeartRate=186.0d;	
 		restingHeartRate=UserProfile.getProfile().restingHeartRate;
 		heartRateReserve=0.0d;
 		acumuladorVo2maxSpeed=0.0d;
@@ -155,7 +165,6 @@ class Vo2maxSpeedView extends ParentView {
 	    	//aux=current runnig heart rate as a percentage of hr reserve
 	    	var aux=(app.heartRate-restingHeartRate)/heartRateReserve;
 	    	
-	    	System.println("velocidad "+app.speed);	
 	    	var velocidad = app.speed * 2.23694;
 	    	var estimacionVo2maxSpeed=velocidad/aux; 
 	    	
