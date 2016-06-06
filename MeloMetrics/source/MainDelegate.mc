@@ -62,7 +62,11 @@ class MainDelegate extends Ui.BehaviorDelegate {
 
 
         function onNextPage(){
-			index=(index + 1) % 5;
+        	if(index == 0) {
+        		index=2;
+        	}else{
+				index=(index + 1) % 5;
+			}
 			
         	Ui.switchToView(getView(), getDelegate(), Ui.SLIDE_LEFT);
     	}
@@ -73,14 +77,14 @@ class MainDelegate extends Ui.BehaviorDelegate {
 	            index = 5;
 	        }
 	        index = index % 5;
-	        Ui.switchToView(getView(index), getDelegate(), Ui.SLIDE_RIGHT);
+	        Ui.switchToView(getView(), getDelegate(), Ui.SLIDE_RIGHT);
     	}
 
 	   function getView(){
         
         //reset view antes de dejarlo
 		System.println(index );
-		if (index != 0 && index != 2){
+		if (index != 0){
 			view.resetVariablesParent();
     		view.resetVariables();
     		view.meloMetricsTimer.timer.stop();
@@ -88,25 +92,25 @@ class MainDelegate extends Ui.BehaviorDelegate {
     	
         if(0 == index)
         {
-			System.println("Cambiando a visto: " + "vo2maxSpeedView" );
+			System.println("Cambiando a vista: " + "vo2maxSpeedView" );
 			view = app.vo2maxSpeedView;
 			
         }
         else if(1 == index)
         {
-			System.println("Cambiando a visto: " + "keyboardView" );
+			System.println("Cambiando a vista: " + "keyboardView" );
 			view = app.keyboardView;
 			
         }
         else if(2 == index)
         {
-			System.println("Cambiando a visto: " + "oneMileWalkTestView" );
+			System.println("Cambiando a vista: " + "oneMileWalkTestView" );
             view = app.oneMileWalkTestView;
 			
         }
         else if(3 == index)
         {	
-            System.println("Cambiando a visto: " + "OneHalfMileRunTest" );
+            System.println("Cambiando a vista: " + "OneHalfMileRunTest" );
             view = app.oneHalfMileRunTest;
         }
         else

@@ -3,7 +3,7 @@
 
 	<label x="20" y="6" font="Gfx.FONT_SMALL" text="@Strings.vo2maxSpeed"
 		color="Gfx.COLOR_BLUE" />
-	<label x="146" y="6" font="Gfx.FONT_SMALL" text="@Strings.hrv"
+	<label x="156" y="6" font="Gfx.FONT_SMALL" text="@Strings.hrv"
 		color="Gfx.COLOR_BLUE" />
 
 	<label x="136" y="90" font="Gfx.FONT_SMALL" text="@Strings.spdms"

@@ -16,7 +16,7 @@ using Toybox.UserProfile as UserProfile;
 
 class Vo2maxSpeedView extends ParentView {
 
-	var	maxHeartRate=1;
+	var	maxHeartRate=1.0d;
 	var	maxHeartRateInt=1;
 	
 	var heartRateReserve;
@@ -143,15 +143,6 @@ class Vo2maxSpeedView extends ParentView {
     	System.println("Detener test");
     }
     
-    function continuarTest(){
-    	testDetenido=false;
-    	meloMetricsTimer.timer.start(method(:timerCallback),1*1000,true);
-    	if(primeraMuestra && activityrec.isRecording()){
-    		activityrec.start();
-    		System.println("Continuar grabando activity");
-    	}
-    	System.println("Continuar test");
-    }
         
     function timerCallback(){	
 
@@ -160,7 +151,7 @@ class Vo2maxSpeedView extends ParentView {
 		}
 			
 		if((meloMetricsTimer.segundos() >= tiempoDuracionTest || !primeraMuestra) && testEnEjecucion && !testDetenido){
-			System.println(meloMetricsTimer.segundos() + " -- " + tiempoDuracionTest);
+			
 	    	var heartRateReserve=maxHeartRate-restingHeartRate;	
 	    	//aux=current runnig heart rate as a percentage of hr reserve
 	    	var aux=(app.heartRate-restingHeartRate)/heartRateReserve;

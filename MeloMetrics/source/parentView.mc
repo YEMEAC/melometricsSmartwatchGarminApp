@@ -57,15 +57,14 @@ function resetVariablesParent(){
     }  
     
     
-    //hacer subclase para rest de recorrido de distancia
     function distanciaFaltaRecorrerTest(){
 		var aux;
 		if(media == null && testEnEjecucion == true && testDetenido==false){
 			//distanciaTestDenido = quiar la distancia recorrida con el test detenido 
 			//distanciaInicioActivity = distancia que ya tenia recorrida antes de iniciar el test
-			
-			var distanciaTestDenido=distanciaContinuarActivity-distanciaDetenerActivity;
-			var distanciaRecorrida= (Activity.getActivityInfo().elapsedDistance-distanciaTestDenido-distanciaInicioActivity)/1000; //km
+			//var distanciaTestDenido=distanciaContinuarActivity-distanciaDetenerActivity;
+
+			var distanciaRecorrida= (Activity.getActivityInfo().elapsedDistance-distanciaInicioActivity)/1000; //km
     		aux=distanciaARecorrer - distanciaRecorrida;
     		
     		
@@ -82,4 +81,33 @@ function resetVariablesParent(){
     	//System.println("distancia test denitod0 "  + (distanciaContinuarActivity-distanciaDetenerActivity)/1000);
     	return aux;
     }
+    
+    function continuarTest(){
+    	testDetenido=false;
+    	meloMetricsTimer.timer.start(method(:timerCallback),1*1000,true);
+    	if(primeraMuestra && activityrec.isRecording()){
+    		activityrec.start();
+    		System.println("Continuar grabando activity");
+    	}
+    	//distanciaContinuarActivity=Activity.getActivityInfo().elapsedDistance;
+    	System.println("Continuar test");
+    }
+    
+    
+      //onehalfmile run  y onemilewalk
+     //no se puede parar el activityinfo elapse distance no se puede parar el test
+
+    function detenerTest(){	
+    	/*testDetenido=true;
+		meloMetricsTimer.timer.stop();
+    	distanciaDetenerActivity=Activity.getActivityInfo().elapsedDistance;
+
+	    if(primeraMuestra && activityrec.isRecording()){
+			activityrec.stop();
+			System.println("Detenido activity recording");
+		}
+    	System.println("Detener test");*/
+    }
+    
+     
 }

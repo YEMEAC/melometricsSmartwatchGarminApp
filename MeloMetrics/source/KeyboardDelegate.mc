@@ -30,9 +30,9 @@ class KeyboardDelegate extends Ui.InputDelegate {
      
      function onSwipe(evt) {
 	        if (evt.getDirection() == Ui.SWIPE_LEFT){
-	            app.mainDelegate.onNextPage();
+	            App.getApp().mainDelegate.onNextPage();
 	        }else if (evt.getDirection() == Ui.SWIPE_RIGHT){
-	             app.mainDelegate.onPreviousPage();
+	             App.getApp().mainDelegate.onPreviousPage();
 	        }
     	}
 

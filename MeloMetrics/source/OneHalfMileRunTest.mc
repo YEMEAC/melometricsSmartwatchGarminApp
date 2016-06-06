@@ -111,34 +111,7 @@ var genero;
     	
     }
     
-    //se puede pasar arriba creo
-    function detenerTest(){
-    	
-    	testDetenido=true;
-		meloMetricsTimer.timer.stop();
-    	distanciaDetenerActivity=Activity.getActivityInfo().elapsedDistance;
-		//por ahora no guardo el calculo continuo
-	    if(primeraMuestra && activityrec.isRecording()){
-			activityrec.stop();
-			System.println("Detenido activity recording");
-		}
-    	System.println("Detener test");
-    }
     
-    //se puede pasar arriba una parte
-    function continuarTest(){
-    
-    	testDetenido=false;
-		meloMetricsTimer.timer.start(method(:timerCallback),1*1000,true);
-    	if(primeraMuestra && activityrec.isRecording()){
-    		activityrec.start();
-    		System.println("Continuar grabando activity");
-    	}
-
-    	distanciaContinuarActivity=Activity.getActivityInfo().elapsedDistance;
-
-    	System.println("Continuar test");
-    }
     
     function timerCallback(){
     
