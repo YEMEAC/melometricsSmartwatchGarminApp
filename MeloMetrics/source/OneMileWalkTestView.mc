@@ -93,14 +93,14 @@ class OneMileWalkTestView extends ParentView {
 		dc.drawText(X2+4, Y2, numFont, meloMetricsTimer.tiempoTranscurridoCuentaAlante(), just);
 		dc.drawText(X3+4, Y1, numFont, distanciaFaltaRecorrer.format("%.2f"), just);
 		
-		if(testEnEjecucion){
-			dc.drawText(101, 74, msgFontSmall, Ui.loadResource(Rez.Strings.correUnaMillaYMedia), just);	
+		if(testEnEjecucion && !testDetenido){
+			dc.drawText(101, 74, msgFontSmall, Ui.loadResource(Rez.Strings.recorreUnaMillaCaminando), just);	
     	}else if(testDetenido){
-			dc.drawText(105, 74, msgFontMedium, Ui.loadResource(Rez.Strings.tabToRestart), just);
+			dc.drawText(105, 74, msgFontSmall, Ui.loadResource(Rez.Strings.tabToContinue), just);
 		}else if (media){
 			dc.drawText(155, 74, msgFontMedium, Ui.loadResource(Rez.Strings.vomax), just);
 		}else{
-			dc.drawText(105, 74, msgFontMedium, Ui.loadResource(Rez.Strings.tabToStart), just);
+			dc.drawText(105, 74, msgFontSmall, Ui.loadResource(Rez.Strings.tabToStart), just);
 		}
     }
 

@@ -19,13 +19,13 @@
 	<string id="dist">Dist</string>
 	<string id="km">km</string>
 
-	<string id="tabToStart">Tab to start test</string>
+	<string id="tabToStart">Pulsa para empezar el test</string>
 	<string id="capturandoDatos">Corre, capturando datos</string>
 	<string id="tabToRestart">Tab to restart the test</string>
-	<string id="tabToContinue">Tab to Continue the test</string>
+	<string id="tabToContinue">Pulsa para continuar el test</string>
 	
-	<string id="recorreUnaMilla">Completa la distancia caminando</string>
-	<string id="correUnaMillaYMedia">Completa la distancia corriendo</string>
+	<string id="recorreUnaMillaCaminando">Completa la distancia caminando</string>
+	<string id="correUnaMillaYMediaCorriendo">Completa la distancia corriendo</string>
 	
 	<string id="esperando">Esperando</string>
 	<string id="estimacionContinua">Estimación continua</string>	

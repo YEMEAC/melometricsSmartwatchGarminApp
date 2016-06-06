@@ -80,7 +80,7 @@ class Vo2maxSpeedView extends ParentView {
 		dc.drawText(X1, Y2, numFont, app.speed.format("%.2f") , just);
 
 		if(primeraMuestra){
-			dc.drawText(40, 90, numFont, Ui.loadResource(Rez.Strings.timer), just);
+			dc.drawText(65, 98, msgFontSmall, Ui.loadResource(Rez.Strings.timer) , just);
 			dc.drawText(X2, Y2, numFont,meloMetricsTimer.tiempoTranscurridoCuentaAtras(tiempoDuracionTest), just);
 		}else{
 			dc.setColor(BLUE, -1);
@@ -98,7 +98,7 @@ class Vo2maxSpeedView extends ParentView {
 		}else if(testDetenido){
 			dc.drawText(105, 74, msgFontSmall, Ui.loadResource(Rez.Strings.tabToContinue), just);
 		}else{
-			dc.drawText(105, 74, msgFontMedium, Ui.loadResource(Rez.Strings.tabToStart), just);
+			dc.drawText(105, 74, msgFontSmall, Ui.loadResource(Rez.Strings.tabToStart), just);
 		}
 		
     }
