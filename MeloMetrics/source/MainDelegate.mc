@@ -33,7 +33,7 @@ class MainDelegate extends Ui.BehaviorDelegate {
     	}
     	
     function onMenu() {
-        Ui.pushView(new Rez.Menus.MainMenu(), new MeloMetricsMenuDelegate(), Ui.SLIDE_UP);
+        //Ui.pushView(new Rez.Menus.MainMenu(), new MeloMetricsMenuDelegate(), Ui.SLIDE_UP);
         return true;
     }
     
@@ -78,6 +78,7 @@ class MainDelegate extends Ui.BehaviorDelegate {
 
 	   function getView(){
         
+        //reset view antes de dejarlo
 		view.resetVariablesParent();
     	view.resetVariables();
     	view.meloMetricsTimer.timer.stop();
@@ -107,6 +108,7 @@ class MainDelegate extends Ui.BehaviorDelegate {
              
         }
 		
+		//reset de la view nueva
 		view.resetVariablesParent();
     	view.resetVariables();
         return view;
@@ -114,12 +116,8 @@ class MainDelegate extends Ui.BehaviorDelegate {
 
     function getDelegate()
     {
-    
-       //deberia retocar esto para que use el mismo delegate todo el rato
-       //var viewTransicion = getView(index);
-       //var delegate = new MainDelegate(index,viewTransicion);
-      // return delegate;
-		//en realidad me estoy devolviendo a mi mismo pero este lengua no comprende un this
+    	//app tiene un apuntar al mismo main delegate que lo esta llamando para hacerse un get asi mismo
+		//una unica instancia de delegate
 		return	app.mainDelegate;
     }
 

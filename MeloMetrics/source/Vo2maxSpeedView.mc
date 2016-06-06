@@ -10,7 +10,7 @@ using Toybox.UserProfile as UserProfile;
 //mirar http://www.brianmac.co.uk/vo2max.htm#vo2 para la docu hay una tabla sobre velocidades
 //FALTA DESAROLLAR EL IMPUT DEL MAX HEARRATE!
 
-//falta poner las unidades de la velocidad y que el mensaje este en kilometros en los test
+
 //intentar que siga guardando el activity durante la estiamcion continua
 //descartar activity si es test no esta completo
 

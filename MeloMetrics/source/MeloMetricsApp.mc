@@ -42,13 +42,9 @@ class MeloMetricsApp extends App.AppBase {
 	var oneHalfMileRunTest;
 	var mainDelegate;
 	
-	//var meloMetricsTimer;
-	//var timerTest;
+
 		
     function initialize() {
-    	//meloMetricsTimer= new MeloMetricsTimer();
-		//timerTest= new Timer.Timer();
-					
     	resetVariables();
         AppBase.initialize();
     }

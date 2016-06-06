@@ -7,8 +7,6 @@ using Toybox.ActivityRecording as ActivityRecording;
 using Toybox.Activity as Activity;
 
 
-//behavior extiende a inputdelegate por lo atnto tiene sus metodos
-//si el compartamientode lso delegate no cambia quizas al final solo haga falta uno
 class MeloMetricsTimer  {
 
 	var timer = new Timer.Timer();

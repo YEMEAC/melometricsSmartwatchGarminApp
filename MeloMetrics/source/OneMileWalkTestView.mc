@@ -71,7 +71,7 @@ class OneMileWalkTestView extends ParentView {
     	var numFont = 6; 	
     	var msgFontMedium = 3;	// Gfx.FONT_MEDIUM
 		var msgFontSmall = 2;	// Gfx.FONT_MEDIUM
-		var just = 5;		// Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER
+		var just = 5;			// Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER
     	
     	var	X1 = 175;
 		var	X2 = 65;
@@ -104,12 +104,6 @@ class OneMileWalkTestView extends ParentView {
 		}
     }
 
-    //una idea podria generar los activities con diferentes laps por ejecucion de test
-	//si un test se detiene acabar el lap e iniciar otro con un nombre que indetifique 
-	// que es una parada de un lap empezado y cuando se continue lo mismo pero con un nombre
-	//que indique que es una continuación etc etc
-	//tambien de la clase Toybox » Application » AppBase los ge y save properties a ver si quizas generan un archivo
-	//que se pueda encontrar en el reloj
     function empezarTest(){
     	
 	    	resetVariablesParent();

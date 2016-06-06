@@ -56,7 +56,7 @@ var genero;
     	var numFont = 6; 	
     	var msgFontMedium = 3;	// Gfx.FONT_MEDIUM
 		var msgFontSmall = 2;	// Gfx.FONT_MEDIUM
-		var just = 5;		// Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER
+		var just = 5;			// Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER
     	
     	var	X1 = 175;
 		var	X2 = 65;
