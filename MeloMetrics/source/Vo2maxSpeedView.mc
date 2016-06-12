@@ -16,8 +16,8 @@ using Toybox.UserProfile as UserProfile;
 
 class Vo2maxSpeedView extends ParentView {
 
-	var	maxHeartRate=1.0d;
-	var	maxHeartRateInt=1;
+	var	maxHeartRate=999.0d;
+	var	maxHeartRateInt=999;
 	
 	var heartRateReserve;
 	var restingHeartRate;
@@ -48,7 +48,7 @@ class Vo2maxSpeedView extends ParentView {
 		acumuladorVo2maxSpeed=0.0d;
 		contadorVo2maxSpeedMuestras=0.0d;
 		//tiempoDuracionTest=60.0*12.0;  //12 minutos
-		tiempoDuracionTest=10;
+		tiempoDuracionTest=720;
 		
 	}
 	

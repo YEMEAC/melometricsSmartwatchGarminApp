@@ -40,7 +40,8 @@ class MainDelegate extends Ui.BehaviorDelegate {
          
         function onTap( evt ){
         
-        	if(Activity.getActivityInfo().elapsedDistance!=null){
+        	if(Activity.getActivityInfo().elapsedDistance!=null && Activity.getActivityInfo().currentSpeed!=null
+        	&& Activity.getActivityInfo().currentHeartRate!=null){
 	        	if(view.testEnEjecucion==false){
 	        		view.empezarTest();
 	        	}else if (view.testEnEjecucion==true && view.testDetenido==false){
@@ -82,7 +83,7 @@ class MainDelegate extends Ui.BehaviorDelegate {
 
 	   function getView(){
         
-        //reset view antes de dejarlo
+        //reset view antes de dejarlo ai casos k falla esto probarlo MAS ATENCION
 		System.println(index );
 		if (index != 0){
 			view.resetVariablesParent();
