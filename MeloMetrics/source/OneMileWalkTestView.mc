@@ -19,7 +19,6 @@ class OneMileWalkTestView extends ParentView {
 	var distanciaInicioActivity;
 
 	 function initialize() {	 	 	
-    	app = App.getApp();
     	resetVariablesParent();
     	resetVariables();
         View.initialize();
@@ -96,23 +95,13 @@ class OneMileWalkTestView extends ParentView {
     }
 
     function empezarTest(){
-		resetVariablesParent();
-    	resetVariables();
-    	 	
- 		Snsr.setEnabledSensors( [Snsr.SENSOR_HEARTRATE] );
-		Snsr.enableSensorEvents( method(:onSnsr) );	
-		
-		testEnEjecucion=true;
-    	
-    	meloMetricsTimer.timer.stop();
-		meloMetricsTimer.timer.start(method(:timerCallback),1*1000,true);
-    	  		
+    	empezarTestParent();
+    	resetVariables();  		
 		var options = { :name => "OneMileWalkTest"  };
 		activityrec=ActivityRecording.createSession(options);
 		activityrec.start();
 
 		distanciaInicioActivity=Activity.getActivityInfo().elapsedDistance;
-		
     	System.println("Empezando test onemilewalk"  + Time.now().value());
     }
     

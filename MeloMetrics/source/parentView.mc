@@ -8,7 +8,7 @@ using Toybox.Activity as Activity;
 
 class ParentView extends Ui.View{
 
-	var app;
+	var app = App.getApp();
 	var meloMetricsTimer = new  MeloMetricsTimer(); 
 	
 	//estado del test
@@ -66,5 +66,17 @@ class ParentView extends Ui.View{
     	}
     	//System.println("distancia test denitod0 "  + (distanciaContinuarActivity-distanciaDetenerActivity)/1000);
     	return aux;
+    }
+    
+    function empezarTestParent(){
+    	resetVariablesParent();
+    	resetVariables();	
+ 		Snsr.setEnabledSensors( [Snsr.SENSOR_HEARTRATE] );
+		Snsr.enableSensorEvents( method(:onSnsr) );	
+		
+		testEnEjecucion=true;
+    	
+    	meloMetricsTimer.timer.stop();
+		meloMetricsTimer.timer.start(method(:timerCallback),1*1000,true);
     }
 }

@@ -23,7 +23,6 @@ class Vo2maxSpeedView extends ParentView {
 	var tiempoDuracionTest;
 	
 	 function initialize() {
-    	app = App.getApp();
     	resetVariablesParent();
     	resetVariables();
         View.initialize();
@@ -111,21 +110,11 @@ class Vo2maxSpeedView extends ParentView {
 
     
     function empezarTest(){
-    	resetVariablesParent();
-    	resetVariables();
-    	 	
- 		Snsr.setEnabledSensors( [Snsr.SENSOR_HEARTRATE] );
-		Snsr.enableSensorEvents( method(:onSnsr) );	
-		
-		testEnEjecucion=true;
-		
+		empezarTestParent();
+		resetVariables();  
 		var options = { :name => "Vo2maxSpeed"  };
 		activityrec=ActivityRecording.createSession(options);
 		activityrec.start();
-			 	
-    	meloMetricsTimer.timer.stop();
-		meloMetricsTimer.timer.start(method(:timerCallback),1*1000,true);
-
     	System.println("Empezando test Vo2maxSpeed");
     }
     
