@@ -25,7 +25,6 @@ class MeloMetricsTimer  {
 		reiniciarSegundos();
 	}
 	
-	
 	function segundos(){
 		return contadorSegundos;
 	}

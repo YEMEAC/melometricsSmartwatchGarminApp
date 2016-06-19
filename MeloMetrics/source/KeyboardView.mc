@@ -30,7 +30,4 @@ class KeyboardView extends Ui.View {
     //! state of your app here.
     function onHide() {
     }
-
-	function resetVariablesParent(){ }
-    function resetVariables(){}
 }

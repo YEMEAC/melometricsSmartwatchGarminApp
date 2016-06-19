@@ -8,10 +8,12 @@ using Toybox.Activity as Activity;
 
 
 //behavior extiende a inputdelegate por lo atnto tiene sus metodos
-//si el compartamientode lso delegate no cambia quizas al final solo haga falta uno
 class MainDelegate extends Ui.BehaviorDelegate {
 
+	//apuntador a la applicacion
 	var app;
+	
+	//apuntador a la view e index de la view actual
 	var view;
 	var index;
 
@@ -33,22 +35,23 @@ class MainDelegate extends Ui.BehaviorDelegate {
     	}
     	
     function onMenu() {
-        //Ui.pushView(new Rez.Menus.MainMenu(), new MeloMetricsMenuDelegate(), Ui.SLIDE_UP);
         return true;
     }
     
          
         function onTap( evt ){
         
-        	if(Activity.getActivityInfo().elapsedDistance!=null && Activity.getActivityInfo().currentSpeed!=null
+        	if(Activity!=null && Activity.getActivityInfo()!= null &&
+        	Activity.getActivityInfo().elapsedDistance!=null && Activity.getActivityInfo().currentSpeed!=null
         	&& Activity.getActivityInfo().currentHeartRate!=null){
 	        	if(view.testEnEjecucion==false){
 	        		view.empezarTest();
-	        	}else if (view.testEnEjecucion==true && view.testDetenido==false){
+	        	}else if (view.testEnEjecucion==true && view.testDetenido==false && view instanceof Vo2maxSpeedView){
 	        		view.detenerTest();
-	        	}else if (view.testEnEjecucion==true && view.testDetenido==true){
+	        	}else if (view.testEnEjecucion==true && view.testDetenido==true && view instanceof Vo2maxSpeedView){
 	        		view.continuarTest();
 	        	}
+	        	//elapse distance del activity no se puede parar asi que los test de distancia no tienen esa opcion
 	        }else{
 	        	System.println("El seguidor de actividad debe estar activado para ejecutar la aplicación");
 	        }
@@ -57,14 +60,13 @@ class MainDelegate extends Ui.BehaviorDelegate {
         }
 
         function onHold( evt ){
-        	 //Ui.pushView(new Rez.Menus.MainMenu(), new MeloMetricsMenuDelegate(), Ui.SLIDE_UP);
 	        return true; 
         }
 
 
         function onNextPage(){
         	if(index == 0) {
-        		index=2;
+        		index=2; //para que salte el input del max hearrate a la vuelta
         	}else{
 				index=(index + 1) % 5;
 			}
@@ -84,11 +86,15 @@ class MainDelegate extends Ui.BehaviorDelegate {
 	   function getView(){
         
         //reset view antes de dejarlo ai casos k falla esto probarlo MAS ATENCION
-		System.println(index );
-		if (index != 0){
+		System.println(index);
+		
+		if (!(view instanceof KeyboardView)){ // ABRIA QUE AÑADIR SI LA SIGUIENTE es la 3 para cuadno va del leboard hacia adelante
+			//pero entonces cuando vas del ultimo test al hacia a tras no entraria
+			//solo se me ocurre definir los metodos vacios en la de keyboardview
 			view.resetVariablesParent();
     		view.resetVariables();
     		view.meloMetricsTimer.timer.stop();
+    		System.println("paso" );
     	}
     	
         if(0 == index)
@@ -116,15 +122,14 @@ class MainDelegate extends Ui.BehaviorDelegate {
         }
         else
         {//index =4
-
-			app.onStop();
-             
+			app.onStop();          
         }
 		
 		//reset de la view nueva
-		if ( index != 1){
+		if (!(view instanceof KeyboardView)){
 			view.resetVariablesParent();
     		view.resetVariables();
+    		view.meloMetricsTimer.timer.stop();
     	}
         return view;
     }

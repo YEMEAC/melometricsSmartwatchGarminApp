@@ -35,13 +35,12 @@ class KeyboardDelegate extends Ui.InputDelegate {
 	             App.getApp().mainDelegate.onPreviousPage();
 	        }
     	}
+	}
 
-}
-
-class KeyboardListener extends Ui.NumberPickerDelegate   {
-    
-    function onNumberPicked(value){
-    	App.getApp().vo2maxSpeedView.setMaxHeartRate(value);
-        App.getApp().mainDelegate.onPreviousPage();
-    }
+	class KeyboardListener extends Ui.NumberPickerDelegate   {
+	    
+	    function onNumberPicked(value){
+	    	App.getApp().vo2maxSpeedView.setMaxHeartRate(value);
+	        App.getApp().mainDelegate.onPreviousPage();
+	    }
 }

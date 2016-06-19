@@ -8,8 +8,6 @@ using Toybox.Activity as Activity;
 using Toybox.UserProfile as UserProfile;
 
 //mirar http://www.brianmac.co.uk/vo2max.htm#vo2 para la docu hay una tabla sobre velocidades
-//FALTA DESAROLLAR EL IMPUT DEL MAX HEARRATE!
-
 
 //intentar que siga guardando el activity durante la estiamcion continua
 //descartar activity si es test no esta completo
@@ -19,11 +17,10 @@ class Vo2maxSpeedView extends ParentView {
 	var	maxHeartRate=999.0d;
 	var	maxHeartRateInt=999;
 	
-	var heartRateReserve;
 	var restingHeartRate;
 	var acumuladorVo2maxSpeed;
 	var contadorVo2maxSpeedMuestras;
-	
+	var tiempoDuracionTest;
 	
 	 function initialize() {
     	app = App.getApp();
@@ -38,17 +35,16 @@ class Vo2maxSpeedView extends ParentView {
     		maxHeartRate= n+0.0d;	//hacerlo decimal
     	}
     			
-		System.println("Max Heart Rate " + maxHeartRate);
+		System.println("Max Heart Rate modificado: " + maxHeartRate);
     }
     
 	function resetVariables(){
 
 		restingHeartRate=UserProfile.getProfile().restingHeartRate;
-		heartRateReserve=0.0d;
 		acumuladorVo2maxSpeed=0.0d;
 		contadorVo2maxSpeedMuestras=0.0d;
 		//tiempoDuracionTest=60.0*12.0;  //12 minutos
-		tiempoDuracionTest=720;
+		tiempoDuracionTest=6;
 		
 	}
 	
@@ -115,10 +111,13 @@ class Vo2maxSpeedView extends ParentView {
 
     
     function empezarTest(){
-    	testEnEjecucion=true;
-    	
-    	Snsr.setEnabledSensors( [Snsr.SENSOR_HEARTRATE] );
+    	resetVariablesParent();
+    	resetVariables();
+    	 	
+ 		Snsr.setEnabledSensors( [Snsr.SENSOR_HEARTRATE] );
 		Snsr.enableSensorEvents( method(:onSnsr) );	
+		
+		testEnEjecucion=true;
 		
 		var options = { :name => "Vo2maxSpeed"  };
 		activityrec=ActivityRecording.createSession(options);
@@ -130,7 +129,6 @@ class Vo2maxSpeedView extends ParentView {
     	System.println("Empezando test Vo2maxSpeed");
     }
     
-    //se puede pasar arriba creo
     function detenerTest(){
     	testDetenido=true;
 		meloMetricsTimer.timer.stop();
@@ -142,8 +140,18 @@ class Vo2maxSpeedView extends ParentView {
 
     	System.println("Detener test");
     }
-    
-        
+     
+    function continuarTest(){
+    	testDetenido=false;
+    	meloMetricsTimer.timer.start(method(:timerCallback),1*1000,true);
+    	if(primeraMuestra && activityrec.isRecording()){
+    		activityrec.start();
+    		System.println("Continuar grabando activity");
+    	}
+    	//distanciaContinuarActivity=Activity.getActivityInfo().elapsedDistance;
+    	System.println("Continuar test");
+    }  
+            
     function timerCallback(){	
 
 		if(testEnEjecucion && !testDetenido){
@@ -156,7 +164,7 @@ class Vo2maxSpeedView extends ParentView {
 	    	//aux=current runnig heart rate as a percentage of hr reserve
 	    	var aux=(app.heartRate-restingHeartRate)/heartRateReserve;
 	    	
-	    	var velocidad = app.speed * 2.23694;
+	    	var velocidad = app.speed * 2.23694; //m/s to pmh
 	    	var estimacionVo2maxSpeed=velocidad/aux; 
 	    	
 			acumuladorVo2maxSpeed=acumuladorVo2maxSpeed+estimacionVo2maxSpeed;

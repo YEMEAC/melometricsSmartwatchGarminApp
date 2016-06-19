@@ -17,9 +17,6 @@ class OneMileWalkTestView extends ParentView {
 	var distanciaARecorrer; 
 	var distanciaFaltaRecorrer;
 	var distanciaInicioActivity;
-	var distanciaDetenerActivity;
-	var distanciaContinuarActivity;
-	var profile;
 
 	 function initialize() {	 	 	
     	app = App.getApp();
@@ -28,30 +25,26 @@ class OneMileWalkTestView extends ParentView {
         View.initialize();
     }
     
-	function resetVariables(){
+	function resetVariables(){	
+		if( UserProfile.getProfile() != null ) {
+            genero=UserProfile.getProfile().gender;
+			edad=Time.Gregorian.info(Time.now(), Time.FORMAT_LONG).year - UserProfile.getProfile().birthYear;
+			pesoPounds=UserProfile.getProfile().weight*0.00220462;  //g to pounds
+			pesoGramos= UserProfile.getProfile().weight;
+		}else{
+			genero=0; edad=25; pesoPounds=154.5; pesoGramos=70000;
 		
-		profile = UserProfile.getProfile();
-		if( profile != null ) {
-            genero=profile.gender;
-			edad=Time.Gregorian.info(Time.now(), Time.FORMAT_LONG).year - profile.birthYear;
-			pesoPounds=profile.weight*0.00220462;  //g to pounds
-			pesoGramos= profile.weight;
-			
-			System.println("Peso pounds " + pesoPounds + " peso gramos" + pesoGramos);
-			System.println("Edad "+edad);
-			System.println("Genero "+genero);
 		}   
+				
+		System.println("Peso pounds " + pesoPounds + " peso gramos" + pesoGramos);
+		System.println("Edad "+edad);
+		System.println("Genero "+genero);
 		
 		//distancia al comienzo del test para no tenerla en cuenta por el activity
 		distanciaInicioActivity=0.0d;
-		distanciaDetenerActivity=0.0d;
-		distanciaContinuarActivity=0.0d;
-		//1 milla = 1.60934 km = 1609.34 m
-		distanciaARecorrer=1.61d;
-		//distanciaARecorrer=0.03d;
+		//1 milla = 1.60934 km = 1609.34 m distanciaARecorrer=1.61d;
+		distanciaARecorrer=0.03d;
 		distanciaFaltaRecorrer=distanciaARecorrer;
-		tiempoDuracionTest=1;
-		
 	}
 	
     //! Load your resources here
@@ -93,10 +86,8 @@ class OneMileWalkTestView extends ParentView {
 		dc.drawText(X2+4, Y2, numFont, meloMetricsTimer.tiempoTranscurridoCuentaAlante(), just);
 		dc.drawText(X3+4, Y1, numFont, distanciaFaltaRecorrer.format("%.2f"), just);
 		
-		if(testEnEjecucion && !testDetenido){
-			dc.drawText(101, 74, msgFontSmall, Ui.loadResource(Rez.Strings.recorreUnaMillaCaminando), just);	
-    	}else if(testDetenido){
-			dc.drawText(105, 74, msgFontSmall, Ui.loadResource(Rez.Strings.tabToContinue), just);
+		if(testEnEjecucion){
+			dc.drawText(101, 74, msgFontSmall, Ui.loadResource(Rez.Strings.recorreUnaMillaCaminando), just);
 		}else if (media){
 			dc.drawText(155, 74, msgFontMedium, Ui.loadResource(Rez.Strings.vomax), just);
 		}else{
@@ -105,55 +96,47 @@ class OneMileWalkTestView extends ParentView {
     }
 
     function empezarTest(){
+		resetVariablesParent();
+    	resetVariables();
+    	 	
+ 		Snsr.setEnabledSensors( [Snsr.SENSOR_HEARTRATE] );
+		Snsr.enableSensorEvents( method(:onSnsr) );	
+		
+		testEnEjecucion=true;
     	
-	    	resetVariablesParent();
-	    	resetVariables();
-	    	 	
-	 		Snsr.setEnabledSensors( [Snsr.SENSOR_HEARTRATE] );
-			Snsr.enableSensorEvents( method(:onSnsr) );	
-			
-			testEnEjecucion=true;
-	    	
-	    	meloMetricsTimer.timer.stop();
-			meloMetricsTimer.timer.start(method(:timerCallback),1*1000,true);
-	    	  		
-	    
-			var options = { :name => "OneMileWalkTest"  };
-			activityrec=ActivityRecording.createSession(options);
-			activityrec.start();
-	
-			distanciaInicioActivity=Activity.getActivityInfo().elapsedDistance;
-			
-	    	System.println("Empezando test onemilewalk"  + Time.now().value());
+    	meloMetricsTimer.timer.stop();
+		meloMetricsTimer.timer.start(method(:timerCallback),1*1000,true);
+    	  		
+		var options = { :name => "OneMileWalkTest"  };
+		activityrec=ActivityRecording.createSession(options);
+		activityrec.start();
+
+		distanciaInicioActivity=Activity.getActivityInfo().elapsedDistance;
+		
+    	System.println("Empezando test onemilewalk"  + Time.now().value());
     }
     
     
     function timerCallback(){
     
-    	 //se puede afinar mas esto si no llama a ++segundo al estar detenido no hace
-		//falta restar el tiempo parado al de ejecucion
-    	if(testEnEjecucion &&  !testDetenido){	
-    		meloMetricsTimer.aumentarSegundos();
-    	}
+    	meloMetricsTimer.aumentarSegundos();
     	
-    	if(0 >= distanciaFaltaRecorrerTest() && testEnEjecucion && !testDetenido){
-    		//app.meloMetricsTimer.stop(); 
+    	if(0 >= distanciaFaltaRecorrerTest() && testEnEjecucion){
 			testEnEjecucion=false;
 	    	
 			var minutos=meloMetricsTimer.contadorSegundos/60.0;
 			// probado con exrx.net/Calculators/Rockport.html && brianmac.co.uk/rockport.htm && www.shapesense.com/fitness-exercise/calculators/vo2max-calculator.shtml
+			//recordar que para el segundo link en el campo de texto pone 10 seconds pulse entonces tengo que hacer (hearRatequesalgaAqui/60)*10
 	    	var aux = 132.853 - 0.0769*pesoPounds - 0.3877*edad + 6.315*genero - 3.2649*minutos - 0.1565*app.heartRate;           	
 			
-			//por ahora no guardo el calculo continuo
-	        if(primeraMuestra && activityrec.isRecording()){
+	        if(activityrec.isRecording()){
 				activityrec.save();
 				activityrec=null;
 				System.println("Activity  Guardado ");
 			}
 
 			media=aux;
-			primeraMuestra=false;
-	
+			meloMetricsTimer.timer.stop();
 			System.println("Peso pounds " + pesoPounds + " peso gramos" + pesoGramos);
 			System.println("Edad "+edad);
 			System.println("Genero "+genero);

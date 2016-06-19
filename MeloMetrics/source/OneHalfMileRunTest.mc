@@ -8,15 +8,10 @@ using Toybox.Activity as Activity;
 
 class OneHalfMileRunTest extends ParentView {
 
-var genero;
-	
 	var distanciaARecorrer; 
 	var distanciaFaltaRecorrer;
 	var distanciaInicioActivity;
-	var distanciaDetenerActivity;
-	var distanciaContinuarActivity;
 	
-
 	 function initialize() {	 	 	
     	app = App.getApp();
     	resetVariablesParent();
@@ -24,19 +19,13 @@ var genero;
         View.initialize();
     }
     
-	function resetVariables(){
-		
+	function resetVariables(){	
 		//distancia al comienzo del test para no tenerla en cuenta por el activity
 		distanciaInicioActivity=0.0d;
-		distanciaDetenerActivity=0.0d;
-		distanciaContinuarActivity=0.0d;
-		//1 milla = 1,60934 km = 1609,34 m
-		//1,5 milla = 2,41402 km = 2414,02 m
-		distanciaARecorrer=2.42d;
-		//distanciaARecorrer=0.03d;
-		distanciaFaltaRecorrer=distanciaARecorrer;
-		tiempoDuracionTest=1;
-		
+		//1 milla = 1,60934 km = 1609,34 m  1,5 milla = 2,41402 km = 2414,02 m
+		//distanciaARecorrer=2.41d;
+		distanciaARecorrer=0.04d;
+		distanciaFaltaRecorrer=distanciaARecorrer;		
 	}
 	
     //! Load your resources here
@@ -78,10 +67,8 @@ var genero;
 		dc.drawText(X2+4, Y2, numFont, meloMetricsTimer.tiempoTranscurridoCuentaAlante(), just);
 		dc.drawText(X3+4, Y1, numFont, distanciaFaltaRecorrer.format("%.2f"), just);
 		
-		if(testEnEjecucion && !testDetenido){
+		if(testEnEjecucion){
 			dc.drawText(101, 74, msgFontSmall, Ui.loadResource(Rez.Strings.correUnaMillaYMediaCorriendo), just);	
-    	}else if(testDetenido){
-			dc.drawText(105, 74, msgFontSmall, Ui.loadResource(Rez.Strings.tabToContinue), just);
 		}else if (media){
 			dc.drawText(155, 74, msgFontMedium, Ui.loadResource(Rez.Strings.vomax), just);
 		}else{
@@ -91,7 +78,9 @@ var genero;
 
 
     function empezarTest(){
-    	resetVariables();  	
+    	resetVariablesParent();
+    	resetVariables();
+    	 	
  		Snsr.setEnabledSensors( [Snsr.SENSOR_HEARTRATE] );
 		Snsr.enableSensorEvents( method(:onSnsr) );	
 		
@@ -99,8 +88,7 @@ var genero;
     	
     	meloMetricsTimer.timer.stop();
 		meloMetricsTimer.timer.start(method(:timerCallback),1*1000,true);
-    	
-    	  		
+    		  		
 		var options = { :name => "OneHalfMileRunTest"  };
 		activityrec=ActivityRecording.createSession(options);
 		activityrec.start();
@@ -111,34 +99,27 @@ var genero;
     	
     }
     
-    
-    
     function timerCallback(){
     
-    	if(testEnEjecucion &&  !testDetenido){	
-    		meloMetricsTimer.aumentarSegundos();
-    	}
-    	
-    	if(0 >= distanciaFaltaRecorrerTest() && testEnEjecucion && !testDetenido){
-    		//app.meloMetricsTimer.stop(); 
+    	meloMetricsTimer.aumentarSegundos();
+
+    	if(0 >= distanciaFaltaRecorrerTest()){
 			testEnEjecucion=false;
 	    	
-	    	//comparada con http://www.exrx.net/Calculators/OneAndHalf.html http://www.shapesense.com/fitness-exercise/calculators/vo2max-calculator.shtml
-			//da lo mismo
+	    	//comparada con http://www.exrx.net/Calculators/OneAndHalf.html http://www.shapesense.com/fitness-exercise/calculators/vo2max-calculator.shtml da lo mismo
 			var minutos=meloMetricsTimer.contadorSegundos/60.0;
 			
 	    	var aux = 483.0d;
 	    	var auxdos = 3.5d;
 	    	media = (aux/minutos) +3.5;         	
 			
-	        if(primeraMuestra && activityrec.isRecording()){
+	        if(activityrec.isRecording()){
 				activityrec.save();
 				activityrec=null;
 				System.println("Activity  Guardado ");
 			}
 
-			primeraMuestra=false;
-	
+			meloMetricsTimer.timer.stop();
 			System.println("tiempo "+minutos + " segundos " +meloMetricsTimer.contadorSegundos);
 			System.println("pusalciones " + app.heartRate*0.1565 + " hearrate "+ app.heartRate);	
 		}

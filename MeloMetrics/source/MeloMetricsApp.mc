@@ -33,9 +33,6 @@ class MeloMetricsApp extends App.AppBase {
 
 	var heartRate;
 	var speed;
-	var vo2max;
-	
-	var activityrec;
 	
 	var oneMileWalkTestView;
 	var vo2maxSpeedView;
@@ -57,14 +54,14 @@ class MeloMetricsApp extends App.AppBase {
     	keyboardView = new KeyboardView();							//vista 1
 		oneMileWalkTestView = new OneMileWalkTestView();			//vista 2
 		oneHalfMileRunTest = new OneHalfMileRunTest();				//vista 3
-		
 		var index=2; //vista inicial
+
 		mainDelegate = new MainDelegate(index,oneMileWalkTestView);
 		keyboardDelegate = new KeyboardDelegate();
 		
 		speed=0.0d;
 		heartRate=0.0d;
-
+	
 	}
 
     //! Return the initial view of your application here
