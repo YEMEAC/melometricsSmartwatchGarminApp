@@ -43,7 +43,7 @@ class Vo2maxSpeedView extends ParentView {
 		acumuladorVo2maxSpeed=0.0d;
 		contadorVo2maxSpeedMuestras=0.0d;
 		//tiempoDuracionTest=60.0*12.0;  //12 minutos
-		tiempoDuracionTest=6;
+		tiempoDuracionTest=720;
 		
 	}
 	

@@ -41,8 +41,9 @@ class OneMileWalkTestView extends ParentView {
 		
 		//distancia al comienzo del test para no tenerla en cuenta por el activity
 		distanciaInicioActivity=0.0d;
-		//1 milla = 1.60934 km = 1609.34 m distanciaARecorrer=1.61d;
-		distanciaARecorrer=0.03d;
+		//1 milla = 1.60934 km = 1609.34 m 
+		distanciaARecorrer=1.61d;
+		//distanciaARecorrer=0.03d;
 		distanciaFaltaRecorrer=distanciaARecorrer;
 	}
 	

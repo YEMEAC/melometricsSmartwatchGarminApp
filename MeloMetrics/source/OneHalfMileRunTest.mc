@@ -22,8 +22,8 @@ class OneHalfMileRunTest extends ParentView {
 		//distancia al comienzo del test para no tenerla en cuenta por el activity
 		distanciaInicioActivity=0.0d;
 		//1 milla = 1,60934 km = 1609,34 m  1,5 milla = 2,41402 km = 2414,02 m
-		//distanciaARecorrer=2.41d;
-		distanciaARecorrer=0.04d;
+		distanciaARecorrer=2.41d;
+		//distanciaARecorrer=0.04d;
 		distanciaFaltaRecorrer=distanciaARecorrer;		
 	}
 	
